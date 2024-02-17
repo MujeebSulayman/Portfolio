@@ -28,8 +28,7 @@ const Navbar = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false);
 
 	return (
-		<nav
-			className='fixed top-0 left-0 right-0 z-10 bg-[#121212a1] backdrop-blur-md'>
+		<nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212a1] backdrop-blur-md sm:bg-[#121212d5] sm:backdrop-blur-md'>
 			<div className='flex flex-wrap items-center justify-between mx-auto p-8'>
 				<Link
 					href='/'
