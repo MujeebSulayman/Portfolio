@@ -27,7 +27,7 @@ const AboutSection = () => {
 					className='rounded-full'
 				/>
 				<div>
-					<h2 className='text-3xl font-bold flex text-gray-300 mb-4 mt-12 items-center justify-center sm:justify-start sm:items-start'>
+					<h2 className='text-3xl font-bold flex text-gray-300 mb-4 mt-12 items-start justify-start'>
 						About Me
 					</h2>
 					<p className='text-base font-normal font-sans text-gray-400 mb-4'>
