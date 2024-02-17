@@ -23,6 +23,11 @@ const AboutSection = () => {
 						well as part of a team and I'm always looking for ways to improve my skills and knowledge. It's always exciting to use my skills and knowledge to
 						create beautiful and functional websites and web applications.
 					</p>
+                    <div className='flex gap-4 flex-row mt-8 flex-wrap'>
+                        <span>Skills</span>
+                        <span>Education</span>
+                        <span>Experience</span>
+                    </div>
 				</div>
 			</div>
 		</section>
