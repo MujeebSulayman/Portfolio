@@ -10,7 +10,7 @@ const HeroSection = () => {
 		<section className='pt-20'>
 			<div className='grid grid-cols-1 lg:grid-cols-12'>
 				<div className='col-span-7 place-self-center'>
-					<h1 className='text-white mb-8 text-5xl lg:text-5xl font-extrabold'>
+					<h1 className='text-white mb-4 text-5xl lg:text-5xl font-extrabold'>
 						<span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
 							Hello,{' '}
 						</span>
@@ -30,7 +30,7 @@ const HeroSection = () => {
 							repeat={Infinity}
 						/>
 					</h1>
-					<p className='text-gray-400 text-md lg:text-lg mb-6'>
+					<p className='text-gray-400 text-md lg:text-lg py-6'>
 						Bringing ideas to life, I creat captivating web applications that
 						leaves a lasting impression and deliver seemsless digital
 						experience.
