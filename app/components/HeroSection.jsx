@@ -26,7 +26,7 @@ const HeroSection = () => {
 							]}
 							wrapper='span'
 							speed={50}
-							style={{ fontSize: '45px', color: '#e6e6e6ef' }}
+							style={{ fontSize: '45px', color: 'white' }}
 							repeat={Infinity}
 						/>
 					</h1>
