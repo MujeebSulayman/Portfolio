@@ -26,12 +26,14 @@ const HeroSection = () => {
 							]}
 							wrapper='span'
 							speed={50}
-							style={{fontSize: '45px'}}
+							style={{ fontSize: '45px', color: '#fff' }}
 							repeat={Infinity}
 						/>
 					</h1>
-					<p className='text-[#ADB7BE] text-lg lg:text-xl mb-6'>
-						Bringing ideas to life, I creat captivating web applications that leaves a lasting impression and deliver seemsless digital experience
+					<p className='text-gray-400 text-md lg:text-lg mb-6'>
+						Bringing ideas to life, I creat captivating web applications that
+						leaves a lasting impression and deliver seemsless digital
+						experience.
 					</p>
 					<div>
 						<button className='px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-400 to-pink-600 hover:bg-slate-200 text-white'>
