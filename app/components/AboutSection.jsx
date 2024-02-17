@@ -20,7 +20,7 @@ const AboutSection = () => {
 		<section className='text-white mt-10'>
 			<div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
 				<Image
-					src='/image/imag<ctrl63> es/my-image.JPG'
+					src='/images/my-image.JPG'
 					alt='my-image'
 					width={400}
 					height={400}
