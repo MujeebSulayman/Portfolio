@@ -18,7 +18,7 @@ const navLinks = [
 ];
 const Navbar = () => {
 	return (
-		<nav className='fixed top-0 left-0 right-0 z-10 bg-[#000000b5] backdrop-blur-sm'>
+		<nav className='fixed top-0 left-0 right-0 z-10 bg-[#000000d0] backdrop-blur-sm'>
 			<div className='flex flex-wrap items-center justify-between mx-auto p-8'>
 				<Link
 					href={'/'}
