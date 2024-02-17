@@ -30,7 +30,7 @@ const HeroSection = () => {
 							repeat={Infinity}
 						/>
 					</h1>
-					<p className='text-gray-400 text-md lg:text-lg py-6'>
+					<p className='text-gray-400 text-md lg:text-lg py-6 font-sans'>
 						Bringing ideas to life, I creat captivating web applications that
 						leaves a lasting impression and deliver seemsless digital
 						experience.
