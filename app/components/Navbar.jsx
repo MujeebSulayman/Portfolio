@@ -61,7 +61,6 @@ const Navbar = () => {
 							return (
 								<li key={index}>
 									<NavLink
-										key={link.title}
 										title={link.title}
 										href={link.path}
 									/>
