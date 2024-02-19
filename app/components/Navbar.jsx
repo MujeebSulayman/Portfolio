@@ -32,7 +32,7 @@ const Navbar = () => {
 			<div className='flex flex-wrap items-center justify-between mx-auto p-8'>
 				<Link
 					href='/'
-					className='text-2xl md:text-3xl text-white font-semibold'>
+					className='text-2xl md:text-3xl font-sans text-white font-semibold'>
 					LOGO
 				</Link>
 				<div className='block md:hidden'>
@@ -55,7 +55,7 @@ const Navbar = () => {
 				<div
 					className='hidden md:block md:w-auto'
 					id='navbar-default'>
-					<ul className='font-medium flex p-4 md:p-0  rounded-lg flex-row md:space-x-8 mt-0'>
+					<ul className='font-medium flex p-4 md:p-0 font-sans rounded-lg flex-row md:space-x-8 mt-0'>
 						{navLinks.map((link, index) => {
 							return (
 								<li key={index}>

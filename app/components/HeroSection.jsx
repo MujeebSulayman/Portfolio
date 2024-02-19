@@ -11,14 +11,13 @@ const HeroSection = () => {
 			<div className='grid grid-cols-1 lg:grid-cols-12'>
 				<div className='col-span-7 place-self-center'>
 					<h1 className='text-white mb-4 text-5xl lg:text-5xl font-extrabold'>
-						<span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
+						<span className=' font-sans text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
 							Hello,{' '}
 						</span>
 						<TypeAnimation
 							sequence={[
-								// Same substring at the start will only be typed out once, initially
 								"I'm Mujeeb",
-								1000, // wait 1s before replacing "Mice" with "Hamsters"
+								1000,
 								"I'm a website developer",
 								1000,
 								'I wield the power of Javascript, React and Node.js',
@@ -30,16 +29,16 @@ const HeroSection = () => {
 							repeat={Infinity}
 						/>
 					</h1>
-					<p className='text-gray-400 text-md lg:text-lg py-6 font-sans'>
+					<p className='text-gray-400 text-md lg:text-lg py-4 font-sans'>
 						Bringing ideas to life, I creat captivating web applications that
 						leaves a lasting impression and deliver seemsless digital
 						experience.
 					</p>
 					<div>
-						<button className='px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-400 to-pink-600 hover:bg-slate-200 text-white'>
+						<button className='px-6 py-3 font-sans rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-400 to-pink-600 hover:bg-slate-200 text-gray-100'>
 							Hire Me
 						</button>
-						<button className='px-6 py-3 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 hover:bg-slate-800 text-white borde mt-3'>
+						<button className='px-6 py-3 font-sans rounded-full bg-gradient-to-br from-blue-500 via-purple-500 hover:bg-slate-800 text-gray-100 borde mt-3'>
 							Download CV
 						</button>
 					</div>
