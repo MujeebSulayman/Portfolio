@@ -88,7 +88,7 @@ const AboutSection = () => {
 	console.log(isPending);
 
 	return (
-		<section className='text-white mt-10'>
+		<section className='text-white py-10'>
 			<div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
 				<Image
 					src='/images/my-image.JPG'
