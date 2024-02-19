@@ -43,8 +43,8 @@ const EmailSection = () => {
 	return (
 		<section
 			id='contact'
-			className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
-			<div className='bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2'></div>
+			className='grid md:grid-cols-2 my-12 md:my-20 py-24 gap-4 relative'>
+			<div className='bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-2xl absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2'></div>
 			<div>
 				<h5 className='text-xl font-bold text-gray-300 my-2'>
 					Let&apos;s Connect
@@ -68,13 +68,13 @@ const EmailSection = () => {
 							alt='Linkedin Icon'
 						/>
 					</Link>
-					<Link href='https://www.linkedin.com/in/sulayman-abdul-mujeeb-299909214/'>
+					<Link href='https://twitter.com/TheHemjay'>
 						<Image
 							src={x}
 							alt='Linkedin Icon'
-                            className='bg-white ml-2 mt-2 sm:py-0 my-10 rounded-sm '
-                            width={35}
-                            height={35}
+							className='bg-white ml-2 mt-2 sm:py-0 my-10 rounded-sm '
+							width={35}
+							height={35}
 						/>
 					</Link>
 				</div>

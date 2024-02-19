@@ -33,7 +33,7 @@ const Navbar = () => {
 				<Link
 					href='/'
 					className='text-2xl md:text-3xl font-sans text-white font-semibold'>
-					LOGO
+					TheHemjay
 				</Link>
 				<div className='block md:hidden'>
 					{!navbarOpen ? (
