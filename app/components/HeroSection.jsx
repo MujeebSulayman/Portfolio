@@ -47,12 +47,12 @@ const HeroSection = () => {
 					<div>
 						<Link
 							href='https://www.linkedin.com/in/sulayman-abdul-mujeeb-299909214/'
-							className='px-6 inline-block py-3 w-full sm:w-fit rounded-md mr-4 font-sans font-semibold bg-gray-400 hover:bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-gray-500 text-gray-900 hover:text-white'>
+							className='px-6 inline-block py-3 sm:w-fit rounded-md mr-4 font-sans font-semibold bg-gray-400 hover:bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-gray-500 text-gray-900 hover:text-white'>
 							Hire Me
 						</Link>
 						<Link
 							href='https://drive.google.com/file/d/16VjjJ34UrzSKr7nzsfo8ATw8DNTSt1xI/view?usp=sharing'
-							className='px-1 inline-block py-1 w-full sm:w-fit rounded-md font-sans font-semibold bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3'>
+							className='px-1 inline-block py-1 sm:w-fit rounded-md font-sans font-semibold bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3'>
 							<span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>
 								Download CV
 							</span>
