@@ -13,8 +13,8 @@ const projectsData = [
 			'People Utility Token(PUT) is a blockchain tech website which is developed to mainly promote the token at first before the launch',
 		image: '/images/project/1.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/MujeebSulayman/PUT',
+		previewUrl: 'https://peopleutilitytoken.vercel.app/',
 	},
 	{
 		id: 2,
@@ -28,23 +28,23 @@ const projectsData = [
 	},
 	{
 		id: 3,
-		title: 'HemDashboard',
+		title: 'Admin Dashboard',
 		description:
 			'HemDash is a CRUD web application developed with so many features designed in it. Ranging from color picker to pie chart, to bar chart which also has editor feature and customer transaction section. ',
 		image: '/images/project/10.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/MujeebSulayman/Admin-Dashboard',
+		previewUrl: 'https://hemdash.netlify.app/',
 	},
 	{
 		id: 4,
-		title: 'HemDestro',
+		title: 'Destro Shopping App',
 		description:
 			'The project was developed as a side project which my objective is to enhance my knowledge in designing user friendly food delivery application and also intgrating payment gateway.',
 		image: '/images/project/3.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/MujeebSulayman/Destro-Shopping-App',
+		previewUrl: 'https://hem-destro.vercel.app/',
 	},
 	{
 		id: 5,
@@ -53,8 +53,8 @@ const projectsData = [
 			'TheSocial is a social medial application where users can share thought and memories, more like Instagram application.',
 		image: '/images/project/4.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/MujeebSulayman/Social-Application',
+		previewUrl: 'https://hem-destro.vercel.app/',
 	},
 	{
 		id: 6,
@@ -63,18 +63,18 @@ const projectsData = [
 			"I'm not really a big fan of anime, i gave myself the challenge to design a user friendly application where people can browse the latest anime movie and also to test how proficient i am in consuming APIs.",
 		image: '/images/project/5.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/MujeebSulayman/Anime-collections',
+		previewUrl: 'https://hemanime.vercel.app/',
 	},
 	{
 		id: 7,
-		title: 'HemTravel',
+		title: 'Travel Guide App',
 		description:
 			'HemTravel is a web application that allows people visiting Ibadan to know more about the place',
 		image: '/images/project/6.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/MujeebSulayman/Travel-App',
+		previewUrl: 'https://hemtravel.vercel.app/',
 	},
 	{
 		id: 8,
@@ -83,8 +83,8 @@ const projectsData = [
 			'HemFit is an exercise website that allows users to perform different types exercise, we have up to 5000 exervise listen up on the website with instructions and videos on how to perform them. ',
 		image: '/images/project/7.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/MujeebSulayman/fitness-app',
+		previewUrl: 'https://hemfit.netlify.app/',
 	},
 	{
 		id: 9,
@@ -103,8 +103,18 @@ const projectsData = [
 			"Yep, You are looking at the portfolio, I'm always looking for ways to improve my skills and knowledge. It's always exciting to use my skills and knowledge to create beautiful and functional websites and web applications.",
 		image: '/images/project/9.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: '/',
-		previewUrl: '/',
+		gitUrl: 'https://github.com/MujeebSulayman/New-Portfolio',
+		previewUrl: 'https://thehemjay.vercel.app/',
+	},
+	{
+		id: 11,
+		title: 'HemNote',
+		description:
+			'Discover & Share AI-Powered Prompts. HemNote is an open-source AI prompting tool for modern world to discover, create and share creative prompts',
+		image: '/images/project/11.PNG',
+		tag: ['All', 'React.Js'],
+		gitUrl: 'https://github.com/MujeebSulayman/Notebook',
+		previewUrl: 'https://hemnote.vercel.app/',
 	},
 ];
 
