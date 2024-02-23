@@ -9,7 +9,7 @@ const HeroSection = () => {
 	const [animate, setAnimate] = useState(false);
 
 	return (
-		<section className='pt-16'>
+		<section className='pt-20'>
 			<div className='grid grid-cols-1 sm:grid-cols-12'>
 				<motion.div
 					initial={{ opacity: 0, scale: 0.5 }}
