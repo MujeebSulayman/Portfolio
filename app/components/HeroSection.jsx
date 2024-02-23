@@ -23,22 +23,24 @@ const HeroSection = () => {
 						<span className=' font-sans text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
 							Hello,{' '}
 						</span>
-						<TypeAnimation
-							sequence={[
-								"I'm Mujeeb.",
-								1000,
-								"I'm a website developer.",
-								1000,
-								'I weild the power of Javascript, React and Node.js.', // Corrected the typo here
-								2000, // Adjusted duration for this sentence
-							]}
-							wrapper='span'
-							speed={50}
-							style={{ fontSize: '45px' }}
-							repeat={Infinity}
-							onAnimationStart={handleAnimationStart}
-							onAnimationComplete={handleAnimationComplete}
-						/>
+						<div style={{  overflow: 'hidden' }}>
+							<TypeAnimation
+								sequence={[
+									"I'm Mujeeb.",
+									1000,
+									"I'm a website developer.",
+									1000,
+									'I breathe air and Javascript.',
+									2000,
+								]}
+								wrapper='span'
+								speed={50}
+								style={{ fontSize: '45px' }}
+								repeat={Infinity}
+								onAnimationStart={handleAnimationStart}
+								onAnimationComplete={handleAnimationComplete}
+							/>
+						</div>
 					</h1>
 					<p className='text-gray-400 text-md lg:text-lg py-4 font-sans'>
 						Bringing ideas to life, I create captivating web applications that
