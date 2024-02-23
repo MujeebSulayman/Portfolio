@@ -15,7 +15,7 @@ const HeroSection = () => {
 					initial={{ opacity: 0, scale: 0.5 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
-					className='col-span-8 place-self-center text-center sm:text-left justify-self-start'>
+					className='col-span-8 place-self-center text-start sm:text-left justify-self-start'>
 					<h1 className='text-white mb-4 font-sans text-5xl lg:text-5xl font-extrabold'>
 						<span className=' font-sans text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
 							Hello,{' '}
