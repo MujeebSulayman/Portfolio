@@ -16,10 +16,10 @@ const HeroSection = () => {
 	};
 
 	return (
-		<section className='pt-20 mb-20'>
+		<section className='pt-20'>
 			<div className='grid grid-cols-1 lg:grid-cols-12'>
 				<div className='col-span-7 place-self-center'>
-					<h1 className='text-white mb-4 text-5xl lg:text-5xl font-extrabold'>
+					<h1 className='text-white text-5xl lg:text-5xl font-extrabold'>
 						<span className=' font-sans text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
 							Hello,{' '}
 						</span>
@@ -29,8 +29,8 @@ const HeroSection = () => {
 								1000,
 								"I'm a website developer.",
 								1000,
-								'I wield the power of Javascript.',
-								1000,
+								'I weild the power of Javascript, React and Node.js.', // Corrected the typo here
+								2000, // Adjusted duration for this sentence
 							]}
 							wrapper='span'
 							speed={50}
