@@ -26,9 +26,8 @@ const HeroSection = () => {
 							style={{
 								fontSize: '45px',
 								fontWeight: 'bold',
-								'@media (max-width: 768px)': {
-									fontSize: '30px', // Adjust the font size for mobile devices
-								},
+								textAlign: 'center',
+								marginBottom: '20px',
 							}}
 							repeat={Infinity}
 						/>
