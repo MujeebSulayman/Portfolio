@@ -3,20 +3,32 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
 	const [animate, setAnimate] = useState(false);
 
 	return (
-		<section className='lg:py-16'>
-			<div className='grid grid-cols-1 lg:grid-cols-12'>
-				<div className='col-span-7 place-self-center'>
-					<h1 className='text-white text-5xl lg:text-5xl font-extrabold'>
+		<section className='pt-16'>
+			<div className='grid grid-cols-1 sm:grid-cols-12'>
+				<motion.div
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5 }}
+					className='col-span-8 place-self-center text-center sm:text-left justify-self-start'>
+					<h1 className='text-white mb-4 font-sans text-5xl lg:text-5xl font-extrabold'>
 						<span className=' font-sans text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
 							Hello,{' '}
 						</span>
 						<TypeAnimation
-							sequence={["I'm Mujeeb.", 1000, "I'm a website developer.", 1000]}
+							sequence={[
+								"I'm Mujeeb.",
+								1000,
+								"I'm a website developer.",
+								1000,
+								'I breathe air and Javascript.',
+								1000,
+							]}
 							speed={50}
 							style={{ fontSize: '45px', fontSize: 'bold' }}
 							repeat={Infinity}
@@ -40,8 +52,12 @@ const HeroSection = () => {
 							</span>
 						</Link>
 					</div>
-				</div>
-				<div className='col-span-5 place-self-center'>
+				</motion.div>
+				<motion.div
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5 }}
+					className='col-span-4 place-self-center mt-4 lg:mt-0'>
 					<div
 						className={`rounded-full w-[400px] h-[500px] lg:w-[500px] relative ${
 							animate ? 'animate' : ''
@@ -54,7 +70,7 @@ const HeroSection = () => {
 							className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
 						/>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	);
