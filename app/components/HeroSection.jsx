@@ -8,7 +8,7 @@ const HeroSection = () => {
 	const [animate, setAnimate] = useState(false);
 
 	return (
-		<section className='pt-20'>
+		<section className='lg:py-16'>
 			<div className='grid grid-cols-1 lg:grid-cols-12'>
 				<div className='col-span-7 place-self-center'>
 					<h1 className='text-white text-5xl lg:text-5xl font-extrabold'>
@@ -16,13 +16,7 @@ const HeroSection = () => {
 							Hello,{' '}
 						</span>
 						<TypeAnimation
-							sequence={[
-								"I'm Mujeeb.",
-								1000,
-								"I'm a website developer.",
-								1000,
-							]}
-
+							sequence={["I'm Mujeeb.", 1000, "I'm a website developer.", 1000]}
 							speed={50}
 							style={{ fontSize: '45px', fontSize: 'bold' }}
 							repeat={Infinity}
