@@ -34,7 +34,13 @@ const HeroSection = () => {
 								1000,
 							]}
 							speed={50}
-							style={{ fontSize: '45px', fontSize: 'bold' }}
+							style={{
+								fontSize: '45px',
+								fontWeight: 'bold',
+								'@media (max-width: 768px)': {
+									fontSize: '30px', // Adjust the font size for mobile devices
+								},
+							}}
 							repeat={Infinity}
 						/>
 					</h1>
