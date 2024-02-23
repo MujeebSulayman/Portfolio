@@ -26,7 +26,7 @@ const HeroSection = () => {
 								1000,
 								'iCode.',
 								1000,
-								'iDesign.',
+								'Develop.',
 								1000,
 								'iBuild.',
 								1000,
