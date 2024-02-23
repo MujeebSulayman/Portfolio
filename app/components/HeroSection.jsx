@@ -7,14 +7,6 @@ import Link from 'next/link';
 const HeroSection = () => {
 	const [animate, setAnimate] = useState(false);
 
-	const handleAnimationStart = () => {
-		setAnimate(true);
-	};
-
-	const handleAnimationComplete = () => {
-		setAnimate(false);
-	};
-
 	return (
 		<section className='pt-20'>
 			<div className='grid grid-cols-1 lg:grid-cols-12'>
@@ -29,10 +21,10 @@ const HeroSection = () => {
 								1000,
 								"I'm a website developer.",
 								1000,
-								'I weild the power of Javascript, React and Node.js.',
 							]}
+
 							speed={50}
-							style={{ fontSize: '45px' }}
+							style={{ fontSize: '45px', fontSize: 'bold' }}
 							repeat={Infinity}
 						/>
 					</h1>
