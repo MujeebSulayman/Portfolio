@@ -26,7 +26,7 @@ const HeroSection = () => {
 								1000,
 								"I'm a website developer.",
 								1000,
-								'I breathe air and Javascript.',
+								'I breath air and Javascript.',
 								1000,
 							]}
 							speed={50}
