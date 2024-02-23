@@ -21,7 +21,16 @@ const HeroSection = () => {
 							Hello,{' '}
 						</span>
 						<TypeAnimation
-							sequence={['iCode.', 1000, 'iCreate.', 1000, 'iBuild.', 1000]}
+							sequence={[
+								'iCode.',
+								1000,
+								'iDev.',
+								1000,
+								'iCreate.',
+								1000,
+								'iBuild.',
+								1000,
+							]}
 							speed={50}
 							style={{
 								fontSize: '45px',
