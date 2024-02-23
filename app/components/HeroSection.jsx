@@ -24,9 +24,13 @@ const HeroSection = () => {
 							sequence={[
 								"I'm Mujeeb.",
 								1000,
-								"I'm a website developer.",
+								'iCode.',
 								1000,
-								'I breath air and Javascript.',
+								'iDesign.',
+								1000,
+								'iBuild.',
+								1000,
+								'iCreate.',
 								1000,
 							]}
 							speed={50}
