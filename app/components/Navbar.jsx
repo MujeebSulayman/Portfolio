@@ -29,7 +29,7 @@ const Navbar = () => {
 
 	return (
 		<nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212a1] backdrop-blur-md'>
-			<div className='flex flex-wrap items-center justify-between mx-auto p-8'>
+			<div className='flex flex-wrap items-center justify-between mx-auto pt-8 pb-8 pl-28 pr-32'>
 				<Link
 					href='/'
 					className='text-2xl md:text-3xl font-sans text-white font-semibold'>

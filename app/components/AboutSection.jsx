@@ -56,7 +56,7 @@ const TAB_DATA = [
 						<h3 className='py-2'>2023 - Present</h3>
 						<p className='mb-8'>
 							I work as a software engineer at Oxgital, i lead the team of 3 which
-							our primary objective is deliver outstanding result.
+							our primary objective is to create in-house softwares for client.
 						</p>
 					</div>
 				</li>

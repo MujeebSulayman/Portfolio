@@ -43,7 +43,7 @@ const HeroSection = () => {
 					</h1>
 					<p className='text-gray-400 text-md lg:text-lg py-4 font-sans'>
 						Bringing ideas to life, I create captivating web applications that
-						leave a lasting impression and deliver seamless digital experiences.
+						leave a lasting<br /> impression and deliver seamless digital experiences.
 					</p>
 					<div>
 						<Link
