@@ -121,7 +121,7 @@ const projectsData = [
 		title: 'Emagify AI',
 		description:
 			'Emagify AI is an AI web app that allows user to restore old image color, resize image, remove background and also remove object from Picture',
-		image: '/images/project/11.PNG',
+		image: '/images/project/12.PNG',
 		tag: ['All', 'React.Js'],
 		gitUrl: 'https://github.com/MujeebSulayman/Emagify-AI',
 		previewUrl: 'https://emagify-ai.vercel.app//',
