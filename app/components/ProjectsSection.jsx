@@ -124,7 +124,7 @@ const projectsData = [
 		image: '/images/project/12.PNG',
 		tag: ['All', 'React.Js'],
 		gitUrl: 'https://github.com/MujeebSulayman/Emagify-AI',
-		previewUrl: 'https://emagify-ai.vercel.app//',
+		previewUrl: 'https://emagify-ai.vercel.app/',
 	},
 ];
 
