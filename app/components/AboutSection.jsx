@@ -91,10 +91,10 @@ const AboutSection = () => {
 		<section className='text-white py-10'>
 			<div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
 				<Image
-					src='/images/my-image.JPG'
+					src='/images/portfolio-image.jpg'
 					alt='my-image'
 					width={400}
-					height={400}
+					height={100}
 					className='rounded-full'
 				/>
 				<div>
@@ -107,8 +107,8 @@ const AboutSection = () => {
 						Studies. I&apos;m passionate about creating beautiful and functional
 						websites and web applications with JavaScript, React, and Node.js.
 						I&apos;m always looking for new challenges and opportunities to
-						learn and grow as a developer. I work as part of a team and
-						I&apos;m always looking for ways to improve my skills and knowledge.
+						learn and grow as a developer. I work as part of a team and I&apos;m
+						always looking for ways to improve my skills and knowledge.
 						It&apos;s always exciting to use my skills and knowledge to create
 						beautiful and functional websites and web applications.
 					</p>
