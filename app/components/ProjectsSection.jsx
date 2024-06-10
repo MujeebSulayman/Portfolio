@@ -63,7 +63,7 @@ const projectsData = [
 			"I'm not really a big fan of anime, i gave myself the challenge to design a user friendly application where people can browse the latest anime movie and also to test how proficient i am in consuming APIs.",
 		image: '/images/project/5.PNG',
 		tag: ['All', 'React.Js'],
-		gitUrl: 'https://github.com/MujeebSulayman/Anime-collections',
+		gitUrl: 'https://github.com/MujeebSulayman/Anime-collections/',
 		previewUrl: 'https://hemanime.vercel.app/',
 	},
 	{
