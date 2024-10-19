@@ -10,13 +10,15 @@ const TAB_DATA = [
 		id: 'skills',
 		content: (
 			<ul className='list-disc pl-2 text-base font-normal font-sans text-gray-300 mb-4'>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>Tailwind</li>
-				<li>JavaScript</li>
-				<li>Three.Js</li>
-				<li>React.Js</li>
-				<li>Node.Js</li>
+				<li>JavaScript/TypeScript</li>
+				<li>Blockchain Development: Solidity, Hardhat, Remix, Ethers.js.</li>
+				<li>Smart Contracts: ERC20, ERC721</li>
+				<li>NextJs</li>
+				<li>ReactJS</li>
+				<li>
+					Smart Contract Security: Reentrancy attacks, Integer overflows, Gas
+					optimizations Development Tools: Git, Docker
+				</li>
 			</ul>
 		),
 	},
@@ -25,6 +27,44 @@ const TAB_DATA = [
 		id: 'experience',
 		content: (
 			<ul className='list-disc pl-2'>
+				<li className='text-base font-normal font-sans text-gray-400 mb-8'>
+					<b className='text-gray-200 font-sans'>Oxgital</b>
+					<div className='m-2'>
+						<h3 className='py-2'> 2023 - 2024</h3>
+
+						<ul className='list-disc pl-2 text-base font-normal font-sans text-gray-300'>
+							<li>
+								Developed and maintained web applications using JavaScript and
+								ReactJS.
+							</li>
+							<li>
+								Collaborated with a team of 5 developers to enhance software
+								features and improve user satisfaction.
+							</li>
+							<li>
+								Implemented unit testing and code reviews, achieving a
+								significant reduction in bugs and improving overall code
+								quality.
+							</li>
+							<li>
+								Assisted in optimizing application performance, resulting in a
+								20% decrease in server response times.
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li className='text-base font-normal font-sans text-gray-400 mb-4'>
+					<b className='text-gray-200 font-sans'>Ooumart</b>
+					<div className='m-4'>
+						<h3 className='py-2'>2022-2023</h3>
+						<p className='mb-8'>
+							I developed a multi vendor e-commerce web application to make
+							sales easier for students in my university. Which made me receive
+							the award of the most creative student of the year (2022/2023)
+							graduating set.
+						</p>
+					</div>
+				</li>
 				<li className='text-base font-normal font-sans text-gray-400 mb-4'>
 					<b className='text-gray-200 font-sans'>Freelance Projects</b>
 					<div className='m-4'>
@@ -38,28 +78,6 @@ const TAB_DATA = [
 						</p>
 					</div>
 				</li>
-				<li className='text-base font-normal font-sans text-gray-400 mb-4'>
-					<b className='text-gray-200 font-sans'>Ooumart</b>
-					<div className='m-4'>
-						<h3 className='py-2'>2022-2023</h3>
-						<p className='mb-8'>
-							I developed a multi vendor e-commerce web application to make
-							sales easier for students in my university. Which made me receive
-							the award of the most creative student of the year (2023/2024)
-							graduating set.
-						</p>
-					</div>
-				</li>
-				<li className='text-base font-normal font-sans text-gray-400 mb-4'>
-					<b className='text-gray-200 font-sans'>Oxgital</b>
-					<div className='m-4'>
-						<h3 className='py-2'>2023 - Present</h3>
-						<p className='mb-8'>
-							I work as a software engineer at Oxgital, i lead the team of 3 which
-							our primary objective is to create in-house softwares for client.
-						</p>
-					</div>
-				</li>
 			</ul>
 		),
 	},
@@ -68,7 +86,7 @@ const TAB_DATA = [
 		id: 'certification',
 		content: (
 			<ul className='list-disc pl-2 text-base font-normal font-sans text-gray-300 mb-4'>
-				<li>Mern Stack Practitioneer</li>
+				<li>Dapp Mentor Academy</li>
 				<li>Oxgital Professional Frontend Developer</li>
 			</ul>
 		),
@@ -102,15 +120,15 @@ const AboutSection = () => {
 						About Me
 					</h2>
 					<p className='text-base font-normal font-sans text-gray-400 mb-4'>
-						I&apos;m a frontend developer with over 3 years of experience in the
-						industry. I have a bachelor&apos;s degree in Foreign Language
-						Studies. I&apos;m passionate about creating beautiful and functional
-						websites and web applications with JavaScript, React, and Node.js.
-						I&apos;m always looking for new challenges and opportunities to
-						learn and grow as a developer. I work as part of a team and I&apos;m
-						always looking for ways to improve my skills and knowledge.
-						It&apos;s always exciting to use my skills and knowledge to create
-						beautiful and functional websites and web applications.
+						I’m an experienced blockchain developer with over 4 years in
+						software development, skilled in JavaScript, Solidity, ReactJS,
+						TypeScript, and NextJs. Specialized in building EVM-compatible
+						blockchain solutions and deploying on Ethereum network. Adept at
+						designing and deploying secure, scalable decentralized applications
+						(dApps) and smart contracts across multiple blockchain networks. A
+						proven leader with hands-on experience in multi-chain solutions,
+						driving growth in the blockchain community, and fostering innovation
+						in Web3 technologies.
 					</p>
 
 					<div className='flex flex-row justify-start mt-8 gap-4 flex-wrap'>
