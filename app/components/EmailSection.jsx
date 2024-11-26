@@ -66,9 +66,9 @@ const EmailSection = () => {
 	return (
 		<section
 			id='contact'
-			className='relative py-12 px-4 sm:py-20'>
+			className='relative py-12 px-2 sm:px-4 sm:py-20'>
 			<div className='max-w-7xl mx-auto'>
-				<div className='grid md:grid-cols-2 gap-6 md:gap-8 relative'>
+				<div className='grid md:grid-cols-2 gap-4 md:gap-8 relative'>
 					{/* Left Column - Contact Info */}
 					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
 						<h2 className='text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-8'>
@@ -98,8 +98,12 @@ const EmailSection = () => {
 											/>
 										</div>
 										<div className='ml-3 sm:ml-4'>
-											<h3 className='text-white font-medium text-sm sm:text-base'>{label}</h3>
-											<p className='text-gray-400 text-xs sm:text-sm'>{username}</p>
+											<h3 className='text-white font-medium text-sm sm:text-base'>
+												{label}
+											</h3>
+											<p className='text-gray-400 text-xs sm:text-sm'>
+												{username}
+											</p>
 										</div>
 									</Link>
 								)
@@ -110,7 +114,9 @@ const EmailSection = () => {
 									<EnvelopeIcon className='w-5 h-5 sm:w-6 sm:h-6 text-gray-400' />
 								</div>
 								<div className='ml-3 sm:ml-4'>
-									<h3 className='text-white font-medium text-sm sm:text-base'>Email</h3>
+									<h3 className='text-white font-medium text-sm sm:text-base'>
+										Email
+									</h3>
 									<p className='text-gray-400 text-xs sm:text-sm'>
 										sulaymanmujeeb6@gmail.com
 									</p>
@@ -169,7 +175,7 @@ const EmailSection = () => {
 										name='subject'
 										required
 										className='w-full px-3 sm:px-4 py-2 sm:py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 text-sm sm:text-base'
-										placeholder="What&apos;s this about?"
+										placeholder="What's this about?"
 									/>
 								</div>
 								<div>
@@ -181,7 +187,7 @@ const EmailSection = () => {
 										required
 										rows={4}
 										className='w-full px-3 sm:px-4 py-2 sm:py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 text-sm sm:text-base resize-none'
-										placeholder="Let&apos;s talk about your project..."
+										placeholder="Let's talk about your project..."
 									/>
 								</div>
 								{error && <p className='text-red-500 text-sm'>{error}</p>}
