@@ -69,7 +69,7 @@ const HeroSection = () => {
 							href="#contact"
 							className="px-8 py-4 rounded-lg border border-gray-700 text-gray-300 hover:border-purple-500 hover:text-white transition-all duration-200"
 						>
-							Let&apos;s Connect
+							Let's Connect
 						</Link>
 					</div>
 

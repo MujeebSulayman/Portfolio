@@ -11,7 +11,9 @@ const TAB_DATA = [
 		content: (
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 				<div className='bg-[#1c1c1c] p-5 rounded-lg'>
-					<h3 className='text-lg font-bold text-white mb-3'>Frontend Development</h3>
+					<h3 className='text-lg font-bold text-white mb-3'>
+						Frontend Development
+					</h3>
 					<ul className='list-none space-y-2'>
 						<li className='flex items-center text-gray-300 text-sm'>
 							<span className='w-2 h-2 bg-blue-500 rounded-full mr-2'></span>
@@ -41,7 +43,9 @@ const TAB_DATA = [
 				</div>
 
 				<div className='bg-[#1c1c1c] p-5 rounded-lg'>
-					<h3 className='text-lg font-bold text-white mb-3'>Blockchain Development</h3>
+					<h3 className='text-lg font-bold text-white mb-3'>
+						Blockchain Development
+					</h3>
 					<ul className='list-none space-y-2'>
 						<li className='flex items-center text-gray-300 text-sm'>
 							<span className='w-2 h-2 bg-purple-500 rounded-full mr-2'></span>
@@ -93,7 +97,9 @@ const TAB_DATA = [
 				</div>
 
 				<div className='bg-[#1c1c1c] p-5 rounded-lg'>
-					<h3 className='text-lg font-bold text-white mb-3'>Development Tools</h3>
+					<h3 className='text-lg font-bold text-white mb-3'>
+						Development Tools
+					</h3>
 					<ul className='list-none space-y-2'>
 						<li className='flex items-center text-gray-300 text-sm'>
 							<span className='w-2 h-2 bg-yellow-500 rounded-full mr-2'></span>
@@ -125,22 +131,39 @@ const TAB_DATA = [
 					<b className='text-gray-200 font-sans'>Blockchain Developer</b>
 					<h3 className='py-2'>2023 - Present</h3>
 					<ul className='list-disc pl-2 text-base font-normal font-sans text-gray-300'>
-						<li>Developed and deployed multiple DeFi and NFT projects on Ethereum and other EVM chains</li>
-						<li>Implemented secure smart contracts following best practices and industry standards</li>
-						<li>Built full-stack dApps with Web3 integration and wallet connectivity</li>
+						<li>
+							Developed and deployed multiple DeFi and NFT projects on Ethereum
+							and other EVM chains
+						</li>
+						<li>
+							Implemented secure smart contracts following best practices and
+							industry standards
+						</li>
+						<li>
+							Built full-stack dApps with Web3 integration and wallet
+							connectivity
+						</li>
 						<li>Optimized smart contracts for gas efficiency and security</li>
 					</ul>
 				</li>
 
 				<li className='text-base font-normal font-sans text-gray-400 mb-8'>
-					<b className='text-gray-200 font-sans'>Oxgital - Frontend Developer</b>
+					<b className='text-gray-200 font-sans'>
+						Oxgital - Frontend Developer
+					</b>
 					<div className='m-2'>
 						<h3 className='py-2'>2023 - 2024</h3>
 						<ul className='list-disc pl-2 text-base font-normal font-sans text-gray-300'>
 							<li>Led frontend development using React.js and Next.js</li>
 							<li>Implemented responsive designs and optimized performance</li>
-							<li>Collaborated with cross-functional teams to deliver high-quality solutions</li>
-							<li>Reduced bug rates by 40% through comprehensive testing implementation</li>
+							<li>
+								Collaborated with cross-functional teams to deliver high-quality
+								solutions
+							</li>
+							<li>
+								Reduced bug rates by 40% through comprehensive testing
+								implementation
+							</li>
 						</ul>
 					</div>
 				</li>
@@ -150,9 +173,10 @@ const TAB_DATA = [
 					<div className='m-4'>
 						<h3 className='py-2'>2019 - Present</h3>
 						<p className='mb-8'>
-							Delivered custom web solutions for diverse clients, specializing in e-commerce platforms, 
-							SaaS applications, and Web3 integrations. Focused on creating scalable, user-friendly 
-							applications with modern technologies and best practices.
+							Delivered custom web solutions for diverse clients, specializing
+							in e-commerce platforms, SaaS applications, and Web3 integrations.
+							Focused on creating scalable, user-friendly applications with
+							modern technologies and best practices.
 						</p>
 					</div>
 				</li>
@@ -185,7 +209,7 @@ const AboutSection = () => {
 	console.log(isPending);
 
 	return (
-		<section id="about" className='text-white py-10'>
+		<section className='text-white py-10'>
 			<div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
 				<Image
 					src='/images/portfolio-image.jpg'
@@ -199,11 +223,13 @@ const AboutSection = () => {
 						About Me
 					</h2>
 					<p className='text-base font-normal font-sans text-gray-400 mb-4'>
-						Full-stack blockchain developer with 4+ years of experience in Web3 and modern web development. 
-						Specialized in building decentralized applications (dApps) using Solidity, React.js, and Next.js. 
-						Passionate about creating secure, scalable solutions that bridge the gap between traditional web 
-						applications and blockchain technology. Experienced in DeFi protocols, NFT marketplaces, and 
-						cross-chain applications.
+						Full-stack blockchain developer with 4+ years of experience in Web3
+						and modern web development. Specialized in building decentralized
+						applications (dApps) using Solidity, React.js, and Next.js.
+						Passionate about creating secure, scalable solutions that bridge the
+						gap between traditional web applications and blockchain technology.
+						Experienced in DeFi protocols, NFT marketplaces, and cross-chain
+						applications.
 					</p>
 
 					<div className='flex flex-row justify-start mt-8 gap-4 flex-wrap'>
