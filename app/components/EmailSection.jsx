@@ -66,52 +66,52 @@ const EmailSection = () => {
 	return (
 		<section
 			id='contact'
-			className='relative py-20 px-4'>
+			className='relative py-12 px-4 sm:py-20'>
 			<div className='max-w-7xl mx-auto'>
-				<div className='grid md:grid-cols-2 gap-8 relative'>
+				<div className='grid md:grid-cols-2 gap-6 md:gap-8 relative'>
 					{/* Left Column - Contact Info */}
-					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
-						<h2 className='text-3xl font-bold text-white mb-8'>
+					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
+						<h2 className='text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-8'>
 							Let&apos;s Connect
 						</h2>
 
-						<p className='text-gray-400 mb-8'>
+						<p className='text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base'>
 							Ready to discuss your next project or explore opportunities? Reach
 							out through any of these channels or send me a direct message.
 						</p>
 
-						<div className='space-y-6'>
+						<div className='space-y-4 sm:space-y-6'>
 							{Object.entries(SOCIAL_LINKS).map(
 								([key, { url, icon, label, username }]) => (
 									<Link
 										key={key}
 										href={url}
 										target='_blank'
-										className='flex items-center p-4 bg-[#1c1c1c] rounded-xl hover:bg-gray-800/50 transition-all group'>
-										<div className='w-12 h-12 flex items-center justify-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg'>
+										className='flex items-center p-3 sm:p-4 bg-[#1c1c1c] rounded-xl hover:bg-gray-800/50 transition-all group'>
+										<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg'>
 											<Image
 												src={icon}
 												alt={`${label} Icon`}
-												width={24}
-												height={24}
+												width={20}
+												height={20}
 												className='opacity-70 group-hover:opacity-100 transition-opacity'
 											/>
 										</div>
-										<div className='ml-4'>
-											<h3 className='text-white font-medium'>{label}</h3>
-											<p className='text-gray-400 text-sm'>{username}</p>
+										<div className='ml-3 sm:ml-4'>
+											<h3 className='text-white font-medium text-sm sm:text-base'>{label}</h3>
+											<p className='text-gray-400 text-xs sm:text-sm'>{username}</p>
 										</div>
 									</Link>
 								)
 							)}
 
-							<div className='flex items-center p-4 bg-[#1c1c1c] rounded-xl'>
-								<div className='w-12 h-12 flex items-center justify-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg'>
-									<EnvelopeIcon className='w-6 h-6 text-gray-400' />
+							<div className='flex items-center p-3 sm:p-4 bg-[#1c1c1c] rounded-xl'>
+								<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg'>
+									<EnvelopeIcon className='w-5 h-5 sm:w-6 sm:h-6 text-gray-400' />
 								</div>
-								<div className='ml-4'>
-									<h3 className='text-white font-medium'>Email</h3>
-									<p className='text-gray-400 text-sm'>
+								<div className='ml-3 sm:ml-4'>
+									<h3 className='text-white font-medium text-sm sm:text-base'>Email</h3>
+									<p className='text-gray-400 text-xs sm:text-sm'>
 										sulaymanmujeeb6@gmail.com
 									</p>
 								</div>
@@ -120,7 +120,7 @@ const EmailSection = () => {
 					</div>
 
 					{/* Right Column - Contact Form */}
-					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
+					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
 						{emailSubmitted ? (
 							<div className='h-full flex flex-col items-center justify-center text-center'>
 								<div className='w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-4'>
@@ -146,41 +146,41 @@ const EmailSection = () => {
 							</div>
 						) : (
 							<form
-								className='space-y-6'
+								className='space-y-4 sm:space-y-6'
 								onSubmit={handleSubmit}>
 								<div>
-									<label className='text-white text-sm font-medium mb-2 block'>
+									<label className='text-white text-xs sm:text-sm font-medium mb-1 sm:mb-2 block'>
 										Your Email
 									</label>
 									<input
 										type='email'
 										name='email'
 										required
-										className='w-full px-4 py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100'
+										className='w-full px-3 sm:px-4 py-2 sm:py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 text-sm sm:text-base'
 										placeholder='name@example.com'
 									/>
 								</div>
 								<div>
-									<label className='text-white text-sm font-medium mb-2 block'>
+									<label className='text-white text-xs sm:text-sm font-medium mb-1 sm:mb-2 block'>
 										Subject
 									</label>
 									<input
 										type='text'
 										name='subject'
 										required
-										className='w-full px-4 py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100'
+										className='w-full px-3 sm:px-4 py-2 sm:py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 text-sm sm:text-base'
 										placeholder="What&apos;s this about?"
 									/>
 								</div>
 								<div>
-									<label className='text-white text-sm font-medium mb-2 block'>
+									<label className='text-white text-xs sm:text-sm font-medium mb-1 sm:mb-2 block'>
 										Message
 									</label>
 									<textarea
 										name='message'
 										required
 										rows={4}
-										className='w-full px-4 py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 resize-none'
+										className='w-full px-3 sm:px-4 py-2 sm:py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 text-sm sm:text-base resize-none'
 										placeholder="Let&apos;s talk about your project..."
 									/>
 								</div>
