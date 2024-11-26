@@ -141,7 +141,7 @@ const EmailSection = () => {
 									Message Sent!
 								</h3>
 								<p className='text-gray-400'>
-									I'll get back to you as soon as possible.
+									I&apos;ll get back to you as soon as possible.
 								</p>
 							</div>
 						) : (
