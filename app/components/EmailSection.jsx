@@ -72,7 +72,7 @@ const EmailSection = () => {
 					{/* Left Column - Contact Info */}
 					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
 						<h2 className='text-3xl font-bold text-white mb-8'>
-							Let's Connect
+							Let&apos;s Connect
 						</h2>
 
 						<p className='text-gray-400 mb-8'>
