@@ -70,7 +70,7 @@ const EmailSection = () => {
 					{/* Left Column - Contact Info */}
 					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
 						<h2 className='text-3xl font-bold text-white mb-8'>
-							Let's Connect
+							Let&apos;s Connect
 						</h2>
 
 						<p className='text-gray-400 mb-8'>
@@ -167,7 +167,7 @@ const EmailSection = () => {
 										name='subject'
 										required
 										className='w-full px-4 py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100'
-										placeholder="What's this about?"
+										placeholder="What&apos;s this about?"
 									/>
 								</div>
 								<div>
@@ -179,7 +179,7 @@ const EmailSection = () => {
 										required
 										rows={4}
 										className='w-full px-4 py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 resize-none'
-										placeholder="Let's talk about your project..."
+										placeholder="Let&apos;s talk about your project..."
 									/>
 								</div>
 								{error && <p className='text-red-500 text-sm'>{error}</p>}
