@@ -167,7 +167,7 @@ const EmailSection = () => {
 										name='subject'
 										required
 										className='w-full px-4 py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100'
-										placeholder="What&apos;s this about?"
+										placeholder='What&apos;s this about?'
 									/>
 								</div>
 								<div>
@@ -179,7 +179,7 @@ const EmailSection = () => {
 										required
 										rows={4}
 										className='w-full px-4 py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 resize-none'
-										placeholder="Let&apos;s talk about your project..."
+										placeholder='Let&apos;s talk about your project...'
 									/>
 								</div>
 								{error && <p className='text-red-500 text-sm'>{error}</p>}
