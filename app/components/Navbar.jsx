@@ -1,9 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NavLink from './NavLink';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-import MenuOverlay from './MenuOverlay';
 
 const navLinks = [
 	{
@@ -26,51 +25,104 @@ const navLinks = [
 
 const Navbar = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false);
+	const [scrolling, setScrolling] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 20) {
+				setScrolling(true);
+			} else {
+				setScrolling(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
+	// Lock body scroll when menu is open
+	useEffect(() => {
+		if (navbarOpen) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'unset';
+		}
+	}, [navbarOpen]);
 
 	return (
-		<nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212a1] backdrop-blur-md'>
-			<div className='flex flex-wrap items-center justify-between mx-auto pt-4 pb-4 sm:pl-20 pl-6 sm:pr-32 pr-10'>
-				<Link
-					href='/'
-					className='text-2xl md:text-3xl font-sans text-white font-semibold'>
-					TheHemjay
-				</Link>
-				<div className='block md:hidden'>
-					{!navbarOpen ? (
-						<button
-							id='nav-toggle'
-							className='flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white'
-							onClick={() => setNavbarOpen(true)}>
-							<Bars3Icon className='h-5 w-5' />
-						</button>
-					) : (
-						<button
-							id='nav-toggle'
-							className='flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white'
-							onClick={() => setNavbarOpen(false)}>
-							<XMarkIcon className='h-5 w-5' />
-						</button>
-					)}
-				</div>
-				<div
-					className='hidden md:block md:w-auto'
-					id='navbar-default'>
-					<ul className='font-medium flex p-4 md:p-0 font-sans rounded-lg flex-row md:space-x-8 mt-0'>
-						{navLinks.map((link, index) => {
-							return (
-								<li key={index}>
+		<>
+			{/* Backdrop overlay */}
+			{navbarOpen && (
+				<div 
+					className="fixed inset-0 bg-black/60 backdrop-blur-sm z-10"
+					onClick={() => setNavbarOpen(false)}
+				/>
+			)}
+
+			<nav
+				className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${
+					scrolling || navbarOpen ? 'bg-[#121212]/90 backdrop-blur-md' : 'bg-transparent'
+				}`}>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='flex items-center justify-between h-16'>
+						{/* Logo */}
+						<Link
+							href='/'
+							className='text-2xl md:text-3xl text-white font-semibold hover:text-gray-300 transition-colors'>
+							TheHemjay
+						</Link>
+
+						{/* Desktop Navigation */}
+						<div className='hidden md:block'>
+							<div className='ml-10 flex items-center space-x-8'>
+								{navLinks.map((link) => (
 									<NavLink
-										title={link.title}
+										key={link.path}
 										href={link.path}
+										title={link.title}
 									/>
-								</li>
-							);
-						})}
-					</ul>
+								))}
+							</div>
+						</div>
+
+						{/* Mobile menu button */}
+						<div className='md:hidden'>
+							<button
+								onClick={() => setNavbarOpen(!navbarOpen)}
+								className='inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800/50 focus:outline-none'>
+								{navbarOpen ? (
+									<XMarkIcon className='h-6 w-6' />
+								) : (
+									<Bars3Icon className='h-6 w-6' />
+								)}
+							</button>
+						</div>
+					</div>
 				</div>
-			</div>
-			{navbarOpen ? <MenuOverlay links={navLinks} /> : null}
-		</nav>
+
+				{/* Mobile Navigation */}
+				<div
+					className={`md:hidden transition-all duration-300 ease-in-out absolute w-full ${
+						navbarOpen
+							? 'opacity-100 translate-y-0'
+							: 'opacity-0 -translate-y-full pointer-events-none'
+					}`}>
+					<div className='px-4 pt-2 pb-3 space-y-1 bg-[#121212] shadow-lg border-t border-gray-800'>
+						{navLinks.map((link) => (
+							<a
+								key={link.path}
+								href={link.path}
+								onClick={() => setNavbarOpen(false)}
+								className='block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all'>
+								{link.title}
+							</a>
+						))}
+					</div>
+				</div>
+			</nav>
+		</>
 	);
 };
 
