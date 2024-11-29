@@ -61,7 +61,7 @@ const TAB_DATA = [
 						</li>
 						<li className='flex items-center text-gray-300 text-sm'>
 							<span className='w-2 h-2 bg-purple-500 rounded-full mr-2'></span>
-							IPFS / TheGraph
+							IPFS
 						</li>
 						<li className='flex items-center text-gray-300 text-sm'>
 							<span className='w-2 h-2 bg-purple-500 rounded-full mr-2'></span>
@@ -69,7 +69,7 @@ const TAB_DATA = [
 						</li>
 						<li className='flex items-center text-gray-300 text-sm'>
 							<span className='w-2 h-2 bg-purple-500 rounded-full mr-2'></span>
-							DeFi / NFT / DAO Protocols
+							DeFi / NFT / Cross Chain Protocols
 						</li>
 					</ul>
 				</div>
@@ -115,7 +115,7 @@ const TAB_DATA = [
 						</li>
 						<li className='flex items-center text-gray-300 text-sm'>
 							<span className='w-2 h-2 bg-yellow-500 rounded-full mr-2'></span>
-							Jest / Mocha / Chai
+						 Mocha / Chai
 						</li>
 					</ul>
 				</div>
