@@ -157,6 +157,16 @@ const projectsData = [
 		previewUrl: 'https://thehemjay.vercel.app/',
 	},
 	{
+		id: 19,
+		title: 'HemDealersip',
+		description:
+			'A decentralized car dealership application powered by Web3 technologies. Supports seamless vehicle listing, cross-chain transactions using the Across protocol, and secure ownership transfers through Ethereum smart contracts.',
+		image: '/images/project/hemDealer.png',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/Car-dealership-dapp',
+		previewUrl: 'https://car-dealership-dapp.vercel.app/',
+	},
+	{
 		id: 12,
 		title: 'HemNote',
 		description:
