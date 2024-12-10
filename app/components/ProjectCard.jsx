@@ -3,46 +3,67 @@ import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
 const ProjectCard = ({
-	imgURL,
-	title,
-	description,
-	gitUrl,
-	previewUrl,
-	tag,
+  imgURL,
+  title,
+  description,
+  gitUrl,
+  previewUrl,
+  tag,
 }) => {
-	return (
-		<div className='group bg-[#1c1c1c] rounded-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl'>
-			<div
-				className='h-48 md:h-72 relative'
-				style={{
-					background: `url(${imgURL})`,
-					backgroundSize: 'cover',
-					backgroundPosition: 'center',
-				}}>
-				<div className='overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500'>
-					<Link
-						href={gitUrl}
-						className='h-12 w-12 mr-4 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link'>
-						<CodeBracketIcon className='h-8 w-8 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white' />
-					</Link>
-					<Link
-						href={previewUrl}
-						className='h-12 w-12 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link'>
-						<EyeIcon className='h-8 w-8 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white' />
-					</Link>
-				</div>
-			</div>
-			<div className='p-6'>
-				<div className='flex justify-between items-center mb-3'>
-					<h2 className='text-xl font-semibold text-white'>{title}</h2>
-					<span className='px-3 py-1 text-xs bg-[#2d2d2d] text-gray-300 rounded-full'>
-						{tag.filter((t) => t !== 'All')[0]}
-					</span>
-				</div>
-				<p className='text-gray-400 text-md leading-relaxed'>{description}</p>
-			</div>
-		</div>
-	);
+  return (
+    <div className='group bg-[#1f1f1f] rounded-2xl shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2'>
+      <div className='relative h-48 md:h-56 overflow-hidden'>
+        <img 
+          src={imgURL} 
+          alt={title} 
+          className='w-full h-full object-cover'
+        />
+        <div className='absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center space-x-4'>
+          <Link 
+            href={gitUrl} 
+            target='_blank'
+            className='bg-white/10 hover:bg-black/60 rounded-full p-3 transition-all duration-300 opacity-0 group-hover:opacity-100'>
+            <CodeBracketIcon className='h-6 w-6 text-white' />
+          </Link>
+          <Link 
+            href={previewUrl} 
+            target='_blank'
+            className='bg-white/10 hover:bg-black/60 rounded-full p-3 transition-all duration-300 opacity-0 group-hover:opacity-100'>
+            <EyeIcon className='h-6 w-6 text-white' />
+          </Link>
+        </div>
+      </div>
+      <div className='flex flex-col flex-grow p-5'>
+        <div className='flex justify-between items-start mb-3'>
+          <h3 className='text-xl font-bold text-white flex-grow pr-2'>{title}</h3>
+          <span className='bg-[#2d2d2d] text-gray-300 text-xs px-3 py-1 rounded-full ml-2'>
+            {tag.filter((t) => t !== 'All')[0]}
+          </span>
+        </div>
+        <p className='text-gray-400 text-sm leading-relaxed flex-grow mb-4'>
+          {description}
+        </p>
+        <div className='flex justify-between items-center'>
+          <div className='flex space-x-2'>
+            <Link 
+              href={gitUrl} 
+              target='_blank'
+              className='text-gray-300 hover:text-white text-sm flex items-center'>
+              <CodeBracketIcon className='h-4 w-4 mr-1' />
+              GitHub
+            </Link>
+            <Link 
+              href={previewUrl} 
+              target='_blank'
+              className='text-gray-300 hover:text-white text-sm flex items-center'>
+              <EyeIcon className='h-4 w-4 mr-1' />
+              Preview
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ProjectCard;

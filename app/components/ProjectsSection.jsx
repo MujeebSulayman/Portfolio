@@ -17,7 +17,7 @@ const projectsData = [
     previewUrl: 'https://dapp-event-app.vercel.app/',
   },
   {
-    id: 1,
+    id: 4,
     title: 'NFT Mart',
     description:
       'A full-featured NFT marketplace deployed on Sepolia testnet. Supports NFT minting, trading, ownership transfers, and marketplace management through smart contracts.',
@@ -47,7 +47,7 @@ const projectsData = [
     previewUrl: 'https://hem-token-ico.vercel.app/',
   },
   {
-    id: 4,
+    id: 1,
     title: 'HemProperty',
     description:
       'A decentralized real estate platform built on Ethereum. Features property listing, buying, selling, and review systems powered by smart contracts, ensuring transparent and secure transactions.',
@@ -137,7 +137,7 @@ const projectsData = [
     previewUrl: 'https://hem-destro.vercel.app/',
   },
   {
-    id: 7,
+    id: 13,
     title: 'Anime',
     description:
       'An anime discovery platform showcasing API integration skills. Features a curated collection of anime titles with detailed information and a user-friendly browsing experience.',
@@ -187,7 +187,7 @@ const projectsData = [
     previewUrl: 'https://hemnote.vercel.app/',
   },
   {
-    id: 13,
+    id: 7,
     title: 'Emagify AI',
     description:
       'An AI-powered image manipulation tool offering features like color restoration, image resizing, background removal, and object removal. Leverages advanced AI algorithms for precise results.',
