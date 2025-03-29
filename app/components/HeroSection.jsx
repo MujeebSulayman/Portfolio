@@ -27,22 +27,22 @@ const HeroSection = () => {
 				>
 					<div className="inline-block px-3 py-1 mb-6 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-xl border border-gray-800">
 						<span className="text-gray-400 text-base">
-							Full Stack & Web3 Developer
+							Blockchain, Frontend & AI Agent Developer
 						</span>
 					</div>
 
 					<h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-						Bridging Web2 to
+						Innovating Across
 						<br />
 						<TypeAnimation
 							sequence={[
-								'Web3',
-								2000,
-								'DeFi',
-								2000,
 								'Blockchain',
 								2000,
-								'The Future',
+								'Web3',
+								2000,
+								'AI Agents',
+								2000,
+								'Frontend',
 								2000,
 							]}
 							wrapper="span"
@@ -53,9 +53,9 @@ const HeroSection = () => {
 					</h1>
 
 					<p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-10">
-						Crafting modern web applications with blockchain integration. 
-						Specialized in building secure, scalable solutions that connect 
-						traditional web services with decentralized technologies.
+						Crafting modern web applications with blockchain and AI integration. 
+						Specialized in building secure, intelligent solutions that bridge 
+						decentralized technologies with cutting-edge AI systems.
 					</p>
 
 					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -76,19 +76,19 @@ const HeroSection = () => {
 					{/* Stats */}
 					<div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
 						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
-							<h3 className="text-2xl font-bold text-white mb-1">20+</h3>
-							<p className="text-gray-400 text-sm">Total Projects</p>
-						</div>
-						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
 							<h3 className="text-2xl font-bold text-white mb-1">10+</h3>
-							<p className="text-gray-400 text-sm">Web3 Projects</p>
+							<p className="text-gray-400 text-sm">Blockchain Projects</p>
 						</div>
 						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
 							<h3 className="text-2xl font-bold text-white mb-1">15+</h3>
-							<p className="text-gray-400 text-sm">Smart Contracts</p>
+							<p className="text-gray-400 text-sm">AI & Web3 Solutions</p>
 						</div>
 						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
-							<h3 className="text-2xl font-bold text-white mb-1">4+</h3>
+							<h3 className="text-2xl font-bold text-white mb-1">25+</h3>
+							<p className="text-gray-400 text-sm">Frontend Projects</p>
+						</div>
+						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
+							<h3 className="text-2xl font-bold text-white mb-1">5+</h3>
 							<p className="text-gray-400 text-sm">Years Experience</p>
 						</div>
 					</div>
