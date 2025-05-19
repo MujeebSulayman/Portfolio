@@ -97,11 +97,11 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 3,
+    id: 23,
     title: "Brain3",
     description:
       "A sophisticated NFT marketplace UI showcase featuring modern design elements, complex gradients, and responsive layouts. Demonstrates advanced CSS implementation and creative visual solutions.",
-    image: "/images/project/nft.jpg",
+    image: "/images/project/Brain3.jpg",
     tag: ["All", "Web2"],
     gitUrl: "https://github.com/MujeebSulayman/Brain3-Dapp-UI",
     previewUrl: "https://brain3-dapp-ui.vercel.app/",
@@ -198,7 +198,7 @@ const projectsData = [
     previewUrl: "https://hem-destro.vercel.app/",
   },
   {
-    id: 6,
+    id: 3,
     title: "Decentralized Job Board",
     description:
       "A decentralized job board platform built on Ethereum. Features job listing, application management, and secure payment processing through smart contracts.",
@@ -259,8 +259,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
         onClick={handleTagChange}
-        name='AI Agent'
-        active={tag === "AI Agent"}
+        name='AI'
+        active={tag === "AI"}
         />
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
