@@ -132,20 +132,10 @@ const projectsData = [
     description:
       "HemReward is a blockchain-based reward system for blood donation activities, built on Ethereum using Next.js and Smart Contracts. The platform incentivizes blood donation through tokenized rewards and a referral system.",
 
-    image: "/images/project/home.PNG",
+    image: "/images/project/home.png",
     tag: ["All", "Web3"],
     gitUrl: "https://github.com/MujeebSulayman/HemReward",
     previewUrl: "https://erc-20-reward-token-referral.vercel.app/",
-  },
-  {
-    id: 21,
-    title: "TheSocials",
-    description:
-      "A social media platform inspired by Instagram, enabling users to share posts and memories. Features user authentication, content management, and interactive social features.",
-    image: "/images/project/4.PNG",
-    tag: ["All", "Web2"],
-    gitUrl: "https://github.com/MujeebSulayman/Social-Application",
-    previewUrl: "https://hem-destro.vercel.app/",
   },
   {
     id: 13,
@@ -206,6 +196,16 @@ const projectsData = [
     tag: ["All", "Web2"],
     gitUrl: "https://github.com/MujeebSulayman/Emagify-AI",
     previewUrl: "https://emagify-ai.vercel.app/",
+  },
+  {
+    id: 21,
+    title: "TheSocials",
+    description:
+      "A social media platform inspired by Instagram, enabling users to share posts and memories. Features user authentication, content management, and interactive social features.",
+    image: "/images/project/4.PNG",
+    tag: ["All", "Web2"],
+    gitUrl: "https://github.com/MujeebSulayman/Social-Application",
+    previewUrl: "https://hem-destro.vercel.app/",
   },
   {
     id: 22,
