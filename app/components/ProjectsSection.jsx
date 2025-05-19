@@ -212,7 +212,7 @@ const projectsData = [
     title: "Decentralized Job Board",
     description:
       "A decentralized job board platform built on Ethereum. Features job listing, application management, and secure payment processing through smart contracts.",
-    image: "/images/project/22.PNG",
+    image: "/images/project/job.png",
     tag: ["All", "Web3"],
     gitUrl: "https://github.com/MujeebSulayman/Decentralized-Job-Board",
     previewUrl: "https://decentralized-job-board.vercel.app/",
