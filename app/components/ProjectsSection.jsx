@@ -126,17 +126,7 @@ const projectsData = [
     gitUrl: "https://github.com/MujeebSulayman/Destro-Shopping-App",
     previewUrl: "https://hem-destro.vercel.app/",
   },
-  {
-    id: 6,
-    title: "HemReward",
-    description:
-      "HemReward is a blockchain-based reward system for blood donation activities, built on Ethereum using Next.js and Smart Contracts. The platform incentivizes blood donation through tokenized rewards and a referral system.",
 
-    image: "/images/project/home.png",
-    tag: ["All", "Web3"],
-    gitUrl: "https://github.com/MujeebSulayman/HemReward",
-    previewUrl: "https://erc-20-reward-token-referral.vercel.app/",
-  },
   {
     id: 13,
     title: "Anime",
@@ -172,7 +162,7 @@ const projectsData = [
     title: "My Portfolio",
     description:
       "A personal portfolio website showcasing my projects and skills. Built with modern web technologies and featuring responsive design, smooth animations, and optimal performance.",
-    image: "/images/project/9.png",
+    image: "/images/project/portfolio.png",
     tag: ["All", "Web2"],
     gitUrl: "https://github.com/MujeebSulayman/New-Portfolio",
     previewUrl: "https://thehemjay.vercel.app/",
@@ -208,7 +198,7 @@ const projectsData = [
     previewUrl: "https://hem-destro.vercel.app/",
   },
   {
-    id: 22,
+    id: 6,
     title: "Decentralized Job Board",
     description:
       "A decentralized job board platform built on Ethereum. Features job listing, application management, and secure payment processing through smart contracts.",
@@ -216,7 +206,18 @@ const projectsData = [
     tag: ["All", "Web3"],
     gitUrl: "https://github.com/MujeebSulayman/Decentralized-Job-Board",
     previewUrl: "https://decentralized-job-board.vercel.app/",
-  }
+  },
+  {
+    id: 22,
+    title: "HemReward",
+    description:
+      "HemReward is a blockchain-based reward system for blood donation activities, built on Ethereum using Next.js and Smart Contracts. The platform incentivizes blood donation through tokenized rewards and a referral system.",
+
+    image: "/images/project/home.png",
+    tag: ["All", "Web3"],
+    gitUrl: "https://github.com/MujeebSulayman/HemReward",
+    previewUrl: "https://erc-20-reward-token-referral.vercel.app/",
+  },
 ];
 
 projectsData.sort((a, b) => a.id - b.id);
