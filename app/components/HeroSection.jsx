@@ -38,11 +38,9 @@ const HeroSection = () => {
 							sequence={[
 								'Blockchain',
 								2000,
-								'Web3',
-								2000,
 								'AI Agents',
 								2000,
-								'Frontend',
+								'Smart Contract',
 								2000,
 							]}
 							wrapper="span"
