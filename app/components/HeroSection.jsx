@@ -40,7 +40,13 @@ const HeroSection = () => {
 								2000,
 								'AI Agents',
 								2000,
-								'Smart Contract',
+								'DeFi',
+								2000,
+								'Web3',
+								2000,
+								'NFT',
+								2000,
+								'Web2',
 								2000,
 							]}
 							wrapper="span"
