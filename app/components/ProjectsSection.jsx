@@ -218,6 +218,26 @@ const projectsData = [
     gitUrl: "https://github.com/MujeebSulayman/HemReward",
     previewUrl: "https://erc-20-reward-token-referral.vercel.app/",
   },
+  {
+    id: 2,
+    title: "Faktora AI",
+    description:
+      "Faktora is a sophisticated AI-powered web3 application that combines cutting-edge technologies for a comprehensive blockchain and AI experience.",
+    image: "/images/project/faktora.png",
+    tag: ["All", "AI", "Web3"],
+    gitUrl: "",
+    previewUrl: "https://app.faktora.ai",
+  },
+  {
+    id: 5,
+    title: "Vow3 AI",
+    description:
+      "Vow3 is a framework that enables AI agents to make covenants, allowing complex economic/social/political interactions in the agentic world such as: Uncollateralized loans to AI agents (1st-ever prudent uncollateralized loans in DeFi), Employment agreements where compensation is guaranteed upon completion, Political alliance towards a common goal e.g. pushing a narrative, supporting a governance vote",
+    image: "/images/project/vow3.png",
+    tag: ["All", "AI", "Web3"],
+    gitUrl: "",
+    previewUrl: "https://vow3-f18twu7kd-mujeebsulaymans-projects.vercel.app/",
+  },
 ];
 
 projectsData.sort((a, b) => a.id - b.id);

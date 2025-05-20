@@ -36,9 +36,18 @@ const ProjectCard = ({
       <div className='flex flex-col flex-grow p-5'>
         <div className='flex justify-between items-start mb-3'>
           <h3 className='text-xl font-bold text-white flex-grow pr-2'>{title}</h3>
-          <span className='bg-[#2d2d2d] text-gray-300 text-xs px-3 py-1 rounded-full ml-2'>
-            {tag.filter((t) => t !== 'All')[0]}
-          </span>
+          <div className='flex flex-wrap gap-2 justify-end'>
+            {tag
+              .filter(t => t !== 'All')
+              .map((t, index) => (
+                <span 
+                  key={index}
+                  className='bg-[#2d2d2d] text-gray-300 text-xs px-3 py-1 rounded-full whitespace-nowrap'
+                >
+                  {t}
+                </span>
+              ))}
+          </div>
         </div>
         <p className='text-gray-400 text-sm leading-relaxed flex-grow mb-4'>
           {description}
