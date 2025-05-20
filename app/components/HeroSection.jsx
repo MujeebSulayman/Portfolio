@@ -70,7 +70,8 @@ const HeroSection = () => {
 							Explore Projects
 						</Link>
 						<Link 
-							href="#contact"
+							href="https://x.com/TheHemjay"
+							target="_blank"
 							className="px-8 py-4 rounded-lg border border-gray-700 text-gray-300 hover:border-purple-500 hover:text-white transition-all duration-200"
 						>
 							Let&apos;s Connect
@@ -84,7 +85,7 @@ const HeroSection = () => {
 							<p className="text-gray-400 text-sm">Blockchain Projects</p>
 						</div>
 						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
-							<h3 className="text-2xl font-bold text-white mb-1">15+</h3>
+							<h3 className="text-2xl font-bold text-white mb-1">10+</h3>
 							<p className="text-gray-400 text-sm">AI & Web3 Solutions</p>
 						</div>
 						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
@@ -92,7 +93,7 @@ const HeroSection = () => {
 							<p className="text-gray-400 text-sm">Frontend Projects</p>
 						</div>
 						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
-							<h3 className="text-2xl font-bold text-white mb-1">5+</h3>
+							<h3 className="text-2xl font-bold text-white mb-1">6+</h3>
 							<p className="text-gray-400 text-sm">Years Experience</p>
 						</div>
 					</div>

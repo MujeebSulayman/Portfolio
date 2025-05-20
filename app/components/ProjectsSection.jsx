@@ -148,7 +148,7 @@ const projectsData = [
     previewUrl: "https://hemtravel.vercel.app/",
   },
   {
-    id: 9,
+    id: 26,
     title: "HemFit",
     description:
       "A comprehensive fitness platform featuring over 5,000 exercises with detailed instructions and demonstration videos. Helps users achieve their fitness goals through structured workouts.",
@@ -219,7 +219,7 @@ const projectsData = [
     previewUrl: "https://erc-20-reward-token-referral.vercel.app/",
   },
   {
-    id: 2,
+    id: 9,
     title: "Faktora AI",
     description:
       "Faktora is a sophisticated AI-powered web3 application that combines cutting-edge technologies for a comprehensive blockchain and AI experience.",
@@ -229,10 +229,10 @@ const projectsData = [
     previewUrl: "https://app.faktora.ai",
   },
   {
-    id: 5,
+    id: 25,
     title: "Vow3 AI",
     description:
-      "Vow3 is a framework that enables AI agents to make covenants, allowing complex economic/social/political interactions in the agentic world such as: Uncollateralized loans to AI agents (1st-ever prudent uncollateralized loans in DeFi), Employment agreements where compensation is guaranteed upon completion, Political alliance towards a common goal e.g. pushing a narrative, supporting a governance vote",
+      "Vow3 is a framework that enables AI agents to make covenants, allowing complex economic/social/political interactions in the agentic world such as: Uncollateralized loans to AI agents, Employment agreements where compensation is guaranteed upon completion, Political alliance towards a common goal.",
     image: "/images/project/vow3.png",
     tag: ["All", "AI", "Web3"],
     gitUrl: "",
@@ -258,7 +258,7 @@ const ProjectsSection = () => {
         Featured Projects
       </h2>
       <p className="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-12">
-        A collection of projects showcasing my expertise in Web2 and Web3
+        A collection of projects showcasing my expertise in Web2, Web3 and AI Agent
         development, from decentralized applications to modern web solutions.
       </p>
       <div className="text-gray-300 flex flex-row font-sans justify-center items-center gap-4 mb-12">
