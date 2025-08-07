@@ -236,7 +236,7 @@ const projectsData = [
     image: "/images/project/vow3.png",
     tag: ["All", "AI", "Web3"],
     gitUrl: "",
-    previewUrl: "https://vow3-f18twu7kd-mujeebsulaymans-projects.vercel.app/",
+    previewUrl: "https://vow3-mujeebsulaymans-projects.vercel.app/",
   },
 ];
 
