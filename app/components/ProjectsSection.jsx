@@ -258,8 +258,9 @@ const ProjectsSection = () => {
         Featured Projects
       </h2>
       <p className="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-12">
-        A collection of projects showcasing my expertise in Web2, Web3 and AI Agent
-        development, from decentralized applications to modern web solutions.
+        A collection of projects showcasing my expertise in Web2, Web3 and AI
+        Agent development, from decentralized applications to modern web
+        solutions.
       </p>
       <div className="text-gray-300 flex flex-row font-sans justify-center items-center gap-4 mb-12">
         <ProjectTag
@@ -277,11 +278,7 @@ const ProjectsSection = () => {
           name="Web3"
           active={tag === "Web3"}
         />
-        <ProjectTag
-        onClick={handleTagChange}
-        name='AI'
-        active={tag === "AI"}
-        />
+        <ProjectTag onClick={handleTagChange} name="AI" active={tag === "AI"} />
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project) => (
