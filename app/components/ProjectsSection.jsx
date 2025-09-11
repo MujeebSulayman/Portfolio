@@ -128,7 +128,7 @@ const projectsData = [
   },
 
   {
-    id: 13,
+    id: 22,
     title: "Anime",
     description:
       "An anime discovery platform showcasing API integration skills. Features a curated collection of anime titles with detailed information and a user-friendly browsing experience.",
@@ -208,15 +208,15 @@ const projectsData = [
     previewUrl: "https://decentralized-job-board.vercel.app/",
   },
   {
-    id: 22,
-    title: "HemReward",
+    id: 13,
+    title: "Nectr",
     description:
-      "HemReward is a blockchain-based reward system for blood donation activities, built on Ethereum using Next.js and Smart Contracts. The platform incentivizes blood donation through tokenized rewards and a referral system.",
+      "NECTR - a modern token ecosystem where you can earn rewards by staking your tokens! This is a complete platform that combines cryptocurrency staking with social features and news updates.",
 
     image: "/images/project/home.png",
     tag: ["All", "Web3"],
-    gitUrl: "https://github.com/MujeebSulayman/HemReward",
-    previewUrl: "https://erc-20-reward-token-referral.vercel.app/",
+    gitUrl: "https://github.com/MujeebSulayman/NECTR",
+    previewUrl: "https://nectr-gilt.vercel.app/",
   },
   {
     id: 9,
