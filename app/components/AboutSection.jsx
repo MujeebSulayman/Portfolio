@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { useState, useTransition } from "react";
-import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
@@ -234,28 +233,51 @@ const AboutSection = () => {
             applications.
           </p>
 
-          <div className="flex flex-row justify-start mt-8 gap-4 flex-wrap">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+          <div className="flex flex-row justify-start mt-8 gap-3 flex-nowrap">
+            <button
+              onClick={() => handleTabChange("skills")}
+              className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                tab === "skills"
+                  ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25"
+                  : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
+              }`}
             >
-              {""}
-              Skills{""}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("experience")}
-              active={tab === "experience"}
+              <span className="text-lg">⚡</span>
+              <span className="text-sm font-semibold">Skills & Expertise</span>
+              {tab === "skills" && (
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl animate-pulse"></div>
+              )}
+            </button>
+            
+            <button
+              onClick={() => handleTabChange("experience")}
+              className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                tab === "experience"
+                  ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25"
+                  : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
+              }`}
             >
-              {""}
-              Experience{""}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certification")}
-              active={tab === "certification"}
+              <span className="text-lg">🚀</span>
+              <span className="text-sm font-semibold">Professional Journey</span>
+              {tab === "experience" && (
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl animate-pulse"></div>
+              )}
+            </button>
+            
+            <button
+              onClick={() => handleTabChange("certification")}
+              className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                tab === "certification"
+                  ? "bg-gradient-to-r from-pink-500 to-blue-500 text-white shadow-lg shadow-pink-500/25"
+                  : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
+              }`}
             >
-              {""}
-              Certification{""}
-            </TabButton>
+              <span className="text-lg">🎓</span>
+              <span className="text-sm font-semibold">Certifications</span>
+              {tab === "certification" && (
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-blue-500/20 rounded-xl animate-pulse"></div>
+              )}
+            </button>
           </div>
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}
