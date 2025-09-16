@@ -69,6 +69,15 @@ const HeroSection = () => {
 						>
 							Explore Projects
 						</Link>
+						<a 
+							href="https://drive.google.com/file/d/1ERNMx-hcGcK00jpjdN6ADlzJm2rMfrjA/view?usp=sharing"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-medium hover:opacity-90 transition-all duration-200 flex items-center space-x-2"
+						>
+							<span>📄</span>
+							<span>Download Resume</span>
+						</a>
 						<Link 
 							href="https://x.com/TheHemjay"
 							target="_blank"

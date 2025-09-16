@@ -143,16 +143,16 @@ const TAB_DATA = [
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-blue-400 mt-2 mr-3 flex-shrink-0"></span>
                   <span className="text-sm leading-relaxed">Implemented upgradeable smart contracts leveraging EIP-2535 (Diamond Standard) and EIP-712 signature verification, delivering modular contract upgrades and secure investor interactions across $500K+ in tokenized RWA assets</span>
-                </li>
+            </li>
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-blue-400 mt-2 mr-3 flex-shrink-0"></span>
                   <span className="text-sm leading-relaxed">Integrated Blockradar infrastructure into smart contracts, enabling non-custodial wallet creation, stablecoin deposits, and seamless RWA transaction flows with multi-chain support</span>
-                </li>
+            </li>
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-blue-400 mt-2 mr-3 flex-shrink-0"></span>
                   <span className="text-sm leading-relaxed">Engineered smart contract–based investor protection mechanisms, including milestone-based escrow, refund processes, and emergency fund recovery, to ensure transparency and safeguard capital in tokenized real estate</span>
-                </li>
-              </ul>
+            </li>
+          </ul>
             </div>
           </div>
 
@@ -168,23 +168,23 @@ const TAB_DATA = [
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-purple-400 mt-2 mr-3 flex-shrink-0"></span>
                   <span className="text-sm leading-relaxed">Developed and deployed Solidity smart contracts powering an AI-driven DeFi platform, handling 70K+ real-time transactions monthly with optimized execution and reduced latency by 40%</span>
-                </li>
+        </li>
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-purple-400 mt-2 mr-3 flex-shrink-0"></span>
                   <span className="text-sm leading-relaxed">Integrated protocols and blockchain infrastructure (Coinbase SDK, Zora, custom Solidity contracts) to enable secure authentication, automated on-chain operations, and 99.9% transaction reliability</span>
-                </li>
+              </li>
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-purple-400 mt-2 mr-3 flex-shrink-0"></span>
                   <span className="text-sm leading-relaxed">Designed multi-agent smart contract workflows with AI-driven analysis models, enabling autonomous execution of complex DeFi strategies, predictive transaction insights across 5+ protocols, and a 30% improvement in liquidity management efficiency</span>
-                </li>
-              </ul>
+              </li>
+            </ul>
           </div>
           </div>
 
           <div className="relative pl-16">
             <div className="absolute left-0 top-3 w-12 h-12 bg-gradient-to-r from-pink-500 to-blue-500 flex items-center justify-center">
               <span className="text-white text-sm font-bold">V3</span>
-            </div>
+          </div>
             <div className="bg-gradient-to-r from-pink-900/10 to-blue-900/10 border-l-4 border-pink-500 p-6 hover:from-pink-900/20 hover:to-blue-900/20 transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-2">Blockchain Developer</h3>
               <p className="text-pink-400 text-sm mb-1 font-medium">Vow3</p>
