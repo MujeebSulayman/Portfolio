@@ -127,61 +127,82 @@ const TAB_DATA = [
     title: "Experience",
     id: "experience",
     content: (
-      <ul className="list-disc pl-2">
-        <li className="text-base font-normal font-sans text-gray-400 mb-4">
-          <b className="text-gray-200 font-sans">Blockchain Developer</b>
-          <h3 className="py-2">2023 - Present</h3>
-          <ul className="list-disc pl-2 text-base font-normal font-sans text-gray-300">
-            <li>
-              Developed and deployed multiple DeFi and NFT projects on Ethereum
-              and other EVM chains
-            </li>
-            <li>
-              Implemented secure smart contracts following best practices and
-              industry standards
-            </li>
-            <li>
-              Built full-stack dApps with Web3 integration and wallet
-              connectivity
-            </li>
-            <li>Optimized smart contracts for gas efficiency and security</li>
-          </ul>
-        </li>
-
-        <li className="text-base font-normal font-sans text-gray-400 mb-8">
-          <b className="text-gray-200 font-sans">
-            Oxgital - Frontend Developer
-          </b>
-          <div className="m-2">
-            <h3 className="py-2">2023 - 2024</h3>
-            <ul className="list-disc pl-2 text-base font-normal font-sans text-gray-300">
-              <li>Led frontend development using React.js and Next.js</li>
-              <li>Implemented responsive designs and optimized performance</li>
-              <li>
-                Collaborated with cross-functional teams to deliver high-quality
-                solutions
-              </li>
-              <li>
-                Reduced bug rates by 40% through comprehensive testing
-                implementation
-              </li>
-            </ul>
+      <div className="space-y-6">
+        <div className="relative">
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+          
+          <div className="relative pl-16 pb-8">
+            <div className="absolute left-0 top-3 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+              <span className="text-white text-sm font-bold">AS</span>
+            </div>
+            <div className="bg-gradient-to-r from-blue-900/10 to-purple-900/10 border-l-4 border-blue-500 p-6 hover:from-blue-900/20 hover:to-purple-900/20 transition-all duration-300">
+              <h3 className="text-xl font-bold text-white mb-2">Lead Smart Contract Developer</h3>
+              <p className="text-blue-400 text-sm mb-1 font-medium">Assetrix, Lagos</p>
+              <p className="text-blue-300 text-xs mb-4">2025 - Present</p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-blue-400 mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-sm leading-relaxed">Implemented upgradeable smart contracts leveraging EIP-2535 (Diamond Standard) and EIP-712 signature verification, delivering modular contract upgrades and secure investor interactions across $500K+ in tokenized RWA assets</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-blue-400 mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-sm leading-relaxed">Integrated Blockradar infrastructure into smart contracts, enabling non-custodial wallet creation, stablecoin deposits, and seamless RWA transaction flows with multi-chain support</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-blue-400 mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-sm leading-relaxed">Engineered smart contract–based investor protection mechanisms, including milestone-based escrow, refund processes, and emergency fund recovery, to ensure transparency and safeguard capital in tokenized real estate</span>
+                </li>
+              </ul>
+            </div>
           </div>
-        </li>
 
-        <li className="text-base font-normal font-sans text-gray-400 mb-4">
-          <b className="text-gray-200 font-sans">Freelance Developer</b>
-          <div className="m-4">
-            <h3 className="py-2">2019 - Present</h3>
-            <p className="mb-8">
-              Delivered custom web solutions for diverse clients, specializing
-              in e-commerce platforms, SaaS applications, and Web3 integrations.
-              Focused on creating scalable, user-friendly applications with
-              modern technologies and best practices.
-            </p>
+          <div className="relative pl-16 pb-8">
+            <div className="absolute left-0 top-3 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+              <span className="text-white text-sm font-bold">FA</span>
+            </div>
+            <div className="bg-gradient-to-r from-purple-900/10 to-pink-900/10 border-l-4 border-purple-500 p-6 hover:from-purple-900/20 hover:to-pink-900/20 transition-all duration-300">
+              <h3 className="text-xl font-bold text-white mb-2">Blockchain & AI Developer</h3>
+              <p className="text-purple-400 text-sm mb-1 font-medium">Faktora, Switzerland</p>
+              <p className="text-purple-300 text-xs mb-4">2024 - 2025</p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-purple-400 mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-sm leading-relaxed">Developed and deployed Solidity smart contracts powering an AI-driven DeFi platform, handling 70K+ real-time transactions monthly with optimized execution and reduced latency by 40%</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-purple-400 mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-sm leading-relaxed">Integrated protocols and blockchain infrastructure (Coinbase SDK, Zora, custom Solidity contracts) to enable secure authentication, automated on-chain operations, and 99.9% transaction reliability</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-purple-400 mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-sm leading-relaxed">Designed multi-agent smart contract workflows with AI-driven analysis models, enabling autonomous execution of complex DeFi strategies, predictive transaction insights across 5+ protocols, and a 30% improvement in liquidity management efficiency</span>
+                </li>
+              </ul>
           </div>
+          </div>
+
+          <div className="relative pl-16">
+            <div className="absolute left-0 top-3 w-12 h-12 bg-gradient-to-r from-pink-500 to-blue-500 flex items-center justify-center">
+              <span className="text-white text-sm font-bold">V3</span>
+            </div>
+            <div className="bg-gradient-to-r from-pink-900/10 to-blue-900/10 border-l-4 border-pink-500 p-6 hover:from-pink-900/20 hover:to-blue-900/20 transition-all duration-300">
+              <h3 className="text-xl font-bold text-white mb-2">Blockchain Developer</h3>
+              <p className="text-pink-400 text-sm mb-1 font-medium">Vow3</p>
+              <p className="text-pink-300 text-xs mb-4">2023 - 2024</p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-pink-400 mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-sm leading-relaxed">Engineered and deployed Solidity smart contracts on multi-chain networks, enabling 500+ covenant transactions with secure role-based access control and Chainlink Functions integration</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-pink-400 mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="text-sm leading-relaxed">Developed a Web3-enabled frontend with Next.js and Web3.js, allowing users to seamlessly create, manage, and visualize covenants with wallet integration and responsive UI</span>
         </li>
       </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     ),
   },
   {
@@ -212,13 +233,81 @@ const AboutSection = () => {
   return (
     <section id="about" className="text-white py-10">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <div className="relative mx-auto max-w-lg">
+          {/* Animated background glow */}
+          <div className="absolute -inset-8 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-3xl opacity-60 animate-pulse"></div>
+          
+          {/* Main image container */}
+          <div className="relative">
+            {/* Floating decorative elements */}
+            <div className="absolute -top-4 -right-4 w-6 h-6 bg-blue-500 rounded-full animate-bounce opacity-80 shadow-lg shadow-blue-500/50"></div>
+            <div className="absolute -bottom-4 -left-4 w-5 h-5 bg-purple-500 rounded-full animate-pulse opacity-80 shadow-lg shadow-purple-500/50"></div>
+            <div className="absolute top-1/2 -left-6 w-4 h-4 bg-pink-500 rounded-full animate-ping opacity-80 shadow-lg shadow-pink-500/50"></div>
+            <div className="absolute top-1/4 -right-6 w-4 h-4 bg-green-500 rounded-full animate-pulse opacity-80 shadow-lg shadow-green-500/50"></div>
+            
+            {/* Main image container */}
+            <div className="relative w-[28rem] h-[28rem] rounded-full overflow-hidden shadow-2xl border-4 border-gray-800/30">
         <Image
           src="/images/portfolio-image.jpg"
-          alt="my-image"
-          width={400}
-          height={100}
-          className="rounded-full"
-        />
+                alt="Sulay - Full-stack Blockchain Developer"
+                width={448}
+                height={448}
+                className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-110"
+                priority
+              />
+              {/* Gradient overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              
+              {/* Inner glow effect */}
+              <div className="absolute inset-0 rounded-full border border-white/10"></div>
+            </div>
+          </div>
+          
+          {/* Status indicator */}
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-5 py-3 rounded-full text-sm font-semibold shadow-xl border border-green-400/30 backdrop-blur-sm">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span>Available for work</span>
+            </div>
+          </div>
+          
+          {/* Ethereum-focused floating icons with labels */}
+          <div className="absolute top-12 -left-12">
+            <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <span className="text-white text-2xl">🔷</span>
+            </div>
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+              Ethereum
+            </div>
+          </div>
+          
+          <div className="absolute top-20 -right-12" style={{animationDelay: '0.5s'}}>
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <span className="text-white text-2xl">📄</span>
+            </div>
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+              Smart Contracts
+            </div>
+          </div>
+          
+          <div className="absolute bottom-20 -left-8" style={{animationDelay: '1s'}}>
+            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <span className="text-white text-2xl">🔄</span>
+            </div>
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+              DeFi Protocols
+            </div>
+          </div>
+          
+          <div className="absolute bottom-12 -right-8" style={{animationDelay: '1.5s'}}>
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <span className="text-white text-2xl">⚡</span>
+            </div>
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+              Web3 Development
+            </div>
+          </div>
+        </div>
         <div>
           <h2 className="text-4xl font-bold flex text-gray-300 mb-4 mt-12 items-start justify-start">
             About Me
