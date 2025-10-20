@@ -235,18 +235,18 @@ const AboutSection = () => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="relative mx-auto max-w-lg">
           {/* Animated background glow */}
-          <div className="absolute -inset-8 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-3xl opacity-60 animate-pulse"></div>
+          <div className="absolute -inset-4 sm:-inset-8 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-3xl opacity-60 animate-pulse"></div>
           
           {/* Main image container */}
           <div className="relative">
             {/* Floating decorative elements */}
-            <div className="absolute -top-4 -right-4 w-6 h-6 bg-blue-500 rounded-full animate-bounce opacity-80 shadow-lg shadow-blue-500/50"></div>
-            <div className="absolute -bottom-4 -left-4 w-5 h-5 bg-purple-500 rounded-full animate-pulse opacity-80 shadow-lg shadow-purple-500/50"></div>
-            <div className="absolute top-1/2 -left-6 w-4 h-4 bg-pink-500 rounded-full animate-ping opacity-80 shadow-lg shadow-pink-500/50"></div>
-            <div className="absolute top-1/4 -right-6 w-4 h-4 bg-green-500 rounded-full animate-pulse opacity-80 shadow-lg shadow-green-500/50"></div>
+            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-4 h-4 sm:w-6 sm:h-6 bg-blue-500 rounded-full animate-bounce opacity-80 shadow-lg shadow-blue-500/50"></div>
+            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-3 h-3 sm:w-5 sm:h-5 bg-purple-500 rounded-full animate-pulse opacity-80 shadow-lg shadow-purple-500/50"></div>
+            <div className="absolute top-1/2 -left-4 sm:-left-6 w-3 h-3 sm:w-4 sm:h-4 bg-pink-500 rounded-full animate-ping opacity-80 shadow-lg shadow-pink-500/50"></div>
+            <div className="absolute top-1/4 -right-4 sm:-right-6 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full animate-pulse opacity-80 shadow-lg shadow-green-500/50"></div>
             
             {/* Main image container */}
-            <div className="relative w-[28rem] h-[28rem] rounded-full overflow-hidden shadow-2xl border-4 border-gray-800/30">
+            <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden shadow-2xl border-4 border-gray-800/30">
         <Image
           src="/images/portfolio-image.jpg"
                 alt="Sulay - Full-stack Blockchain Developer"
@@ -264,55 +264,56 @@ const AboutSection = () => {
           </div>
           
           {/* Status indicator */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-5 py-3 rounded-full text-sm font-semibold shadow-xl border border-green-400/30 backdrop-blur-sm">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-2 sm:px-5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold shadow-xl border border-green-400/30 backdrop-blur-sm">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span>Available for work</span>
+              <span className="hidden sm:inline">Available for work</span>
+              <span className="sm:hidden">Available</span>
             </div>
           </div>
           
           {/* Ethereum-focused floating icons with labels */}
-          <div className="absolute top-12 -left-12">
-            <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
-              <span className="text-white text-2xl">🔷</span>
+          <div className="absolute top-8 -left-6 sm:top-12 sm:-left-12">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <span className="text-white text-lg sm:text-2xl">🔷</span>
             </div>
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+            <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
               Ethereum
             </div>
           </div>
           
-          <div className="absolute top-20 -right-12" style={{animationDelay: '0.5s'}}>
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
-              <span className="text-white text-2xl">📄</span>
+          <div className="absolute top-16 -right-6 sm:top-20 sm:-right-12" style={{animationDelay: '0.5s'}}>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <span className="text-white text-lg sm:text-2xl">📄</span>
             </div>
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+            <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
               Smart Contracts
             </div>
           </div>
           
-          <div className="absolute bottom-20 -left-8" style={{animationDelay: '1s'}}>
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
-              <span className="text-white text-2xl">🔄</span>
+          <div className="absolute bottom-16 -left-4 sm:bottom-20 sm:-left-8" style={{animationDelay: '1s'}}>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <span className="text-white text-lg sm:text-2xl">🔄</span>
             </div>
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+            <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
               DeFi Protocols
             </div>
           </div>
           
-          <div className="absolute bottom-12 -right-8" style={{animationDelay: '1.5s'}}>
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
-              <span className="text-white text-2xl">⚡</span>
+          <div className="absolute bottom-8 -right-4 sm:bottom-12 sm:-right-8" style={{animationDelay: '1.5s'}}>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <span className="text-white text-lg sm:text-2xl">⚡</span>
             </div>
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
+            <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
               Web3 Development
             </div>
           </div>
         </div>
         <div>
-          <h2 className="text-4xl font-bold flex text-gray-300 mb-4 mt-12 items-start justify-start">
+          <h2 className="text-3xl sm:text-4xl font-bold flex text-gray-300 mb-4 mt-8 sm:mt-12 items-start justify-start">
             About Me
           </h2>
-          <p className="text-base font-normal font-sans text-gray-400 mb-4">
+          <p className="text-sm sm:text-base font-normal font-sans text-gray-400 mb-4">
             Full-stack blockchain developer with 4+ years of experience in Web3
             and modern web development. Specialized in building decentralized
             applications (dApps) and AI agents.
@@ -322,17 +323,17 @@ const AboutSection = () => {
             applications.
           </p>
 
-          <div className="flex flex-row justify-start mt-8 gap-3 flex-nowrap">
+          <div className="flex flex-col sm:flex-row justify-start mt-6 sm:mt-8 gap-2 sm:gap-3">
             <button
               onClick={() => handleTabChange("skills")}
-              className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+              className={`group relative flex items-center justify-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                 tab === "skills"
                   ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25"
                   : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
               }`}
             >
-              <span className="text-lg">⚡</span>
-              <span className="text-sm font-semibold">Skills & Expertise</span>
+              <span className="text-base sm:text-lg">⚡</span>
+              <span className="text-xs sm:text-sm font-semibold">Skills & Expertise</span>
               {tab === "skills" && (
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl animate-pulse"></div>
               )}
@@ -340,14 +341,14 @@ const AboutSection = () => {
             
             <button
               onClick={() => handleTabChange("experience")}
-              className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+              className={`group relative flex items-center justify-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                 tab === "experience"
                   ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25"
                   : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
               }`}
             >
-              <span className="text-lg">🚀</span>
-              <span className="text-sm font-semibold">Professional Journey</span>
+              <span className="text-base sm:text-lg">🚀</span>
+              <span className="text-xs sm:text-sm font-semibold">Professional Journey</span>
               {tab === "experience" && (
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl animate-pulse"></div>
               )}
@@ -355,14 +356,14 @@ const AboutSection = () => {
             
             <button
               onClick={() => handleTabChange("certification")}
-              className={`group relative flex items-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+              className={`group relative flex items-center justify-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                 tab === "certification"
                   ? "bg-gradient-to-r from-pink-500 to-blue-500 text-white shadow-lg shadow-pink-500/25"
                   : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
               }`}
             >
-              <span className="text-lg">🎓</span>
-              <span className="text-sm font-semibold">Certifications</span>
+              <span className="text-base sm:text-lg">🎓</span>
+              <span className="text-xs sm:text-sm font-semibold">Certifications</span>
               {tab === "certification" && (
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-blue-500/20 rounded-xl animate-pulse"></div>
               )}
