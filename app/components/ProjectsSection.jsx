@@ -110,7 +110,7 @@ const projectsData = [
 		previewUrl: 'https://hemshop.vercel.app/',
 	},
 	{
-		id: 12,
+		id: 11,
 		title: 'Wallet Wrapped',
 		description:
 			'A beautiful Spotify Wrapped-style application that shows all activities of a wallet address across Ethereum and all major L2s for the year 2025. Features multi-chain support automatically scanning Ethereum, Polygon, Arbitrum, Optimism, Base, zkSync, Linea, Scroll, Avalanche, and BNB Chain with comprehensive transaction analysis, token transfer tracking, and beautiful visualizations.',
@@ -130,7 +130,7 @@ const projectsData = [
 		previewUrl: 'https://hemdex.vercel.app/',
 	},
 	{
-		id: 14,
+		id: 13,
 		title: 'Vow3 AI',
 		description:
 			'Vow3 is a framework that enables AI agents to make covenants, allowing complex economic/social/political interactions in the agentic world such as: Uncollateralized loans to AI agents, Employment agreements where compensation is guaranteed upon completion, Political alliance towards a common goal.',
