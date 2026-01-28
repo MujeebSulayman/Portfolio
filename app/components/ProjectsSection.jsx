@@ -284,8 +284,8 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 		const pathTag = pathname.slice(1);
 		const validTags = ["web2", "web3", "ai"];
 		if (validTags.includes(pathTag.toLowerCase())) {
-			const capitalizedTag = pathTag.toLowerCase() === "ai" 
-				? "AI" 
+			const capitalizedTag = pathTag.toLowerCase() === "ai"
+				? "AI"
 				: pathTag.charAt(0).toUpperCase() + pathTag.slice(1).toLowerCase();
 			setTag(capitalizedTag);
 			setTimeout(() => {
