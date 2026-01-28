@@ -3,7 +3,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
 const projectsData = [
 	{
@@ -262,10 +263,54 @@ const projectsData = [
 
 projectsData.sort((a, b) => a.id - b.id);
 
-const ProjectsSection = () => {
-	const [tag, setTag] = useState("All");
+const ProjectsSection = ({ initialTag = "All" }) => {
+	const router = useRouter();
+	const pathname = usePathname();
+	const [tag, setTag] = useState(initialTag);
+
+	// Sync tag with URL path changes
+	useEffect(() => {
+		const pathTag = pathname.slice(1); // Remove leading slash
+		const validTags = ["web2", "web3", "ai"];
+		if (validTags.includes(pathTag.toLowerCase())) {
+			const capitalizedTag = pathTag.charAt(0).toUpperCase() + pathTag.slice(1).toLowerCase();
+			setTag(capitalizedTag);
+			// Scroll to projects section when on a tag route
+			setTimeout(() => {
+				const projectsSection = document.getElementById("projects");
+				if (projectsSection) {
+					projectsSection.scrollIntoView({ behavior: "smooth" });
+				}
+			}, 300);
+		} else if (pathname === "/") {
+			setTag("All");
+		}
+		// Scroll to projects section if hash is present
+		if (window.location.hash === "#projects") {
+			setTimeout(() => {
+				const projectsSection = document.getElementById("projects");
+				if (projectsSection) {
+					projectsSection.scrollIntoView({ behavior: "smooth" });
+				}
+			}, 100);
+		}
+	}, [pathname]);
+
 	const handleTagChange = (newTag) => {
 		setTag(newTag);
+		// Update URL with the selected tag
+		if (newTag === "All") {
+			router.push("/");
+		} else {
+			router.push(`/${newTag.toLowerCase()}`);
+		}
+		// Scroll to projects section after route change
+		setTimeout(() => {
+			const projectsSection = document.getElementById("projects");
+			if (projectsSection) {
+				projectsSection.scrollIntoView({ behavior: "smooth" });
+			}
+		}, 100);
 	};
 
 	const filteredProjects = projectsData.filter((project) =>
