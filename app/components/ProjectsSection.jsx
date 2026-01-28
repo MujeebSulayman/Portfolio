@@ -121,13 +121,13 @@ const projectsData = [
 	},
 	{
 		id: 12,
-		title: 'Vow3 AI',
+		title: 'Wallet Wrapped',
 		description:
-			'Vow3 is a framework that enables AI agents to make covenants, allowing complex economic/social/political interactions in the agentic world such as: Uncollateralized loans to AI agents, Employment agreements where compensation is guaranteed upon completion, Political alliance towards a common goal.',
-		image: '/images/project/vow3.png',
-		tag: ['All', 'AI', 'Web3'],
-		gitUrl: '',
-		previewUrl: 'https://vow3-mujeebsulaymans-projects.vercel.app/',
+			'A beautiful Spotify Wrapped-style application that shows all activities of a wallet address across Ethereum and all major L2s for the year 2025. Features multi-chain support automatically scanning Ethereum, Polygon, Arbitrum, Optimism, Base, zkSync, Linea, Scroll, Avalanche, and BNB Chain with comprehensive transaction analysis, token transfer tracking, and beautiful visualizations.',
+		image: '/images/project/wrapper.png',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/wallet-wrap',
+		previewUrl: 'https://wallet-wrap.vercel.app/',
 	},
 	{
 		id: 13,
@@ -141,6 +141,18 @@ const projectsData = [
 	},
 	{
 		id: 14,
+		title: 'Vow3 AI',
+		description:
+			'Vow3 is a framework that enables AI agents to make covenants, allowing complex economic/social/political interactions in the agentic world such as: Uncollateralized loans to AI agents, Employment agreements where compensation is guaranteed upon completion, Political alliance towards a common goal.',
+		image: '/images/project/vow3.png',
+		tag: ['All', 'AI', 'Web3'],
+		gitUrl: '',
+		previewUrl: 'https://vow3-mujeebsulaymans-projects.vercel.app/',
+	},
+
+
+	{
+		id: 15,
 		title: 'People Utility Token',
 		description:
 			'A blockchain technology website developed to showcase and promote a utility token prior to its launch. Features token information, roadmap, and whitepaper integration.',
@@ -150,7 +162,7 @@ const projectsData = [
 		previewUrl: 'https://peopleutilitytoken.vercel.app/',
 	},
 	{
-		id: 15,
+		id: 16,
 		title: 'Emagify AI',
 		description:
 			'An AI-powered image manipulation tool offering features like color restoration, image resizing, background removal, and object removal. Leverages advanced AI algorithms for precise results.',
@@ -160,7 +172,7 @@ const projectsData = [
 		previewUrl: 'https://emagify-ai.vercel.app/',
 	},
 	{
-		id: 16,
+		id: 17,
 		title: 'Travel Guide App',
 		description:
 			'A comprehensive travel guide for Ibadan, featuring local attractions, cultural insights, and travel recommendations. Helps visitors explore and navigate the city effectively.',
@@ -170,7 +182,7 @@ const projectsData = [
 		previewUrl: 'https://hemtravel.vercel.app/',
 	},
 	{
-		id: 17,
+		id: 18,
 		title: 'Admin Dashboard',
 		description:
 			'A comprehensive CRUD admin interface featuring dynamic data visualization with charts, color customization tools, rich text editing capabilities, and transaction management systems.',
@@ -180,7 +192,7 @@ const projectsData = [
 		previewUrl: 'https://hemdash.netlify.app/',
 	},
 	{
-		id: 18,
+		id: 19,
 		title: 'My Portfolio',
 		description:
 			'A personal portfolio website showcasing my projects and skills. Built with modern web technologies and featuring responsive design, smooth animations, and optimal performance.',
@@ -190,7 +202,7 @@ const projectsData = [
 		previewUrl: 'https://thehemjay.vercel.app/',
 	},
 	{
-		id: 19,
+		id: 20,
 		title: 'HemNote',
 		description:
 			'An AI-powered prompt sharing platform enabling users to discover, create, and share creative prompts. Features user authentication, prompt management, and community interaction.',
@@ -200,7 +212,7 @@ const projectsData = [
 		previewUrl: 'https://hemnote.vercel.app/',
 	},
 	{
-		id: 20,
+		id: 21,
 		title: 'Steely',
 		description:
 			'An immersive 3D virtual exhibition platform developed for a PhD research project. Features interactive art displays and virtual gallery spaces that simulate real-world exhibition experiences.',
@@ -210,7 +222,7 @@ const projectsData = [
 		previewUrl: '/',
 	},
 	{
-		id: 21,
+		id: 22,
 		title: 'TheSocials',
 		description:
 			'A social media platform inspired by Instagram, enabling users to share posts and memories. Features user authentication, content management, and interactive social features.',
@@ -220,7 +232,7 @@ const projectsData = [
 		previewUrl: 'https://hem-destro.vercel.app/',
 	},
 	{
-		id: 22,
+		id: 23,
 		title: 'Anime',
 		description:
 			'An anime discovery platform showcasing API integration skills. Features a curated collection of anime titles with detailed information and a user-friendly browsing experience.',
@@ -230,7 +242,7 @@ const projectsData = [
 		previewUrl: 'https://hemanime.vercel.app/',
 	},
 	{
-		id: 23,
+		id: 24,
 		title: 'Brain3',
 		description:
 			'A sophisticated NFT marketplace UI showcase featuring modern design elements, complex gradients, and responsive layouts. Demonstrates advanced CSS implementation and creative visual solutions.',
@@ -240,7 +252,7 @@ const projectsData = [
 		previewUrl: 'https://brain3-dapp-ui.vercel.app/',
 	},
 	{
-		id: 24,
+		id: 25,
 		title: 'Destro Shopping App',
 		description:
 			'A modern food delivery application featuring an intuitive user interface and integrated payment gateway. Demonstrates efficient state management and secure transaction processing.',
@@ -250,7 +262,7 @@ const projectsData = [
 		previewUrl: 'https://hem-destro.vercel.app/',
 	},
 	{
-		id: 25,
+		id: 26,
 		title: 'HemFit',
 		description:
 			'A comprehensive fitness platform featuring over 5,000 exercises with detailed instructions and demonstration videos. Helps users achieve their fitness goals through structured workouts.',
