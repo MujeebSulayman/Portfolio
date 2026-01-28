@@ -14,7 +14,6 @@ export default function TagPage({ params }) {
 		redirect('/');
 	}
 	
-	// Handle AI specially - it should be all uppercase
 	const tagCapitalized = tag.toLowerCase() === "ai" 
 		? "AI" 
 		: tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase();

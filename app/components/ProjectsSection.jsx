@@ -268,17 +268,14 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 	const pathname = usePathname();
 	const [tag, setTag] = useState(initialTag);
 
-	// Sync tag with URL path changes
 	useEffect(() => {
-		const pathTag = pathname.slice(1); // Remove leading slash
+		const pathTag = pathname.slice(1);
 		const validTags = ["web2", "web3", "ai"];
 		if (validTags.includes(pathTag.toLowerCase())) {
-			// Handle AI specially - it should be all uppercase
 			const capitalizedTag = pathTag.toLowerCase() === "ai" 
 				? "AI" 
 				: pathTag.charAt(0).toUpperCase() + pathTag.slice(1).toLowerCase();
 			setTag(capitalizedTag);
-			// Scroll to projects section when on a tag route
 			setTimeout(() => {
 				const projectsSection = document.getElementById("projects");
 				if (projectsSection) {
@@ -288,7 +285,6 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 		} else if (pathname === "/") {
 			setTag("All");
 		}
-		// Scroll to projects section if hash is present
 		if (window.location.hash === "#projects") {
 			setTimeout(() => {
 				const projectsSection = document.getElementById("projects");
@@ -301,13 +297,11 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 
 	const handleTagChange = (newTag) => {
 		setTag(newTag);
-		// Update URL with the selected tag
 		if (newTag === "All") {
 			router.push("/");
 		} else {
 			router.push(`/${newTag.toLowerCase()}`);
 		}
-		// Scroll to projects section after route change
 		setTimeout(() => {
 			const projectsSection = document.getElementById("projects");
 			if (projectsSection) {
