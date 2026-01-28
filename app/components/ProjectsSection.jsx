@@ -30,7 +30,7 @@ const projectsData = [
 		id: 3,
 		title: 'Decentralized Job Board',
 		description:
-			'A decentralized job board platform built on Ethereum. Features job listing, application management, and secure payment processing through smart contracts.',
+			'HemBoard is a blockchain-powered job marketplace that connects employers and job seekers through secure, transparent smart contracts. By leveraging a paymaster and sponsored transactions, HemBoard enables fully gasless job posting and applications, removing fees and friction while delivering a seamless Web3 hiring experience.',
 		image: '/images/project/job.png',
 		tag: ['All', 'Web3'],
 		gitUrl: 'https://github.com/MujeebSulayman/Decentralized-Job-Board',
