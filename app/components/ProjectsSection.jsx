@@ -7,56 +7,6 @@ import { useState } from "react";
 
 const projectsData = [
 	{
-		id: 14,
-		title: 'Hemivent',
-		description:
-			'A decentralized event management platform built on blockchain technology. Enables organizers to create and manage events with secure payment processing and ticket distribution through smart contracts.',
-		image: '/images/project/Hemivent.jpg',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/Dapp-event-app',
-		previewUrl: 'https://dapp-event-app.vercel.app/',
-	},
-	{
-		id: 4,
-		title: 'NFT Mart',
-		description:
-			'A full-featured NFT marketplace deployed on Sepolia testnet. Supports NFT minting, trading, ownership transfers, and marketplace management through smart contracts.',
-		image: '/images/project/nftmart.jpg',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/nft-mart',
-		previewUrl: 'https://nft-mart-seven.vercel.app/',
-	},
-	{
-		id: 27,
-		title: 'NFT Mart',
-		description:
-			"An advanced Ethereum-focused arbitrage and MEV bot that scans decentralized exchanges (DEXs) for profitable opportunities, simulates execution, and submits bundles directly to builders using Flashbots. Designed for production-ready deployment post-Merge, it leverages flash loans, priority fee boosting, and real-time monitoring to maximize profit while maintaining on-chain safety.",
-		image: '/images/project/flashbot.png',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/HemSniper',
-		previewUrl: 'https://hem-sniper.vercel.app/',
-	},
-	{
-		id: 16,
-		title: 'HemDex',
-		description:
-			'A decentralized token exchange platform similar to Uniswap, deployed on Sepolia testnet. Enables seamless ERC-20 token swaps with automated market-making functionality.',
-		image: '/images/project/Tokenswap.jpg',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/Token-Swap',
-		previewUrl: 'https://hemdex.vercel.app/',
-	},
-	{
-		id: 17,
-		title: 'HemToken-ICO',
-		description:
-			'An ERC-20 token sale platform deployed on the Hardhat testnet. Implements token creation, distribution, and auction functionality through smart contracts.',
-		image: '/images/project/TokenSale.jpg',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/HemToken-ICO',
-		previewUrl: 'https://hem-token-ico.vercel.app/',
-	},
-	{
 		id: 1,
 		title: 'HemProperty',
 		description:
@@ -77,44 +27,24 @@ const projectsData = [
 		previewUrl: 'https://car-dealership-dapp.vercel.app/',
 	},
 	{
-		id: 20,
-		title: 'HemShop',
+		id: 3,
+		title: 'Decentralized Job Board',
 		description:
-			'A Web3-powered e-commerce platform built with Next.js, TypeScript, and Ethereum smart contracts. Features crypto payments, NFT integration for product authenticity, decentralized marketplace functionality, and comprehensive seller/product management systems.',
-		image: '/images/project/hemshop.png',
+			'A decentralized job board platform built on Ethereum. Features job listing, application management, and secure payment processing through smart contracts.',
+		image: '/images/project/job.png',
 		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/HemShop-dApp',
-		previewUrl: 'https://hemshop.vercel.app/',
+		gitUrl: 'https://github.com/MujeebSulayman/Decentralized-Job-Board',
+		previewUrl: 'https://decentralized-job-board.vercel.app/',
 	},
 	{
-		id: 15,
-		title: 'People Utility Token',
+		id: 4,
+		title: 'NFT Mart',
 		description:
-			'A blockchain technology website developed to showcase and promote a utility token prior to its launch. Features token information, roadmap, and whitepaper integration.',
-		image: '/images/project/1.PNG',
-		tag: ['All', 'Web2'],
-		gitUrl: 'https://github.com/MujeebSulayman/PUT',
-		previewUrl: 'https://peopleutilitytoken.vercel.app/',
-	},
-	{
-		id: 19,
-		title: 'Steely',
-		description:
-			'An immersive 3D virtual exhibition platform developed for a PhD research project. Features interactive art displays and virtual gallery spaces that simulate real-world exhibition experiences.',
-		image: '/images/project/2.PNG',
-		tag: ['All', 'Web2'],
-		gitUrl: '/',
-		previewUrl: '/',
-	},
-	{
-		id: 23,
-		title: 'Brain3',
-		description:
-			'A sophisticated NFT marketplace UI showcase featuring modern design elements, complex gradients, and responsive layouts. Demonstrates advanced CSS implementation and creative visual solutions.',
-		image: '/images/project/Brain3.jpg',
-		tag: ['All', 'Web2'],
-		gitUrl: 'https://github.com/MujeebSulayman/Brain3-Dapp-UI',
-		previewUrl: 'https://brain3-dapp-ui.vercel.app/',
+			'A full-featured NFT marketplace deployed on Sepolia testnet. Supports NFT minting, trading, ownership transfers, and marketplace management through smart contracts.',
+		image: '/images/project/nftmart.jpg',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/nft-mart',
+		previewUrl: 'https://nft-mart-seven.vercel.app/',
 	},
 	{
 		id: 5,
@@ -127,38 +57,108 @@ const projectsData = [
 		previewUrl: 'https://whisper-chain-five.vercel.app/',
 	},
 	{
-		id: 18,
-		title: 'Admin Dashboard',
+		id: 6,
+		title: 'HemDex',
 		description:
-			'A comprehensive CRUD admin interface featuring dynamic data visualization with charts, color customization tools, rich text editing capabilities, and transaction management systems.',
-		image: '/images/project/10.PNG',
-		tag: ['All', 'Web2'],
-		gitUrl: 'https://github.com/MujeebSulayman/Admin-Dashboard',
-		previewUrl: 'https://hemdash.netlify.app/',
+			'A decentralized token exchange platform similar to Uniswap, deployed on Sepolia testnet. Enables seamless ERC-20 token swaps with automated market-making functionality.',
+		image: '/images/project/Tokenswap.jpg',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/Token-Swap',
+		previewUrl: 'https://hemdex.vercel.app/',
 	},
 	{
-		id: 24,
-		title: 'Destro Shopping App',
+		id: 7,
+		title: 'HemToken-ICO',
 		description:
-			'A modern food delivery application featuring an intuitive user interface and integrated payment gateway. Demonstrates efficient state management and secure transaction processing.',
-		image: '/images/project/3.PNG',
-		tag: ['All', 'Web2'],
-		gitUrl: 'https://github.com/MujeebSulayman/Destro-Shopping-App',
-		previewUrl: 'https://hem-destro.vercel.app/',
-	},
-
-	{
-		id: 22,
-		title: 'Anime',
-		description:
-			'An anime discovery platform showcasing API integration skills. Features a curated collection of anime titles with detailed information and a user-friendly browsing experience.',
-		image: '/images/project/5.PNG',
-		tag: ['All', 'Web2'],
-		gitUrl: 'https://github.com/MujeebSulayman/Anime-collections/',
-		previewUrl: 'https://hemanime.vercel.app/',
+			'An ERC-20 token sale platform deployed on the Hardhat testnet. Implements token creation, distribution, and auction functionality through smart contracts.',
+		image: '/images/project/TokenSale.jpg',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/HemToken-ICO',
+		previewUrl: 'https://hem-token-ico.vercel.app/',
 	},
 	{
 		id: 8,
+		title: 'Faktora AI',
+		description:
+			'Faktora is a sophisticated AI-powered web3 application that combines cutting-edge technologies for a comprehensive blockchain and AI experience.',
+		image: '/images/project/faktora.png',
+		tag: ['All', 'AI', 'Web3'],
+		gitUrl: '',
+		previewUrl: 'https://app.faktora.ai',
+	},
+	{
+		id: 9,
+		title: 'Nectr',
+		description:
+			'NECTR - a modern token ecosystem where you can earn rewards by staking your tokens! This is a complete platform that combines cryptocurrency staking with social features and news updates.',
+
+		image: '/images/project/home.png',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/NECTR',
+		previewUrl: 'https://nectr-gilt.vercel.app/',
+	},
+	{
+		id: 10,
+		title: 'Hemivent',
+		description:
+			'A decentralized event management platform built on blockchain technology. Enables organizers to create and manage events with secure payment processing and ticket distribution through smart contracts.',
+		image: '/images/project/Hemivent.jpg',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/Dapp-event-app',
+		previewUrl: 'https://dapp-event-app.vercel.app/',
+	},
+	{
+		id: 11,
+		title: 'HemShop',
+		description:
+			'A Web3-powered e-commerce platform built with Next.js, TypeScript, and Ethereum smart contracts. Features crypto payments, NFT integration for product authenticity, decentralized marketplace functionality, and comprehensive seller/product management systems.',
+		image: '/images/project/hemshop.png',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/HemShop-dApp',
+		previewUrl: 'https://hemshop.vercel.app/',
+	},
+	{
+		id: 12,
+		title: 'Vow3 AI',
+		description:
+			'Vow3 is a framework that enables AI agents to make covenants, allowing complex economic/social/political interactions in the agentic world such as: Uncollateralized loans to AI agents, Employment agreements where compensation is guaranteed upon completion, Political alliance towards a common goal.',
+		image: '/images/project/vow3.png',
+		tag: ['All', 'AI', 'Web3'],
+		gitUrl: '',
+		previewUrl: 'https://vow3-mujeebsulaymans-projects.vercel.app/',
+	},
+	{
+		id: 13,
+		title: 'NFT Mart',
+		description:
+			"An advanced Ethereum-focused arbitrage and MEV bot that scans decentralized exchanges (DEXs) for profitable opportunities, simulates execution, and submits bundles directly to builders using Flashbots. Designed for production-ready deployment post-Merge, it leverages flash loans, priority fee boosting, and real-time monitoring to maximize profit while maintaining on-chain safety.",
+		image: '/images/project/flashbot.png',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/HemSniper',
+		previewUrl: 'https://hem-sniper.vercel.app/',
+	},
+	{
+		id: 14,
+		title: 'People Utility Token',
+		description:
+			'A blockchain technology website developed to showcase and promote a utility token prior to its launch. Features token information, roadmap, and whitepaper integration.',
+		image: '/images/project/1.PNG',
+		tag: ['All', 'Web2'],
+		gitUrl: 'https://github.com/MujeebSulayman/PUT',
+		previewUrl: 'https://peopleutilitytoken.vercel.app/',
+	},
+	{
+		id: 15,
+		title: 'Emagify AI',
+		description:
+			'An AI-powered image manipulation tool offering features like color restoration, image resizing, background removal, and object removal. Leverages advanced AI algorithms for precise results.',
+		image: '/images/project/12.PNG',
+		tag: ['All', 'Web2'],
+		gitUrl: 'https://github.com/MujeebSulayman/Emagify-AI',
+		previewUrl: 'https://emagify-ai.vercel.app/',
+	},
+	{
+		id: 16,
 		title: 'Travel Guide App',
 		description:
 			'A comprehensive travel guide for Ibadan, featuring local attractions, cultural insights, and travel recommendations. Helps visitors explore and navigate the city effectively.',
@@ -168,17 +168,17 @@ const projectsData = [
 		previewUrl: 'https://hemtravel.vercel.app/',
 	},
 	{
-		id: 26,
-		title: 'HemFit',
+		id: 17,
+		title: 'Admin Dashboard',
 		description:
-			'A comprehensive fitness platform featuring over 5,000 exercises with detailed instructions and demonstration videos. Helps users achieve their fitness goals through structured workouts.',
-		image: '/images/project/7.PNG',
+			'A comprehensive CRUD admin interface featuring dynamic data visualization with charts, color customization tools, rich text editing capabilities, and transaction management systems.',
+		image: '/images/project/10.PNG',
 		tag: ['All', 'Web2'],
-		gitUrl: 'https://github.com/MujeebSulayman/fitness-app',
-		previewUrl: 'https://hemfit.netlify.app/',
+		gitUrl: 'https://github.com/MujeebSulayman/Admin-Dashboard',
+		previewUrl: 'https://hemdash.netlify.app/',
 	},
 	{
-		id: 11,
+		id: 18,
 		title: 'My Portfolio',
 		description:
 			'A personal portfolio website showcasing my projects and skills. Built with modern web technologies and featuring responsive design, smooth animations, and optimal performance.',
@@ -188,7 +188,7 @@ const projectsData = [
 		previewUrl: 'https://thehemjay.vercel.app/',
 	},
 	{
-		id: 12,
+		id: 19,
 		title: 'HemNote',
 		description:
 			'An AI-powered prompt sharing platform enabling users to discover, create, and share creative prompts. Features user authentication, prompt management, and community interaction.',
@@ -198,14 +198,14 @@ const projectsData = [
 		previewUrl: 'https://hemnote.vercel.app/',
 	},
 	{
-		id: 7,
-		title: 'Emagify AI',
+		id: 20,
+		title: 'Steely',
 		description:
-			'An AI-powered image manipulation tool offering features like color restoration, image resizing, background removal, and object removal. Leverages advanced AI algorithms for precise results.',
-		image: '/images/project/12.PNG',
+			'An immersive 3D virtual exhibition platform developed for a PhD research project. Features interactive art displays and virtual gallery spaces that simulate real-world exhibition experiences.',
+		image: '/images/project/2.PNG',
 		tag: ['All', 'Web2'],
-		gitUrl: 'https://github.com/MujeebSulayman/Emagify-AI',
-		previewUrl: 'https://emagify-ai.vercel.app/',
+		gitUrl: '/',
+		previewUrl: '/',
 	},
 	{
 		id: 21,
@@ -218,45 +218,44 @@ const projectsData = [
 		previewUrl: 'https://hem-destro.vercel.app/',
 	},
 	{
-		id: 3,
-		title: 'Decentralized Job Board',
+		id: 22,
+		title: 'Anime',
 		description:
-			'A decentralized job board platform built on Ethereum. Features job listing, application management, and secure payment processing through smart contracts.',
-		image: '/images/project/job.png',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/Decentralized-Job-Board',
-		previewUrl: 'https://decentralized-job-board.vercel.app/',
+			'An anime discovery platform showcasing API integration skills. Features a curated collection of anime titles with detailed information and a user-friendly browsing experience.',
+		image: '/images/project/5.PNG',
+		tag: ['All', 'Web2'],
+		gitUrl: 'https://github.com/MujeebSulayman/Anime-collections/',
+		previewUrl: 'https://hemanime.vercel.app/',
 	},
 	{
-		id: 13,
-		title: 'Nectr',
+		id: 23,
+		title: 'Brain3',
 		description:
-			'NECTR - a modern token ecosystem where you can earn rewards by staking your tokens! This is a complete platform that combines cryptocurrency staking with social features and news updates.',
-
-		image: '/images/project/home.png',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/NECTR',
-		previewUrl: 'https://nectr-gilt.vercel.app/',
+			'A sophisticated NFT marketplace UI showcase featuring modern design elements, complex gradients, and responsive layouts. Demonstrates advanced CSS implementation and creative visual solutions.',
+		image: '/images/project/Brain3.jpg',
+		tag: ['All', 'Web2'],
+		gitUrl: 'https://github.com/MujeebSulayman/Brain3-Dapp-UI',
+		previewUrl: 'https://brain3-dapp-ui.vercel.app/',
 	},
 	{
-		id: 9,
-		title: 'Faktora AI',
+		id: 24,
+		title: 'Destro Shopping App',
 		description:
-			'Faktora is a sophisticated AI-powered web3 application that combines cutting-edge technologies for a comprehensive blockchain and AI experience.',
-		image: '/images/project/faktora.png',
-		tag: ['All', 'AI', 'Web3'],
-		gitUrl: '',
-		previewUrl: 'https://app.faktora.ai',
+			'A modern food delivery application featuring an intuitive user interface and integrated payment gateway. Demonstrates efficient state management and secure transaction processing.',
+		image: '/images/project/3.PNG',
+		tag: ['All', 'Web2'],
+		gitUrl: 'https://github.com/MujeebSulayman/Destro-Shopping-App',
+		previewUrl: 'https://hem-destro.vercel.app/',
 	},
 	{
 		id: 25,
-		title: 'Vow3 AI',
+		title: 'HemFit',
 		description:
-			'Vow3 is a framework that enables AI agents to make covenants, allowing complex economic/social/political interactions in the agentic world such as: Uncollateralized loans to AI agents, Employment agreements where compensation is guaranteed upon completion, Political alliance towards a common goal.',
-		image: '/images/project/vow3.png',
-		tag: ['All', 'AI', 'Web3'],
-		gitUrl: '',
-		previewUrl: 'https://vow3-mujeebsulaymans-projects.vercel.app/',
+			'A comprehensive fitness platform featuring over 5,000 exercises with detailed instructions and demonstration videos. Helps users achieve their fitness goals through structured workouts.',
+		image: '/images/project/7.PNG',
+		tag: ['All', 'Web2'],
+		gitUrl: 'https://github.com/MujeebSulayman/fitness-app',
+		previewUrl: 'https://hemfit.netlify.app/',
 	},
 ];
 
