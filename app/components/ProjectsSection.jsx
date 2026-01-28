@@ -27,6 +27,16 @@ const projectsData = [
 		previewUrl: 'https://nft-mart-seven.vercel.app/',
 	},
 	{
+		id: 27,
+		title: 'NFT Mart',
+		description:
+			"An advanced Ethereum-focused arbitrage and MEV bot that scans decentralized exchanges (DEXs) for profitable opportunities, simulates execution, and submits bundles directly to builders using Flashbots. Designed for production-ready deployment post-Merge, it leverages flash loans, priority fee boosting, and real-time monitoring to maximize profit while maintaining on-chain safety.",
+		image: '/images/project/flashbot.png',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/HemSniper',
+		previewUrl: 'https://hem-sniper.vercel.app/',
+	},
+	{
 		id: 16,
 		title: 'HemDex',
 		description:
