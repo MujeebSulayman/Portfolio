@@ -273,7 +273,10 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 		const pathTag = pathname.slice(1); // Remove leading slash
 		const validTags = ["web2", "web3", "ai"];
 		if (validTags.includes(pathTag.toLowerCase())) {
-			const capitalizedTag = pathTag.charAt(0).toUpperCase() + pathTag.slice(1).toLowerCase();
+			// Handle AI specially - it should be all uppercase
+			const capitalizedTag = pathTag.toLowerCase() === "ai" 
+				? "AI" 
+				: pathTag.charAt(0).toUpperCase() + pathTag.slice(1).toLowerCase();
 			setTag(capitalizedTag);
 			// Scroll to projects section when on a tag route
 			setTimeout(() => {

@@ -14,7 +14,10 @@ export default function TagPage({ params }) {
 		redirect('/');
 	}
 	
-	const tagCapitalized = tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase();
+	// Handle AI specially - it should be all uppercase
+	const tagCapitalized = tag.toLowerCase() === "ai" 
+		? "AI" 
+		: tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase();
 
 	return (
 		<main className='flex min-h-screen flex-col bg-[#121212]'>
