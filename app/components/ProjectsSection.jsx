@@ -38,16 +38,6 @@ const projectsData = [
 	},
 	{
 		id: 4,
-		title: 'NFT Mart',
-		description:
-			'A full-featured NFT marketplace deployed on Sepolia testnet. Supports NFT minting, trading, ownership transfers, and marketplace management through smart contracts.',
-		image: '/images/project/nftmart.jpg',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/nft-mart',
-		previewUrl: 'https://nft-mart-seven.vercel.app/',
-	},
-	{
-		id: 5,
 		title: 'whisperChain',
 		description:
 			'A decentralized messaging platform built on Ethereum that enables encrypted, private messaging with built-in payment capabilities. WhisperChain combines blockchain technology with IPFS for secure, censorship-resistant communication.',
@@ -57,15 +47,26 @@ const projectsData = [
 		previewUrl: 'https://whisper-chain-five.vercel.app/',
 	},
 	{
-		id: 6,
-		title: 'HemDex',
+		id: 5,
+		title: 'NFT Mart',
 		description:
-			'A decentralized token exchange platform similar to Uniswap, deployed on Sepolia testnet. Enables seamless ERC-20 token swaps with automated market-making functionality.',
-		image: '/images/project/Tokenswap.jpg',
+			'A full-featured NFT marketplace deployed on Sepolia testnet. Supports NFT minting, trading, ownership transfers, and marketplace management through smart contracts.',
+		image: '/images/project/nftmart.jpg',
 		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/Token-Swap',
-		previewUrl: 'https://hemdex.vercel.app/',
+		gitUrl: 'https://github.com/MujeebSulayman/nft-mart',
+		previewUrl: 'https://nft-mart-seven.vercel.app/',
 	},
+	{
+		id: 6,
+		title: 'HemSniper',
+		description:
+			"An advanced Ethereum-focused arbitrage and MEV bot that scans decentralized exchanges (DEXs) for profitable opportunities, simulates execution, and submits bundles directly to builders using Flashbots. Designed for production-ready deployment post-Merge, it leverages flash loans, priority fee boosting, and real-time monitoring to maximize profit while maintaining on-chain safety.",
+		image: '/images/project/flashbot.png',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/HemSniper',
+		previewUrl: 'https://hem-sniper.vercel.app/',
+	},
+
 	{
 		id: 7,
 		title: 'HemToken-ICO',
@@ -129,13 +130,13 @@ const projectsData = [
 	},
 	{
 		id: 13,
-		title: 'NFT Mart',
+		title: 'HemDex',
 		description:
-			"An advanced Ethereum-focused arbitrage and MEV bot that scans decentralized exchanges (DEXs) for profitable opportunities, simulates execution, and submits bundles directly to builders using Flashbots. Designed for production-ready deployment post-Merge, it leverages flash loans, priority fee boosting, and real-time monitoring to maximize profit while maintaining on-chain safety.",
-		image: '/images/project/flashbot.png',
+			'A decentralized token exchange platform similar to Uniswap, deployed on Sepolia testnet. Enables seamless ERC-20 token swaps with automated market-making functionality.',
+		image: '/images/project/Tokenswap.jpg',
 		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/HemSniper',
-		previewUrl: 'https://hem-sniper.vercel.app/',
+		gitUrl: 'https://github.com/MujeebSulayman/Token-Swap',
+		previewUrl: 'https://hemdex.vercel.app/',
 	},
 	{
 		id: 14,
@@ -262,58 +263,58 @@ const projectsData = [
 projectsData.sort((a, b) => a.id - b.id);
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
-  };
+	const [tag, setTag] = useState("All");
+	const handleTagChange = (newTag) => {
+		setTag(newTag);
+	};
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
+	const filteredProjects = projectsData.filter((project) =>
+		project.tag.includes(tag)
+	);
 
-  return (
-    <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
-      <h2 className="text-center text-4xl font-bold text-white mb-8">
-        Featured Projects
-      </h2>
-      <p className="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-12">
-        A collection of projects showcasing my expertise in Web2, Web3 and AI
-        Agent development, from decentralized applications to modern web
-        solutions.
-      </p>
-      <div className="text-gray-300 flex flex-row font-sans justify-center items-center gap-4 mb-12">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          active={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web2"
-          active={tag === "Web2"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web3"
-          active={tag === "Web3"}
-        />
-        <ProjectTag onClick={handleTagChange} name="AI" active={tag === "AI"} />
-      </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgURL={project.image}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
-            tag={project.tag}
-          />
-        ))}
-      </div>
-    </section>
-  );
+	return (
+		<section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
+			<h2 className="text-center text-4xl font-bold text-white mb-8">
+				Featured Projects
+			</h2>
+			<p className="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-12">
+				A collection of projects showcasing my expertise in Web2, Web3 and AI
+				Agent development, from decentralized applications to modern web
+				solutions.
+			</p>
+			<div className="text-gray-300 flex flex-row font-sans justify-center items-center gap-4 mb-12">
+				<ProjectTag
+					onClick={handleTagChange}
+					name="All"
+					active={tag === "All"}
+				/>
+				<ProjectTag
+					onClick={handleTagChange}
+					name="Web2"
+					active={tag === "Web2"}
+				/>
+				<ProjectTag
+					onClick={handleTagChange}
+					name="Web3"
+					active={tag === "Web3"}
+				/>
+				<ProjectTag onClick={handleTagChange} name="AI" active={tag === "AI"} />
+			</div>
+			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+				{filteredProjects.map((project) => (
+					<ProjectCard
+						key={project.id}
+						title={project.title}
+						description={project.description}
+						imgURL={project.image}
+						gitUrl={project.gitUrl}
+						previewUrl={project.previewUrl}
+						tag={project.tag}
+					/>
+				))}
+			</div>
+		</section>
+	);
 };
 
 export default ProjectsSection;
