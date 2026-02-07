@@ -4,9 +4,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thehemjay.vercel.app";
-const siteTitle = "Mujeeb Sulayman | Full-Stack Developer — Web2, Web3";
+const ogImageUrl = `${siteUrl}/images/project/portfolio.png`;
+const siteTitle = "Mujeeb Sulayman | Full-Stack Blockchain Developer — Web2, Web3";
 const siteDescription =
-  "Full-stack developer specializing in Web2, Web3. Portfolio of decentralized applications, smart contracts, and modern web solutions.";
+  "Full-stack blockchain developer specializing in Web2, Web3. Portfolio of decentralized applications, smart contracts, and modern web solutions.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -23,10 +24,11 @@ export const metadata = {
     siteName: "TheHemjay",
     images: [
       {
-        url: "/images/project/portfolio.png",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: siteTitle,
+        type: "image/png",
       },
     ],
     type: "website",
@@ -35,7 +37,7 @@ export const metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/images/project/portfolio.png"],
+    images: [ogImageUrl],
   },
 };
 
