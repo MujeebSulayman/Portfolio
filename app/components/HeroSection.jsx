@@ -25,11 +25,7 @@ const HeroSection = () => {
 					transition={{ duration: 0.5 }}
 					className="text-center"
 				>
-					<div className="inline-block px-3 py-1 mb-6 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-xl border border-gray-800">
-						<span className="text-gray-400 text-base">
-							Blockchain, Frontend & AI Agent Developer
-						</span>
-					</div>
+				
 
 					<h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
 						Innovating Across
@@ -42,9 +38,7 @@ const HeroSection = () => {
 								2000,
 								'DeFi',
 								2000,
-								'Web3',
-								2000,
-								'NFT',
+								'RWA',
 								2000,
 								'Web2',
 								2000,

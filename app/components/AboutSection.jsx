@@ -56,19 +56,20 @@ const TAB_DATA = [
             </li>
             <li className="flex items-center text-gray-300 text-sm">
               <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-              Ethers.js / Wagmi
+              Ethers.js / Viem
             </li>
             <li className="flex items-center text-gray-300 text-sm">
               <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
               IPFS
             </li>
+          
             <li className="flex items-center text-gray-300 text-sm">
               <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-              MetaMask / WalletConnect
+              DeFi / Cross Chain Protocols
             </li>
             <li className="flex items-center text-gray-300 text-sm">
               <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
-              DeFi / NFT / Cross Chain Protocols
+              Real World Assets (RWA)
             </li>
           </ul>
         </div>
@@ -86,11 +87,7 @@ const TAB_DATA = [
             </li>
             <li className="flex items-center text-gray-300 text-sm">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              OpenZeppelin Contracts
-            </li>
-            <li className="flex items-center text-gray-300 text-sm">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              Gas Optimization
+              EIP-2771 (Trusted Forwarder)
             </li>
           </ul>
         </div>
