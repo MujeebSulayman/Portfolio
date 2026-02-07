@@ -75,7 +75,7 @@ const TAB_DATA = [
         </div>
 
         <div className="bg-[#1c1c1c] p-5 rounded-lg">
-          <h3 className="text-lg font-bold text-white mb-3">Smart Contracts</h3>
+          <h3 className="text-lg font-bold text-white mb-3">Standards & EIPs</h3>
           <ul className="list-none space-y-2">
             <li className="flex items-center text-gray-300 text-sm">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -83,11 +83,19 @@ const TAB_DATA = [
             </li>
             <li className="flex items-center text-gray-300 text-sm">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              Diamond Standard (EIP-2535)
+              EIP-2535 (Diamond Standard)
             </li>
             <li className="flex items-center text-gray-300 text-sm">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              EIP-2771 (Trusted Forwarder)
+              EIP-2771 (Trusted Forwarder / meta-txs)
+            </li>
+            <li className="flex items-center text-gray-300 text-sm">
+              <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              EIP-712 (Typed structured data & signing)
+            </li>
+            <li className="flex items-center text-gray-300 text-sm">
+              <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              EIP-3156 (Flash loans)
             </li>
           </ul>
         </div>
