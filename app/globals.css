@@ -26,12 +26,7 @@ body {
 
 body {
 	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(
-			to bottom,
-			rgb(var(--background-start-rgb)),
-			rgb(var(--background-end-rgb))
-		)
-		fixed;
+	background: rgb(var(--background-start-rgb));
 	min-height: 100vh;
 	position: relative;
 	margin: 0 auto;

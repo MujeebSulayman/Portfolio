@@ -69,7 +69,7 @@ const EmailSection = () => {
 			className='relative py-12 px-2 sm:px-4 sm:py-20'>
 			<div className='max-w-7xl mx-auto'>
 				<div className='grid md:grid-cols-2 gap-4 md:gap-8 relative'>
-					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
+					<div className='bg-white/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
 						<h2 className='text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-8'>
 							Let&apos;s Connect
 						</h2>
@@ -87,7 +87,7 @@ const EmailSection = () => {
 										href={url}
 										target='_blank'
 										className='flex items-center p-3 sm:p-4 bg-[#1c1c1c] rounded-xl hover:bg-gray-800/50 transition-all group'>
-										<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg'>
+										<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/10 rounded-lg'>
 											<Image
 												src={icon}
 												alt={`${label} Icon`}
@@ -109,7 +109,7 @@ const EmailSection = () => {
 							)}
 
 							<div className='flex items-center p-3 sm:p-4 bg-[#1c1c1c] rounded-xl'>
-								<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg'>
+								<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/10 rounded-lg'>
 									<EnvelopeIcon className='w-5 h-5 sm:w-6 sm:h-6 text-gray-400' />
 								</div>
 								<div className='ml-3 sm:ml-4'>
@@ -125,7 +125,7 @@ const EmailSection = () => {
 					</div>
 
 					{/* Right Column - Contact Form */}
-					<div className='bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
+					<div className='bg-white/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
 						{emailSubmitted ? (
 							<div className='h-full flex flex-col items-center justify-center text-center'>
 								<div className='w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-4'>
@@ -193,7 +193,7 @@ const EmailSection = () => {
 								<button
 									type='submit'
 									disabled={isLoading}
-									className='w-full py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-50'>
+									className='w-full py-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-500 transition-colors disabled:opacity-50'>
 									{isLoading ? 'Sending...' : 'Send Message'}
 								</button>
 							</form>

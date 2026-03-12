@@ -15,7 +15,7 @@ const HeroSection = () => {
 			</div>
 
 			{/* Grid Pattern Overlay */}
-			<div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+			<div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20"></div>
 
 			{/* Content */}
 			<div className="relative z-10 max-w-7xl mx-auto px-4">
@@ -27,7 +27,7 @@ const HeroSection = () => {
 				>
 				
 
-					<h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+					<h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
 						Innovating Across
 						<br />
 						<TypeAnimation
@@ -45,7 +45,7 @@ const HeroSection = () => {
 							]}
 							wrapper="span"
 							speed={50}
-							className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
+							className="text-blue-400"
 							repeat={Infinity}
 						/>
 					</h1>
@@ -59,15 +59,15 @@ const HeroSection = () => {
 					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 						<Link 
 							href="#projects"
-							className="px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium hover:opacity-90 transition-all duration-200"
+							className="px-8 py-4 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500 transition-all duration-200"
 						>
 							Explore Projects
 						</Link>
 						<a 
-							href="https://drive.google.com/file/d/1ERNMx-hcGcK00jpjdN6ADlzJm2rMfrjA/view?usp=sharing"
+							href="https://drive.google.com/file/d/1Na5lcGN7zMc_slTRaQD-QbrIIXOIJPDL/view?usp=sharing"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-medium hover:opacity-90 transition-all duration-200 flex items-center space-x-2"
+							className="px-8 py-4 rounded-lg bg-green-600 text-white font-medium hover:bg-green-500 transition-all duration-200 flex items-center space-x-2"
 						>
 							<span>📄</span>
 							<span>Download Resume</span>
@@ -83,19 +83,19 @@ const HeroSection = () => {
 
 					{/* Stats */}
 					<div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
+						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">
 							<h3 className="text-2xl font-bold text-white mb-1">10+</h3>
 							<p className="text-gray-400 text-sm">Blockchain Projects</p>
 						</div>
-						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
+						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">
 							<h3 className="text-2xl font-bold text-white mb-1">10+</h3>
 							<p className="text-gray-400 text-sm">AI & Web3 Solutions</p>
 						</div>
-						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
+						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">
 							<h3 className="text-2xl font-bold text-white mb-1">25+</h3>
 							<p className="text-gray-400 text-sm">Frontend Projects</p>
 						</div>
-						<div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm border border-gray-800">
+						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">
 							<h3 className="text-2xl font-bold text-white mb-1">6+</h3>
 							<p className="text-gray-400 text-sm">Years Experience</p>
 						</div>

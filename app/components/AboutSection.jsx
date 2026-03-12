@@ -134,13 +134,13 @@ const TAB_DATA = [
     content: (
       <div className="space-y-6">
         <div className="relative">
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-blue-500"></div>
           
           <div className="relative pl-16 pb-8">
-            <div className="absolute left-0 top-3 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+            <div className="absolute left-0 top-3 w-12 h-12 bg-blue-600 flex items-center justify-center">
               <span className="text-white text-sm font-bold">AS</span>
             </div>
-            <div className="bg-gradient-to-r from-blue-900/10 to-purple-900/10 border-l-4 border-blue-500 p-6 hover:from-blue-900/20 hover:to-purple-900/20 transition-all duration-300">
+            <div className="bg-blue-900/10 border-l-4 border-blue-500 p-6 hover:bg-blue-900/20 transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-2">Lead Smart Contract Developer</h3>
               <p className="text-blue-400 text-sm mb-1 font-medium">Assetrix, Lagos</p>
               <p className="text-blue-300 text-xs mb-4">2025 - Present</p>
@@ -162,10 +162,10 @@ const TAB_DATA = [
           </div>
 
           <div className="relative pl-16 pb-8">
-            <div className="absolute left-0 top-3 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+            <div className="absolute left-0 top-3 w-12 h-12 bg-purple-600 flex items-center justify-center">
               <span className="text-white text-sm font-bold">FA</span>
             </div>
-            <div className="bg-gradient-to-r from-purple-900/10 to-pink-900/10 border-l-4 border-purple-500 p-6 hover:from-purple-900/20 hover:to-pink-900/20 transition-all duration-300">
+            <div className="bg-purple-900/10 border-l-4 border-purple-500 p-6 hover:bg-purple-900/20 transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-2">Blockchain & AI Developer</h3>
               <p className="text-purple-400 text-sm mb-1 font-medium">Faktora, Switzerland</p>
               <p className="text-purple-300 text-xs mb-4">2024 - 2025</p>
@@ -187,10 +187,10 @@ const TAB_DATA = [
           </div>
 
           <div className="relative pl-16">
-            <div className="absolute left-0 top-3 w-12 h-12 bg-gradient-to-r from-pink-500 to-blue-500 flex items-center justify-center">
+            <div className="absolute left-0 top-3 w-12 h-12 bg-pink-600 flex items-center justify-center">
               <span className="text-white text-sm font-bold">V3</span>
           </div>
-            <div className="bg-gradient-to-r from-pink-900/10 to-blue-900/10 border-l-4 border-pink-500 p-6 hover:from-pink-900/20 hover:to-blue-900/20 transition-all duration-300">
+            <div className="bg-pink-900/10 border-l-4 border-pink-500 p-6 hover:bg-pink-900/20 transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-2">Blockchain Developer</h3>
               <p className="text-pink-400 text-sm mb-1 font-medium">Vow3</p>
               <p className="text-pink-300 text-xs mb-4">2023 - 2024</p>
@@ -240,7 +240,7 @@ const AboutSection = () => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="relative mx-auto max-w-lg">
           {/* Animated background glow */}
-          <div className="absolute -inset-4 sm:-inset-8 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-3xl opacity-60 animate-pulse"></div>
+          <div className="absolute -inset-4 sm:-inset-8 bg-blue-500/20 rounded-full blur-3xl opacity-60 animate-pulse"></div>
           
           {/* Main image container */}
           <div className="relative">
@@ -260,8 +260,8 @@ const AboutSection = () => {
                 className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-110"
                 priority
               />
-              {/* Gradient overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              {/* Overlay for depth */}
+              <div className="absolute inset-0 bg-black/40"></div>
               
               {/* Inner glow effect */}
               <div className="absolute inset-0 rounded-full border border-white/10"></div>
@@ -269,7 +269,7 @@ const AboutSection = () => {
           </div>
           
           {/* Status indicator */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-2 sm:px-5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold shadow-xl border border-green-400/30 backdrop-blur-sm">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-3 py-2 sm:px-5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold shadow-xl border border-green-400/30 backdrop-blur-sm">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
               <span className="hidden sm:inline">Available for work</span>
@@ -279,8 +279,8 @@ const AboutSection = () => {
           
           {/* Ethereum-focused floating icons with labels */}
           <div className="absolute top-8 -left-6 sm:top-12 sm:-left-12">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
-              <span className="text-white text-lg sm:text-2xl">🔷</span>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-cyan-600 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg" alt="Ethereum" className="w-7 h-7 sm:w-9 sm:h-9 object-contain" />
             </div>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
               Ethereum
@@ -288,8 +288,8 @@ const AboutSection = () => {
           </div>
           
           <div className="absolute top-16 -right-6 sm:top-20 sm:-right-12" style={{animationDelay: '0.5s'}}>
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
-              <span className="text-white text-lg sm:text-2xl">📄</span>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-purple-600 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Solidity_logo.svg" alt="Solidity" className="w-7 h-7 sm:w-9 sm:h-9 object-contain" />
             </div>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
               Smart Contracts
@@ -297,8 +297,8 @@ const AboutSection = () => {
           </div>
           
           <div className="absolute bottom-16 -left-4 sm:bottom-20 sm:-left-8" style={{animationDelay: '1s'}}>
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
-              <span className="text-white text-lg sm:text-2xl">🔄</span>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-600 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <img src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/uni.svg" alt="Uniswap DeFi" className="w-7 h-7 sm:w-9 sm:h-9 object-contain" />
             </div>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
               DeFi Protocols
@@ -306,8 +306,8 @@ const AboutSection = () => {
           </div>
           
           <div className="absolute bottom-8 -right-4 sm:bottom-12 sm:-right-8" style={{animationDelay: '1.5s'}}>
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
-              <span className="text-white text-lg sm:text-2xl">⚡</span>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+              <img src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/link.svg" alt="Chainlink Web3" className="w-7 h-7 sm:w-9 sm:h-9 object-contain" />
             </div>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900/90 text-white text-xs px-2 py-1 rounded-md whitespace-nowrap">
               Web3 Development
@@ -333,14 +333,14 @@ const AboutSection = () => {
               onClick={() => handleTabChange("skills")}
               className={`group relative flex items-center justify-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                 tab === "skills"
-                  ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25"
+                  ? "bg-blue-600 text-white shadow-lg shadow-blue-500/25"
                   : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
               }`}
             >
               <span className="text-base sm:text-lg">⚡</span>
               <span className="text-xs sm:text-sm font-semibold">Skills & Expertise</span>
               {tab === "skills" && (
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl animate-pulse"></div>
+                <div className="absolute inset-0 bg-blue-500/20 rounded-xl animate-pulse"></div>
               )}
             </button>
             
@@ -348,14 +348,14 @@ const AboutSection = () => {
               onClick={() => handleTabChange("experience")}
               className={`group relative flex items-center justify-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                 tab === "experience"
-                  ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25"
+                  ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25"
                   : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
               }`}
             >
               <span className="text-base sm:text-lg">🚀</span>
               <span className="text-xs sm:text-sm font-semibold">Professional Journey</span>
               {tab === "experience" && (
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl animate-pulse"></div>
+                <div className="absolute inset-0 bg-purple-500/20 rounded-xl animate-pulse"></div>
               )}
             </button>
             
@@ -363,14 +363,14 @@ const AboutSection = () => {
               onClick={() => handleTabChange("certification")}
               className={`group relative flex items-center justify-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                 tab === "certification"
-                  ? "bg-gradient-to-r from-pink-500 to-blue-500 text-white shadow-lg shadow-pink-500/25"
+                  ? "bg-pink-600 text-white shadow-lg shadow-pink-500/25"
                   : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50 hover:border-gray-600/50"
               }`}
             >
               <span className="text-base sm:text-lg">🎓</span>
               <span className="text-xs sm:text-sm font-semibold">Certifications</span>
               {tab === "certification" && (
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-blue-500/20 rounded-xl animate-pulse"></div>
+                <div className="absolute inset-0 bg-pink-500/20 rounded-xl animate-pulse"></div>
               )}
             </button>
           </div>
