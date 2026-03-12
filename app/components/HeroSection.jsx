@@ -84,7 +84,7 @@ const HeroSection = () => {
 					{/* Stats */}
 					<div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
 						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">
-							<h3 className="text-2xl font-bold text-white mb-1">10+</h3>
+							<h3 className="text-2xl font-bold text-white mb-1">18+</h3>
 							<p className="text-gray-400 text-sm">Blockchain Projects</p>
 						</div>
 						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">

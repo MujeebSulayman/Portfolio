@@ -143,7 +143,7 @@ const TAB_DATA = [
             <div className="bg-blue-900/10 border-l-4 border-blue-500 p-6 hover:bg-blue-900/20 transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-2">Lead Smart Contract Developer</h3>
               <p className="text-blue-400 text-sm mb-1 font-medium">Assetrix, Lagos</p>
-              <p className="text-blue-300 text-xs mb-4">2025 - Present</p>
+              <p className="text-blue-300 text-xs mb-4">2025 - 2026</p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-blue-400 mt-2 mr-3 flex-shrink-0"></span>
@@ -319,13 +319,8 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-sm sm:text-base font-normal font-sans text-gray-400 mb-4">
-            Full-stack blockchain developer with 4+ years of experience in Web3
-            and modern web development. Specialized in building decentralized
-            applications (dApps) and AI agents.
-            Passionate about creating secure, scalable solutions that bridge the
-            gap between traditional web applications and blockchain technology.
-            Experienced in DeFi protocols, On-chain AI agents, and cross-chain
-            applications.
+            I’m a full-stack software engineer specializing in blockchain with over 4 years of experience building smart contracts and decentralized applications on Ethereum. My work spans DeFi infrastructure, real-world asset (RWA) tokenization, and Web3 payment systems. I have build end-to-end decentralized applications including smart contracts, backend services, and modern web interfaces.
+            I’m passionate about creating secure, scalable systems that bridge traditional software with decentralized technologies while exploring emerging areas like AI-driven DeFi automation and intelligent blockchain agents.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-start mt-6 sm:mt-8 gap-2 sm:gap-3">
