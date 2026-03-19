@@ -25,7 +25,7 @@ const HeroSection = () => {
 					transition={{ duration: 0.5 }}
 					className="text-center"
 				>
-				
+
 
 					<h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white">
 						Innovating Across
@@ -34,63 +34,50 @@ const HeroSection = () => {
 							sequence={[
 								'Blockchain',
 								2000,
-								'AI Agents',
-								2000,
 								'DeFi',
 								2000,
 								'RWA',
 								2000,
-								'Web2',
-								2000,
 							]}
 							wrapper="span"
 							speed={50}
-							className="text-blue-400"
+							className="text-lemon-500"
 							repeat={Infinity}
 						/>
 					</h1>
 
 					<p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-10">
-						Crafting modern web applications with blockchain and AI integration. 
-						Specialized in building secure, intelligent solutions that bridge 
-						decentralized technologies with cutting-edge AI systems.
+						Bridge traditional software with
+						decentralized technologies while exploring emerging areas like AI-driven DeFi automation and intelligent
+						blockchain agents.
 					</p>
 
 					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-						<Link 
+						<Link
 							href="#projects"
 							className="px-8 py-4 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-500 transition-all duration-200"
 						>
 							Explore Projects
 						</Link>
-						<a 
+						<a
 							href="https://drive.google.com/file/d/1Na5lcGN7zMc_slTRaQD-QbrIIXOIJPDL/view?usp=sharing"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="px-8 py-4 rounded-lg bg-green-600 text-white font-medium hover:bg-green-500 transition-all duration-200 flex items-center space-x-2"
 						>
-							<span>📄</span>
+
 							<span>Download Resume</span>
 						</a>
-						<Link 
-							href="https://x.com/TheHemjay"
-							target="_blank"
-							className="px-8 py-4 rounded-lg border border-gray-700 text-gray-300 hover:border-purple-500 hover:text-white transition-all duration-200"
-						>
-							Let&apos;s Connect
-						</Link>
+
 					</div>
 
 					{/* Stats */}
-					<div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+					<div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8">
 						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">
 							<h3 className="text-2xl font-bold text-white mb-1">18+</h3>
 							<p className="text-gray-400 text-sm">Blockchain Projects</p>
 						</div>
-						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">
-							<h3 className="text-2xl font-bold text-white mb-1">10+</h3>
-							<p className="text-gray-400 text-sm">AI & Web3 Solutions</p>
-						</div>
+
 						<div className="p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-gray-800">
 							<h3 className="text-2xl font-bold text-white mb-1">25+</h3>
 							<p className="text-gray-400 text-sm">Frontend Projects</p>

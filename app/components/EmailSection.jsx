@@ -87,7 +87,7 @@ const EmailSection = () => {
 										href={url}
 										target='_blank'
 										className='flex items-center p-3 sm:p-4 bg-[#1c1c1c] rounded-xl hover:bg-gray-800/50 transition-all group'>
-										<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/10 rounded-lg'>
+										<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/15 rounded-lg'>
 											<Image
 												src={icon}
 												alt={`${label} Icon`}

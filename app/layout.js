@@ -5,9 +5,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thehemjay.vercel.app";
 const ogImageUrl = `${siteUrl}/images/project/portfolio.png`;
-const siteTitle = "Mujeeb Sulayman | Full-Stack Blockchain Developer — Web2, Web3";
+const siteTitle = "Mujeeb Sulayman | Full-Stack Blockchain Developer";
 const siteDescription =
-  "Full-stack blockchain developer specializing in Web2, Web3. Portfolio of decentralized applications, smart contracts, and modern web solutions.";
+  "I am a fullstack blockchain developer bridging traditional software with decentralized technologies while exploring emerging areas like AI-driven DeFi automation and intelligent blockchain agents.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -21,7 +21,7 @@ export const metadata = {
     title: siteTitle,
     description: siteDescription,
     url: siteUrl,
-    siteName: "TheHemjay",
+    siteName: "TheHemjay Portfolio",
     images: [
       {
         url: ogImageUrl,
