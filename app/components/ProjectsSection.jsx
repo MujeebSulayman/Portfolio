@@ -339,7 +339,7 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 				Agent development, from decentralized applications to modern web
 				solutions.
 			</p>
-			<div className="text-gray-300 flex flex-row font-sans justify-center items-center gap-4 mb-12">
+			<div className="text-gray-300 flex flex-row flex-wrap font-sans justify-center items-center gap-3 mb-12">
 				<ProjectTag
 					onClick={handleTagChange}
 					name="All"

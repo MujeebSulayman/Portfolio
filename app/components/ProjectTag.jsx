@@ -6,7 +6,7 @@ const ProjectTag = ({ name, onClick, isSelected }) => {
 	: 'text-[#ADB7BE] border-slate-600 hover:border-white';
 	return (
 		<button
-			className={`${buttonStyles} rounded-lg border-2 px-3 py-2 md:px-6 md:py-2 text-lg cursor-pointer`}
+			className={`${buttonStyles} rounded-lg border-2 px-4 py-1.5 text-sm md:px-6 md:py-2 md:text-lg cursor-pointer`}
 			onClick={() => onClick(name)}>
 			{name}
 		</button>
