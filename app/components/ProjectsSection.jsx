@@ -8,6 +8,16 @@ import { useRouter, usePathname } from "next/navigation";
 
 const projectsData = [
 	{
+		id: 0,
+		title: 'Flusor',
+		description:
+			'Flusor is a comprehensive web-based development environment for creating, compiling, and deploying Solidity smart contracts. It combines a powerful visual no-code builder with a traditional IDE experience, making smart contract development accessible to both beginners and experienced developers.',
+		image: '/images/project/flusor.PNG',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/Flusor',
+		previewUrl: 'https://flusor-nine.vercel.app/',
+	},
+	{
 		id: 1,
 		title: 'HemProperty',
 		description:
@@ -261,16 +271,7 @@ const projectsData = [
 		gitUrl: 'https://github.com/MujeebSulayman/fitness-app',
 		previewUrl: 'https://hemfit.netlify.app/',
 	},
-	{
-		id: 26,
-		title: 'FLusor',
-		description:
-			'Flusor is a comprehensive web-based development environment for creating, compiling, and deploying Solidity smart contracts. It combines a powerful visual no-code builder with a traditional IDE experience, making smart contract development accessible to both beginners and experienced developers.',
-		image: '/images/project/flusor.PNG',
-		tag: ['All', 'Web3'],
-		gitUrl: 'https://github.com/MujeebSulayman/Flusor',
-		previewUrl: 'https://flusor-nine.vercel.app/',
-	},
+
 ];
 
 projectsData.sort((a, b) => a.id - b.id);
@@ -326,6 +327,11 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 		project.tag.includes(tag)
 	);
 
+	const tagCounts = ['All', 'Web2', 'Web3', 'AI'].reduce((acc, t) => {
+		acc[t] = projectsData.filter((p) => p.tag.includes(t)).length;
+		return acc;
+	}, {});
+
 	return (
 		<section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
 			<h2 className="text-center text-3xl sm:text-4xl font-bold text-gray-300 mb-8">
@@ -340,19 +346,27 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 				<ProjectTag
 					onClick={handleTagChange}
 					name="All"
-					active={tag === "All"}
+					isSelected={tag === "All"}
+					count={tagCounts["All"]}
 				/>
 				<ProjectTag
 					onClick={handleTagChange}
 					name="Web2"
-					active={tag === "Web2"}
+					isSelected={tag === "Web2"}
+					count={tagCounts["Web2"]}
 				/>
 				<ProjectTag
 					onClick={handleTagChange}
 					name="Web3"
-					active={tag === "Web3"}
+					isSelected={tag === "Web3"}
+					count={tagCounts["Web3"]}
 				/>
-				<ProjectTag onClick={handleTagChange} name="AI" active={tag === "AI"} />
+				<ProjectTag
+					onClick={handleTagChange}
+					name="AI"
+					isSelected={tag === "AI"}
+					count={tagCounts["AI"]}
+				/>
 			</div>
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
 				{filteredProjects.map((project) => (
