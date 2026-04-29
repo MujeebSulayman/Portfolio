@@ -261,6 +261,16 @@ const projectsData = [
 		gitUrl: 'https://github.com/MujeebSulayman/fitness-app',
 		previewUrl: 'https://hemfit.netlify.app/',
 	},
+	{
+		id: 26,
+		title: 'FLusor',
+		description:
+			'Flusor is a comprehensive web-based development environment for creating, compiling, and deploying Solidity smart contracts. It combines a powerful visual no-code builder with a traditional IDE experience, making smart contract development accessible to both beginners and experienced developers.',
+		image: '/images/project/flusor.PNG',
+		tag: ['All', 'Web3'],
+		gitUrl: 'https://github.com/MujeebSulayman/Flusor',
+		previewUrl: 'https://flusor-nine.vercel.app/',
+	},
 ];
 
 projectsData.sort((a, b) => a.id - b.id);
