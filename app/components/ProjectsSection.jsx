@@ -12,7 +12,7 @@ const projectsData = [
 		title: 'Flusor',
 		description:
 			'Flusor is a comprehensive web-based development environment for creating, compiling, and deploying Solidity smart contracts. It combines a powerful visual no-code builder with a traditional IDE experience, making smart contract development accessible to both beginners and experienced developers.',
-		image: '/images/project/flusor.PNG',
+		image: '/images/project/flusor.png',
 		tag: ['All', 'Web3'],
 		gitUrl: 'https://github.com/MujeebSulayman/Flusor',
 		previewUrl: 'https://flusor-nine.vercel.app/',
@@ -327,10 +327,7 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 		project.tag.includes(tag)
 	);
 
-	const tagCounts = ['All', 'Web2', 'Web3', 'AI'].reduce((acc, t) => {
-		acc[t] = projectsData.filter((p) => p.tag.includes(t)).length;
-		return acc;
-	}, {});
+
 
 	return (
 		<section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
@@ -342,30 +339,26 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 				Agent development, from decentralized applications to modern web
 				solutions.
 			</p>
-			<div className="text-gray-300 flex flex-row font-sans justify-center items-center gap-4 mb-12">
+			<div className="text-gray-300 flex flex-row flex-wrap font-sans justify-center items-center gap-3 mb-12">
 				<ProjectTag
 					onClick={handleTagChange}
 					name="All"
 					isSelected={tag === "All"}
-					count={tagCounts["All"]}
 				/>
 				<ProjectTag
 					onClick={handleTagChange}
 					name="Web2"
 					isSelected={tag === "Web2"}
-					count={tagCounts["Web2"]}
 				/>
 				<ProjectTag
 					onClick={handleTagChange}
 					name="Web3"
 					isSelected={tag === "Web3"}
-					count={tagCounts["Web3"]}
 				/>
 				<ProjectTag
 					onClick={handleTagChange}
 					name="AI"
 					isSelected={tag === "AI"}
-					count={tagCounts["AI"]}
 				/>
 			</div>
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
