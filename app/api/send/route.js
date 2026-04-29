@@ -2,93 +2,94 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const FROM_EMAIL = 'Portfolio Contact <Admin@holdispay.xyz>';
+const TO_EMAIL = 'sulaymanmujeeb6@gmail.com';
 
 export async function POST(req) {
 	try {
 		const { email, subject, message } = await req.json();
-		const data = await resend.emails.send({
-			from: 'Portfolio Contact <Admin@holdispay.xyz>',
-			to: ['sulaymanmujeeb6@gmail.com'],
+
+		if (!email || !subject || !message) {
+			return NextResponse.json(
+				{ error: "Missing required fields" },
+				{ status: 400 }
+			);
+		}
+
+		const { data, error } = await resend.emails.send({
+			from: FROM_EMAIL,
+			to: [TO_EMAIL],
 			reply_to: email,
 			subject: `[Portfolio] ${subject}`,
 			html: `
 				<!DOCTYPE html>
-				<html lang="en">
-				<head>
-					<meta charset="UTF-8" />
-					<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-					<title>New Contact Message</title>
-				</head>
-				<body style="margin:0;padding:0;background-color:#0f1117;font-family:'Segoe UI',Arial,sans-serif;">
-					<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#0f1117;padding:40px 16px;">
-						<tr>
-							<td align="center">
-								<table width="100%" style="max-width:580px;background-color:#1a1a2e;border-radius:16px;overflow:hidden;border:1px solid #2a2a3e;">
-									<!-- Header -->
-									<tr>
-										<td style="background-color:#1e3a5f;padding:32px 40px;text-align:center;">
-											<p style="margin:0;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#60a5fa;font-weight:600;">Portfolio Contact</p>
-											<h1 style="margin:8px 0 0;font-size:26px;font-weight:700;color:#ffffff;">New Message Received</h1>
-										</td>
-									</tr>
-
-									<!-- Body -->
-									<tr>
-										<td style="padding:36px 40px;">
-											<!-- Sender info card -->
-											<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#111827;border-radius:12px;border:1px solid #2a2a3e;margin-bottom:24px;">
-												<tr>
-													<td style="padding:20px 24px;">
-														<p style="margin:0 0 12px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#6b7280;font-weight:600;">Sender Details</p>
-														<table cellpadding="0" cellspacing="0">
-															<tr>
-																<td style="padding:4px 0;">
-																	<span style="color:#9ca3af;font-size:13px;display:inline-block;width:70px;">From:</span>
-																	<a href="mailto:${email}" style="color:#60a5fa;font-size:13px;text-decoration:none;font-weight:500;">${email}</a>
-																</td>
-															</tr>
-															<tr>
-																<td style="padding:4px 0;">
-																	<span style="color:#9ca3af;font-size:13px;display:inline-block;width:70px;">Subject:</span>
-																	<span style="color:#e5e7eb;font-size:13px;font-weight:500;">${subject}</span>
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-											</table>
-
-											<!-- Message -->
-											<p style="margin:0 0 10px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#6b7280;font-weight:600;">Message</p>
-											<div style="background-color:#111827;border-radius:12px;border:1px solid #2a2a3e;padding:20px 24px;">
-												<p style="margin:0;color:#d1d5db;font-size:15px;line-height:1.7;white-space:pre-wrap;">${message}</p>
+				<html>
+					<head>
+						<meta charset="utf-8">
+						<meta name="viewport" content="width=device-width, initial-scale=1.0">
+						<title>New Inquiry from Portfolio</title>
+					</head>
+					<body style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; background-color: #f4f7fa; margin: 0; padding: 0;">
+						<table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f7fa; padding: 40px 20px;">
+							<tr>
+								<td align="center">
+									<div style="max-width: 600px; width: 100%; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid #eef2f6; text-align: left;">
+										<!-- Header -->
+										<div style="background: #2563eb; padding: 40px 30px; text-align: center; color: #ffffff;">
+											<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.9;">Portfolio Notification</p>
+											<h1 style="margin: 8px 0 0; font-size: 26px; font-weight: 700; letter-spacing: -0.5px;">New Message Received</h1>
+										</div>
+										
+										<!-- Content -->
+										<div style="padding: 40px 30px;">
+											<div style="margin-bottom: 25px;">
+												<span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748b; letter-spacing: 1px; margin-bottom: 8px; display: block;">From</span>
+												<div style="font-size: 15px; color: #1e293b; background: #f8fafc; padding: 12px 16px; border-radius: 8px; border: 1px solid #f1f5f9; font-weight: 500;">
+													${email}
+												</div>
 											</div>
-
-											<!-- CTA -->
-											<div style="margin-top:28px;text-align:center;">
-												<a href="mailto:${email}" style="display:inline-block;background-color:#2563eb;color:#ffffff;text-decoration:none;font-size:14px;font-weight:600;padding:12px 32px;border-radius:8px;letter-spacing:0.5px;">Reply to ${email}</a>
+											
+											<div style="margin-bottom: 25px;">
+												<span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748b; letter-spacing: 1px; margin-bottom: 8px; display: block;">Subject</span>
+												<div style="font-size: 15px; color: #1e293b; background: #f8fafc; padding: 12px 16px; border-radius: 8px; border: 1px solid #f1f5f9; font-weight: 500;">
+													${subject}
+												</div>
 											</div>
-										</td>
-									</tr>
-
-									<!-- Footer -->
-									<tr>
-										<td style="padding:20px 40px;border-top:1px solid #2a2a3e;text-align:center;">
-											<p style="margin:0;color:#4b5563;font-size:12px;">This message was sent via your portfolio contact form.</p>
-											<p style="margin:6px 0 0;color:#374151;font-size:11px;">Sulayman Abdul-Mujeeb • Portfolio</p>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-				</body>
+											
+											<div style="margin-bottom: 30px;">
+												<span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748b; letter-spacing: 1px; margin-bottom: 8px; display: block;">Message</span>
+												<div style="font-size: 15px; color: #334155; line-height: 1.8; background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #f1f5f9; white-space: pre-wrap;">${message}</div>
+											</div>
+											
+											<div style="text-align: center; margin-top: 20px;">
+												<a href="mailto:${email}" style="display: inline-block; padding: 14px 32px; background-color: #2563eb; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 15px;">Reply to Message</a>
+											</div>
+										</div>
+										
+										<!-- Footer -->
+										<div style="padding: 30px; text-align: center; background: #f8fafc; border-top: 1px solid #f1f5f9;">
+											<p style="margin: 0; font-size: 13px; color: #94a3b8;">&copy; ${new Date().getFullYear()} Sulayman Abdul-Mujeeb. All rights reserved.</p>
+											<p style="margin: 8px 0 0; font-size: 11px; color: #cbd5e1;">Sent via Portfolio Contact Form</p>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</body>
 				</html>
 			`,
+
+
 		});
 
-		return NextResponse.json({ message: "Email sent successfully" });
+		if (error) {
+			console.error("Resend Error:", error);
+			return NextResponse.json({ error }, { status: 500 });
+		}
+
+		return NextResponse.json({ message: "Email sent successfully", data });
 	} catch (error) {
+		console.error("Internal Server Error:", error);
 		return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
 	}
 }
