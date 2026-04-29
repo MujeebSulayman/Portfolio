@@ -330,14 +330,13 @@ const ProjectsSection = ({ initialTag = "All" }) => {
 
 
 	return (
-		<section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
+		<section id="projects" className="py-10 px-4 max-w-7xl mx-auto">
 			<h2 className="text-center text-3xl sm:text-4xl font-bold text-gray-300 mb-8">
 				Featured Projects
 			</h2>
 			<p className="text-gray-400 text-md text-center max-w-2xl mx-auto mb-12">
 				A collection of projects showcasing my expertise in Web2, Web3 and AI
-				Agent development, from decentralized applications to modern web
-				solutions.
+				Agent development.
 			</p>
 			<div className="text-gray-300 flex flex-row flex-wrap font-sans justify-center items-center gap-3 mb-12">
 				<ProjectTag
