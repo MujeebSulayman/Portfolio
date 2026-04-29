@@ -20,7 +20,7 @@ export async function POST(req) {
 			from: FROM_EMAIL,
 			to: [TO_EMAIL],
 			reply_to: email,
-			subject: `[Portfolio] ${subject}`,
+			subject: `Portfolio: ${subject}`,
 			html: `
 				<!DOCTYPE html>
 				<html>
