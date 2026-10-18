@@ -38,11 +38,6 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <span className="glass inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium text-zinc-300">
-          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
-          Full-stack blockchain developer · open to work
-        </span>
-
         <h1 className="mt-8 text-[clamp(3rem,8vw,5.75rem)] font-medium leading-[0.95] tracking-[-0.045em] text-zinc-50">
           Innovating
           <br />
