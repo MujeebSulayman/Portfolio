@@ -1,29 +1,9 @@
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { EnvelopeIcon } from '@heroicons/react/24/outline';
-
-const SOCIAL_LINKS = {
-	github: {
-		url: 'https://github.com/MujeebSulayman',
-		icon: '/github-icon.svg',
-		label: 'GitHub',
-		username: '@MujeebSulayman',
-	},
-	twitter: {
-		url: 'https://twitter.com/TheHemjay',
-		icon: '/x.svg',
-		label: 'Twitter',
-		username: '@TheHemjay',
-	},
-	linkedin: {
-		url: 'https://www.linkedin.com/in/sulayman-abdul-mujeeb-299909214/',
-		icon: '/linkedin-icon.svg',
-		label: 'LinkedIn',
-		username: 'Sulayman Abdul-Mujeeb',
-	},
-};
+import { EnvelopeIcon, ArrowUpRightIcon, CheckIcon } from '@heroicons/react/24/outline';
+import SectionHeading from './SectionHeading';
+import SocialIcon from './SocialIcon';
+import { EMAIL, SOCIAL_LINKS } from '../data/site';
 
 const EmailSection = () => {
 	const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -63,142 +43,117 @@ const EmailSection = () => {
 		}
 	};
 
+	const channels = [
+		...SOCIAL_LINKS.map(({ key, label, username, url }) => ({
+			key,
+			label,
+			value: username,
+			href: url,
+			icon: <SocialIcon name={key} className='h-[18px] w-[18px]' />,
+		})),
+		{
+			key: 'email',
+			label: 'Email',
+			value: EMAIL,
+			href: `mailto:${EMAIL}`,
+			icon: <EnvelopeIcon className='h-5 w-5' />,
+		},
+	];
+
 	return (
-		<section
-			id='contact'
-			className='relative py-12 px-2 sm:px-4 sm:py-20'>
-			<div className='max-w-7xl mx-auto'>
-				<div className='grid md:grid-cols-2 gap-4 md:gap-8 relative'>
-					<div className='bg-white/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
-						<h2 className='text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-8'>
-							Let&apos;s Connect
-						</h2>
+		<section id='contact' className='py-20 sm:py-28'>
+			<SectionHeading index='03' label='Contact' title="Let's connect">
+				Ready to discuss your next project or explore opportunities? Reach out through any of
+				these channels or send me a direct message.
+			</SectionHeading>
 
-						<p className='text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base'>
-							Ready to discuss your next project or explore opportunities? Reach
-							out through any of these channels or send me a direct message.
-						</p>
+			<div className='grid gap-5 lg:grid-cols-[1fr_1.2fr]'>
+				<div className='glass rounded-[32px] p-3 sm:p-4'>
+					<p className='label px-3 pb-3 pt-2'>Channels</p>
+					<ul className='space-y-2'>
+						{channels.map(({ key, label, value, href, icon }) => (
+							<li key={key}>
+								<a
+									href={href}
+									target={key === 'email' ? undefined : '_blank'}
+									rel='noopener noreferrer'
+									className='glass-inset group flex items-center gap-4 rounded-2xl p-3 transition-colors hover:border-white/10 hover:bg-white/[0.03] sm:p-4'>
+									<span className='grid h-11 w-11 flex-none place-items-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-zinc-300 transition-colors group-hover:text-accent'>
+										{icon}
+									</span>
+									<div className='min-w-0 flex-1'>
+										<p className='text-sm font-medium text-zinc-100'>{label}</p>
+										<p className='truncate text-sm text-zinc-500'>{value}</p>
+									</div>
+									<ArrowUpRightIcon className='h-4 w-4 flex-none text-zinc-600 transition-colors group-hover:text-accent' />
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
 
-						<div className='space-y-4 sm:space-y-6'>
-							{Object.entries(SOCIAL_LINKS).map(
-								([key, { url, icon, label, username }]) => (
-									<Link
-										key={key}
-										href={url}
-										target='_blank'
-										className='flex items-center p-3 sm:p-4 bg-[#1c1c1c] rounded-xl hover:bg-gray-800/50 transition-all group'>
-										<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/15 rounded-lg'>
-											<Image
-												src={icon}
-												alt={`${label} Icon`}
-												width={20}
-												height={20}
-												className='opacity-70 group-hover:opacity-100 transition-opacity'
-											/>
-										</div>
-										<div className='ml-3 sm:ml-4'>
-											<h3 className='text-white font-medium text-sm sm:text-base'>
-												{label}
-											</h3>
-											<p className='text-gray-400 text-xs sm:text-sm'>
-												{username}
-											</p>
-										</div>
-									</Link>
-								)
-							)}
-
-							<div className='flex items-center p-3 sm:p-4 bg-[#1c1c1c] rounded-xl'>
-								<div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white/10 rounded-lg'>
-									<EnvelopeIcon className='w-5 h-5 sm:w-6 sm:h-6 text-gray-400' />
-								</div>
-								<div className='ml-3 sm:ml-4'>
-									<h3 className='text-white font-medium text-sm sm:text-base'>
-										Email
-									</h3>
-									<p className='text-gray-400 text-xs sm:text-sm'>
-										sulaymanmujeeb6@gmail.com
-									</p>
-								</div>
+				<div className='glass rounded-[32px] p-6 sm:p-8'>
+					{emailSubmitted ? (
+						<div className='flex h-full min-h-[360px] flex-col items-center justify-center text-center'>
+							<div className='mb-5 grid h-16 w-16 place-items-center rounded-full bg-accent/10 text-accent ring-1 ring-inset ring-accent/25'>
+								<CheckIcon className='h-8 w-8' />
 							</div>
+							<h3 className='text-2xl font-medium tracking-tight text-zinc-50'>Message sent</h3>
+							<p className='mt-2 text-zinc-400'>
+								I&apos;ll get back to you as soon as possible.
+							</p>
 						</div>
-					</div>
-
-					{/* Right Column - Contact Form */}
-					<div className='bg-white/5 p-4 sm:p-8 rounded-2xl backdrop-blur-sm border border-gray-800'>
-						{emailSubmitted ? (
-							<div className='h-full flex flex-col items-center justify-center text-center'>
-								<div className='w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-4'>
-									<svg
-										className='w-8 h-8 text-green-500'
-										fill='none'
-										viewBox='0 0 24 24'
-										stroke='currentColor'>
-										<path
-											strokeLinecap='round'
-											strokeLinejoin='round'
-											strokeWidth={2}
-											d='M5 13l4 4L19 7'
-										/>
-									</svg>
-								</div>
-								<h3 className='text-2xl font-bold text-white mb-2'>
-									Message Sent!
-								</h3>
-								<p className='text-gray-400'>
-									I&apos;ll get back to you as soon as possible.
-								</p>
+					) : (
+						<form className='space-y-5' onSubmit={handleSubmit}>
+							<p className='label'>Send a message</p>
+							<div>
+								<label htmlFor='email' className='mb-2 block text-sm font-medium text-zinc-300'>
+									Your email
+								</label>
+								<input
+									id='email'
+									type='email'
+									name='email'
+									required
+									className='field glass-inset'
+									placeholder='name@example.com'
+								/>
 							</div>
-						) : (
-							<form
-								className='space-y-4 sm:space-y-6'
-								onSubmit={handleSubmit}>
-								<div>
-									<label className='text-white text-xs sm:text-sm font-medium mb-1 sm:mb-2 block'>
-										Your Email
-									</label>
-									<input
-										type='email'
-										name='email'
-										required
-										className='w-full px-3 sm:px-4 py-2 sm:py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 text-sm sm:text-base'
-										placeholder='name@example.com'
-									/>
-								</div>
-								<div>
-									<label className='text-white text-xs sm:text-sm font-medium mb-1 sm:mb-2 block'>
-										Subject
-									</label>
-									<input
-										type='text'
-										name='subject'
-										required
-										className='w-full px-3 sm:px-4 py-2 sm:py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 text-sm sm:text-base'
-										placeholder="What's this about?"
-									/>
-								</div>
-								<div>
-									<label className='text-white text-xs sm:text-sm font-medium mb-1 sm:mb-2 block'>
-										Message
-									</label>
-									<textarea
-										name='message'
-										required
-										rows={4}
-										className='w-full px-3 sm:px-4 py-2 sm:py-3 bg-[#1c1c1c] border border-gray-800 rounded-lg focus:outline-none focus:border-purple-500 text-gray-100 text-sm sm:text-base resize-none'
-										placeholder="Let's talk about your project..."
-									/>
-								</div>
-								{error && <p className='text-red-500 text-sm'>{error}</p>}
-								<button
-									type='submit'
-									disabled={isLoading}
-									className='w-full py-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-500 transition-colors disabled:opacity-50'>
-									{isLoading ? 'Sending...' : 'Send Message'}
-								</button>
-							</form>
-						)}
-					</div>
+							<div>
+								<label htmlFor='subject' className='mb-2 block text-sm font-medium text-zinc-300'>
+									Subject
+								</label>
+								<input
+									id='subject'
+									type='text'
+									name='subject'
+									required
+									className='field glass-inset'
+									placeholder="What's this about?"
+								/>
+							</div>
+							<div>
+								<label htmlFor='message' className='mb-2 block text-sm font-medium text-zinc-300'>
+									Message
+								</label>
+								<textarea
+									id='message'
+									name='message'
+									required
+									rows={5}
+									className='field glass-inset resize-none'
+									placeholder="Let's talk about your project..."
+								/>
+							</div>
+							{error && <p className='text-sm text-red-400'>{error}</p>}
+							<button
+								type='submit'
+								disabled={isLoading}
+								className='btn btn-accent w-full disabled:opacity-50'>
+								{isLoading ? 'Sending...' : 'Send message'}
+							</button>
+						</form>
+					)}
 				</div>
 			</div>
 		</section>

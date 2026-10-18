@@ -7,12 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        default: ['Space Grotesk', 'sans-serif'],
+      colors: {
+        accent: "rgb(var(--accent) / <alpha-value>)",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
     },
   },

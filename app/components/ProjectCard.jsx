@@ -1,78 +1,61 @@
 import React from 'react';
-import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/solid';
-import Link from 'next/link';
+import { CodeBracketIcon, ArrowUpRightIcon } from '@heroicons/react/24/outline';
 
-const ProjectCard = ({
-  imgURL,
-  title,
-  description,
-  gitUrl,
-  previewUrl,
-  tag,
-}) => {
-  return (
-    <div className='group bg-[#1f1f1f] rounded-2xl shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2'>
-      <div className='relative h-48 md:h-56 overflow-hidden'>
-        <img 
-          src={imgURL} 
-          alt={title} 
-          className='w-full h-full object-cover'
-        />
-        <div className='absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center space-x-4'>
-          <Link 
-            href={gitUrl} 
-            target='_blank'
-            className='bg-white/10 hover:bg-black/60 rounded-full p-3 transition-all duration-300 opacity-0 group-hover:opacity-100'>
-            <CodeBracketIcon className='h-6 w-6 text-white' />
-          </Link>
-          <Link 
-            href={previewUrl} 
-            target='_blank'
-            className='bg-white/10 hover:bg-black/60 rounded-full p-3 transition-all duration-300 opacity-0 group-hover:opacity-100'>
-            <EyeIcon className='h-6 w-6 text-white' />
-          </Link>
-        </div>
-      </div>
-      <div className='flex flex-col flex-grow p-5'>
-        <div className='flex justify-between items-start mb-3'>
-          <h3 className='text-xl font-bold text-white flex-grow pr-2'>{title}</h3>
-          <div className='flex flex-wrap gap-2 justify-end'>
-            {tag
-              .filter(t => t !== 'All')
-              .map((t, index) => (
-                <span 
-                  key={index}
-                  className='bg-[#2d2d2d] text-gray-300 text-xs px-3 py-1 rounded-full whitespace-nowrap'
-                >
-                  {t}
-                </span>
-              ))}
-          </div>
-        </div>
-        <p className='text-gray-400 text-sm leading-relaxed flex-grow mb-4'>
-          {description}
-        </p>
-        <div className='flex justify-between items-center'>
-          <div className='flex space-x-2'>
-            <Link 
-              href={gitUrl} 
-              target='_blank'
-              className='text-gray-300 hover:text-white text-sm flex items-center'>
-              <CodeBracketIcon className='h-4 w-4 mr-1' />
-              GitHub
-            </Link>
-            <Link 
-              href={previewUrl} 
-              target='_blank'
-              className='text-gray-300 hover:text-white text-sm flex items-center'>
-              <EyeIcon className='h-4 w-4 mr-1' />
-              Preview
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+const isRealLink = (url) => url && url !== '/';
+
+const ProjectCard = ({ imgURL, title, description, gitUrl, previewUrl, tag }) => {
+	return (
+		<article className='glass group flex h-full flex-col rounded-[28px] p-2.5 transition duration-300 hover:-translate-y-1 hover:border-white/[0.14]'>
+			<div className='glass-inset relative aspect-[16/10] overflow-hidden rounded-[20px]'>
+				<img
+					src={imgURL}
+					alt={title}
+					loading='lazy'
+					className='h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]'
+				/>
+				<div className='absolute left-3 top-3 flex flex-wrap gap-1.5'>
+					{tag
+						.filter((t) => t !== 'All')
+						.map((t) => (
+							<span
+								key={t}
+								className='glass-strong rounded-full px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-zinc-200'>
+								{t}
+							</span>
+						))}
+				</div>
+			</div>
+
+			<div className='flex flex-1 flex-col px-3 pb-3 pt-5'>
+				<h3 className='text-xl font-medium tracking-tight text-zinc-50'>{title}</h3>
+				<p
+					title={description}
+					className='mt-2 line-clamp-4 flex-1 text-sm leading-relaxed text-zinc-400'>
+					{description}
+				</p>
+				<div className='mt-6 flex gap-2'>
+					{isRealLink(previewUrl) && (
+						<a
+							href={previewUrl}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='btn btn-primary btn-sm'>
+							Live preview <ArrowUpRightIcon className='h-3.5 w-3.5' />
+						</a>
+					)}
+					{isRealLink(gitUrl) && (
+						<a
+							href={gitUrl}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='btn btn-glass btn-sm border border-white/10'>
+							<CodeBracketIcon className='h-4 w-4' /> Code
+						</a>
+					)}
+				</div>
+			</div>
+		</article>
+	);
 };
 
 export default ProjectCard;

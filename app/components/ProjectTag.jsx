@@ -1,14 +1,18 @@
 import React from 'react';
 
-const ProjectTag = ({ name, onClick, isSelected }) => {
-	const buttonStyles = isSelected
-	? 'border-purple-200 text-white'
-	: 'text-[#ADB7BE] border-slate-600 hover:border-white';
+const ProjectTag = ({ name, count, onClick, isSelected }) => {
 	return (
 		<button
-			className={`${buttonStyles} rounded-lg border-2 px-4 py-1.5 text-sm md:px-6 md:py-2 md:text-lg cursor-pointer`}
+			role='tab'
+			aria-selected={isSelected}
+			className={`inline-flex items-center gap-2 whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors sm:px-5 ${
+				isSelected ? 'pill-active' : 'text-zinc-400 hover:text-white'
+			}`}
 			onClick={() => onClick(name)}>
 			{name}
+			<span className={`font-mono text-[11px] ${isSelected ? 'text-accent' : 'text-zinc-600'}`}>
+				{count}
+			</span>
 		</button>
 	);
 };

@@ -1,33 +1,17 @@
 import { redirect } from 'next/navigation';
-import AboutSection from '../components/AboutSection';
-import EmailSection from '../components/EmailSection';
-import Footer from '../components/Footer';
-import HeroSection from '../components/HeroSection';
-import Navbar from '../components/Navbar';
-import ProjectSection from '../components/ProjectsSection';
+import HomePage from '../components/HomePage';
 
 export default function TagPage({ params }) {
 	const { tag } = params;
 	const validTags = ["web2", "web3", "ai"];
-	
+
 	if (!validTags.includes(tag?.toLowerCase())) {
 		redirect('/');
 	}
-	
-	const tagCapitalized = tag.toLowerCase() === "ai" 
-		? "AI" 
+
+	const tagCapitalized = tag.toLowerCase() === "ai"
+		? "AI"
 		: tag.charAt(0).toUpperCase() + tag.slice(1).toLowerCase();
 
-	return (
-		<main className='flex min-h-screen flex-col bg-[#121212]'>
-			<Navbar />
-			<div className='container mx-auto px-12 py-4 mt-16 lg:mt-8'>
-				<HeroSection />
-				<AboutSection />
-				<ProjectSection initialTag={tagCapitalized} />
-				<EmailSection/>
-				<Footer/>
-			</div>
-		</main>
-	);
+	return <HomePage initialTag={tagCapitalized} />;
 }

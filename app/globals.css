@@ -1,115 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-	--foreground-rgb: 255, 255, 255;
-	--background-start-rgb: 17, 24, 39;
-	--background-end-rgb: 3, 7, 18;
+	/* The single brand color. Change it here and the whole site follows. */
+	--accent: 76 125 255;
+	--bg: 9 9 11;
 }
 
-* {
-	font-family: 'Space Grotesk', sans-serif !important;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
 }
 
-html,
 body {
-	width: 100%;
 	min-width: 320px;
 	overflow-x: hidden;
+	color: #f4f4f5;
+	background-color: rgb(var(--bg));
+	/* Faint line grid: gives the glass panels something to refract. Solid lines, no gradients. */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M64 0H0v64' fill='none' stroke='%23ffffff' stroke-opacity='0.035'/%3E%3C/svg%3E");
+	background-attachment: fixed;
+	font-family: var(--font-sans), system-ui, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-body {
-	color: rgb(var(--foreground-rgb));
-	background: rgb(var(--background-start-rgb));
-	min-height: 100vh;
-	position: relative;
-	margin: 0 auto;
-	max-width: 100%;
+::selection {
+	background: rgb(var(--accent) / 0.35);
+	color: #fff;
 }
 
-/* Add global section styles */
-section {
-	padding-left: 0.25rem !important; /* 4px */
-	padding-right: 0.25rem !important; /* 4px */
-	width: 100% !important;
-	max-width: 100% !important;
-}
-
-/* Container styles for mobile */
-@media (max-width: 640px) {
-	.max-w-7xl,
-	.container,
-	.mx-auto {
-		width: 90% !important;
-		max-width: 98% !important;
-		margin-left: auto !important;
-		margin-right: auto !important;
-		padding-left: 0.25rem !important;
-		padding-right: 0.25rem !important;
+@layer components {
+	/* Liquid glass surfaces */
+	.glass {
+		background-color: rgb(255 255 255 / 0.035);
+		border: 1px solid rgb(255 255 255 / 0.08);
+		box-shadow:
+			inset 0 1px 0 0 rgb(255 255 255 / 0.07),
+			0 24px 48px -28px rgb(0 0 0 / 0.9);
+		-webkit-backdrop-filter: blur(20px) saturate(160%);
+		backdrop-filter: blur(20px) saturate(160%);
 	}
 
-	/* Adjust grid gaps on mobile */
-	.grid {
-		gap: 0.75rem !important;
+	.glass-strong {
+		background-color: rgb(24 24 27 / 0.6);
+		border: 1px solid rgb(255 255 255 / 0.1);
+		box-shadow:
+			inset 0 1px 0 0 rgb(255 255 255 / 0.09),
+			0 16px 40px -16px rgb(0 0 0 / 0.8);
+		-webkit-backdrop-filter: blur(28px) saturate(180%);
+		backdrop-filter: blur(28px) saturate(180%);
+	}
+
+	/* Recessed well inside a glass panel */
+	.glass-inset {
+		background-color: rgb(0 0 0 / 0.28);
+		border: 1px solid rgb(255 255 255 / 0.05);
+		box-shadow: inset 0 1px 2px 0 rgb(0 0 0 / 0.4);
+	}
+
+	/* Active pill inside a segmented control */
+	.pill-active {
+		background-color: rgb(255 255 255 / 0.08);
+		color: #fff;
+		box-shadow:
+			inset 0 1px 0 0 rgb(255 255 255 / 0.1),
+			0 4px 12px -4px rgb(0 0 0 / 0.6);
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		border-radius: 9999px;
+		padding: 0.8rem 1.5rem;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		white-space: nowrap;
+		transition:
+			background-color 200ms,
+			transform 200ms,
+			box-shadow 200ms;
+	}
+
+	.btn:active {
+		transform: scale(0.98);
+	}
+
+	.btn-primary {
+		background-color: #ececee;
+		color: #09090b;
+		box-shadow:
+			inset 0 -2px 0 0 rgb(0 0 0 / 0.12),
+			0 10px 28px -12px rgb(255 255 255 / 0.35);
+	}
+
+	.btn-primary:hover {
+		background-color: #fff;
+	}
+
+	.btn-accent {
+		background-color: rgb(var(--accent));
+		color: #fff;
+		box-shadow:
+			inset 0 1px 0 0 rgb(255 255 255 / 0.25),
+			0 10px 28px -10px rgb(var(--accent) / 0.7);
+	}
+
+	.btn-accent:hover {
+		background-color: rgb(var(--accent) / 0.9);
+	}
+
+	.btn-glass {
+		color: #f4f4f5;
+	}
+
+	.btn-glass:hover {
+		background-color: rgb(255 255 255 / 0.07);
+	}
+
+	.btn-sm {
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+	}
+
+	.label {
+		font-family: var(--font-mono), ui-monospace, monospace;
+		font-size: 0.6875rem;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #71717a;
+	}
+
+	.field {
+		width: 100%;
+		border-radius: 1rem;
+		padding: 0.85rem 1rem;
+		font-size: 0.9375rem;
+		color: #f4f4f5;
+		outline: none;
+		transition:
+			border-color 200ms,
+			box-shadow 200ms;
+	}
+
+	.field::placeholder {
+		color: #52525b;
+	}
+
+	.field:focus {
+		border-color: rgb(var(--accent) / 0.6);
+		box-shadow:
+			inset 0 1px 2px 0 rgb(0 0 0 / 0.4),
+			0 0 0 4px rgb(var(--accent) / 0.12);
 	}
 }
 
-@media (min-width: 640px) {
-	section {
-		padding-left: 1rem !important;
-		padding-right: 1rem !important;
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
 	}
-}
 
-@media (min-width: 1024px) {
-	section {
-		padding-left: 2rem !important;
-		padding-right: 2rem !important;
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
 	}
-}
-
-.max-w-7xl {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-@layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
-}
-
-/* Custom animations for the about section */
-@keyframes spin-slow {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-.animate-spin-slow {
-	animation: spin-slow 8s linear infinite;
-}
-
-/* Floating animation for particles */
-@keyframes float {
-	0%, 100% {
-		transform: translateY(0px);
-	}
-	50% {
-		transform: translateY(-10px);
-	}
-}
-
-.animate-float {
-	animation: float 3s ease-in-out infinite;
 }

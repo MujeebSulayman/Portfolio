@@ -1,8 +1,9 @@
-import { Inter } from "next/font/google";
+import { Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap", adjustFontFallback: false });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thehemjay.vercel.app";
 const ogImageUrl = `${siteUrl}/images/project/portfolio.png`;
@@ -14,10 +15,6 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: siteTitle,
   description: siteDescription,
-  icons: {
-    icon: "/images/project/portfolio.png",
-    apple: "/images/project/portfolio.png",
-  },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
@@ -42,10 +39,14 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: "#09090b",
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+      <body>
         {children}
         <Analytics />
       </body>

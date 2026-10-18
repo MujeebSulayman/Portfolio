@@ -1,128 +1,122 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import NavLink from './NavLink';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-
-const navLinks = [
-	{
-		title: 'Home',
-		path: '/',
-	},
-	{
-		title: 'About',
-		path: '#about',
-	},
-	{
-		title: 'Projects',
-		path: '#projects',
-	},
-	{
-		title: 'Contact',
-		path: '#contact',
-	},
-];
+import { Bars3Icon, XMarkIcon, ArrowUpRightIcon } from '@heroicons/react/24/outline';
+import { NAV_LINKS, RESUME_URL } from '../data/site';
+import Logo from './Logo';
 
 const Navbar = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false);
-	const [scrolling, setScrolling] = useState(false);
+	const [active, setActive] = useState('home');
 
+	// Highlight the link for whichever section is in view
 	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 20) {
-				setScrolling(true);
-			} else {
-				setScrolling(false);
-			}
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
+		const sections = NAV_LINKS.map(({ id }) => document.getElementById(id)).filter(Boolean);
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) setActive(entry.target.id);
+				});
+			},
+			{ rootMargin: '-45% 0px -50% 0px' }
+		);
+		sections.forEach((section) => observer.observe(section));
+		return () => observer.disconnect();
 	}, []);
 
 	// Lock body scroll when menu is open
 	useEffect(() => {
-		if (navbarOpen) {
-			document.body.style.overflow = 'hidden';
-		} else {
-			document.body.style.overflow = 'unset';
-		}
+		document.body.style.overflow = navbarOpen ? 'hidden' : 'unset';
 	}, [navbarOpen]);
 
 	return (
-		<>
-			{/* Backdrop overlay */}
+		<header className='fixed inset-x-0 top-3 z-50 px-3 sm:top-4 sm:px-4'>
 			{navbarOpen && (
-				<div 
-					className="fixed inset-0 bg-black/60 backdrop-blur-sm z-10"
+				<div
+					className='fixed inset-0 -z-10 bg-black/50 md:hidden'
 					onClick={() => setNavbarOpen(false)}
 				/>
 			)}
 
-			<nav
-				className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${
-					scrolling || navbarOpen ? 'bg-[#121212]/90 backdrop-blur-md' : 'bg-transparent'
-				}`}>
-				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='flex items-center justify-between h-16'>
-						{/* Logo */}
-						<Link
-							href='/'
-							className='text-2xl md:text-3xl text-white font-semibold hover:text-gray-300 transition-colors'>
-							TheHemjay
-						</Link>
+			<nav className='glass-strong mx-auto flex h-14 max-w-6xl items-center justify-between rounded-full pl-2 pr-2 sm:pl-3'>
+				<Link
+					href='/'
+					className='flex items-center gap-2.5 rounded-full pr-2'>
+					<Logo className='h-9 w-9 drop-shadow-[0_6px_14px_rgb(76_125_255/0.35)]' />
+					<span className='text-[17px] font-medium tracking-tight text-zinc-100'>
+						thehemjay
+					</span>
+				</Link>
 
-						{/* Desktop Navigation */}
-						<div className='hidden md:block'>
-							<div className='ml-10 flex items-center space-x-8'>
-								{navLinks.map((link) => (
-									<NavLink
-										key={link.path}
-										href={link.path}
-										title={link.title}
-									/>
-								))}
-							</div>
-						</div>
-
-						{/* Mobile menu button */}
-						<div className='md:hidden'>
-							<button
-								onClick={() => setNavbarOpen(!navbarOpen)}
-								className='inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800/50 focus:outline-none'>
-								{navbarOpen ? (
-									<XMarkIcon className='h-6 w-6' />
-								) : (
-									<Bars3Icon className='h-6 w-6' />
-								)}
-							</button>
-						</div>
-					</div>
+				<div className='hidden items-center gap-1 md:flex'>
+					{NAV_LINKS.map(({ title, id }) => (
+						<a
+							key={id}
+							href={`#${id}`}
+							className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+								active === id ? 'pill-active' : 'text-zinc-400 hover:text-white'
+							}`}>
+							{title}
+						</a>
+					))}
 				</div>
 
-				{/* Mobile Navigation */}
-				<div
-					className={`md:hidden transition-all duration-300 ease-in-out absolute w-full ${
-						navbarOpen
-							? 'opacity-100 translate-y-0'
-							: 'opacity-0 -translate-y-full pointer-events-none'
-					}`}>
-					<div className='px-4 pt-2 pb-3 space-y-1 bg-[#121212] shadow-lg border-t border-gray-800'>
-						{navLinks.map((link) => (
-							<a
-								key={link.path}
-								href={link.path}
-								onClick={() => setNavbarOpen(false)}
-								className='block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all'>
-								{link.title}
-							</a>
-						))}
-					</div>
+				<div className='flex items-center gap-2'>
+					<a
+						href={RESUME_URL}
+						target='_blank'
+						rel='noopener noreferrer'
+						className='btn btn-glass btn-sm hidden border border-white/10 sm:inline-flex'>
+						Resume
+					</a>
+					<a
+						href='#contact'
+						className='btn btn-accent btn-sm hidden sm:inline-flex'>
+						Hire me
+					</a>
+					<button
+						onClick={() => setNavbarOpen(!navbarOpen)}
+						aria-label={navbarOpen ? 'Close menu' : 'Open menu'}
+						aria-expanded={navbarOpen}
+						className='grid h-10 w-10 place-items-center rounded-full border border-white/10 text-zinc-300 transition-colors hover:bg-white/[0.07] hover:text-white md:hidden'>
+						{navbarOpen ? <XMarkIcon className='h-5 w-5' /> : <Bars3Icon className='h-5 w-5' />}
+					</button>
 				</div>
 			</nav>
-		</>
+
+			{/* Mobile Navigation */}
+			<div
+				className={`glass-strong mx-auto mt-2 max-w-6xl rounded-3xl p-2 transition-all duration-300 md:hidden ${
+					navbarOpen ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 opacity-0'
+				}`}>
+				{NAV_LINKS.map(({ title, id }) => (
+					<a
+						key={id}
+						href={`#${id}`}
+						onClick={() => setNavbarOpen(false)}
+						className={`block rounded-2xl px-4 py-3 text-base font-medium transition-colors ${
+							active === id ? 'pill-active' : 'text-zinc-400 hover:text-white'
+						}`}>
+						{title}
+					</a>
+				))}
+				<div className='mt-2 grid grid-cols-2 gap-2 border-t border-white/[0.06] pt-2'>
+					<a
+						href={RESUME_URL}
+						target='_blank'
+						rel='noopener noreferrer'
+						className='btn btn-glass btn-sm border border-white/10'>
+						Resume <ArrowUpRightIcon className='h-3.5 w-3.5' />
+					</a>
+					<a
+						href='#contact'
+						onClick={() => setNavbarOpen(false)}
+						className='btn btn-accent btn-sm'>
+						Hire me
+					</a>
+				</div>
+			</div>
+		</header>
 	);
 };
 
