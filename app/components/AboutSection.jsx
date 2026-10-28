@@ -159,7 +159,10 @@ const SubHeading = ({ label, meta }) => (
 
 const Intro = () => (
   <div className="grid gap-4 lg:grid-cols-12">
-    <motion.div {...reveal} className="glass rounded-[32px] p-2.5 lg:col-span-4 lg:row-span-2">
+    <motion.div
+      {...reveal}
+      className="glass rounded-[32px] p-2.5 lg:col-span-4 lg:row-span-2"
+    >
       <div className="relative mx-auto aspect-[4/5] h-full max-h-[560px] w-full overflow-hidden rounded-[24px] lg:aspect-auto lg:max-h-none lg:min-h-[480px]">
         <Image
           src="/images/portfolio-image.jpg"
@@ -171,8 +174,12 @@ const Intro = () => (
         />
         <div className="glass-strong absolute inset-x-3 bottom-3 flex items-center justify-between gap-3 rounded-2xl px-4 py-3">
           <div className="min-w-0">
-            <p className="truncate text-sm font-medium text-zinc-50">Sulayman Abdul-Mujeeb</p>
-            <p className="truncate text-xs text-zinc-400">Full-stack blockchain developer</p>
+            <p className="truncate text-sm font-medium text-zinc-50">
+              Sulayman Abdul-Mujeeb
+            </p>
+            <p className="truncate text-xs text-zinc-400">
+              Full-stack blockchain developer
+            </p>
           </div>
           <span className="inline-flex flex-none items-center gap-1.5 rounded-full bg-accent px-2.5 py-1 text-[11px] font-semibold text-white">
             Open to work
@@ -196,11 +203,11 @@ const Intro = () => (
         <span className="text-accent">decentralized technology.</span>
       </h2>
       <p className="mt-6 max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-        I’m a full-stack software engineer specializing in blockchain with over 4 years of
-        experience building smart contracts and decentralized applications on Ethereum. I’ve
-        built end-to-end dapps including smart contracts, backend services, and modern web
-        interfaces, and I’m exploring AI-driven DeFi automation and intelligent blockchain
-        agents.
+        I’m a full-stack software engineer specializing in blockchain with over
+        4 years of experience building smart contracts and decentralized
+        applications on Ethereum. I’ve built end-to-end dapps including smart
+        contracts, backend services, and modern web interfaces, and I’m
+        exploring AI-driven DeFi automation and intelligent blockchain agents.
       </p>
       <div className="mt-auto flex flex-col gap-6 pt-8 sm:flex-row sm:items-end sm:justify-between">
         <ul className="flex flex-wrap gap-2">
@@ -230,7 +237,10 @@ const Intro = () => (
       className="grid grid-cols-2 gap-4 lg:col-span-8 lg:grid-cols-4"
     >
       {RESULTS.map(({ value, label }) => (
-        <li key={label} className="glass flex flex-col justify-between rounded-[28px] p-5 sm:p-6">
+        <li
+          key={label}
+          className="glass flex flex-col justify-between rounded-[28px] p-5 sm:p-6"
+        >
           <p className="text-3xl font-medium tracking-[-0.03em] text-zinc-50 sm:text-4xl">
             {value}
           </p>
@@ -245,82 +255,103 @@ const Experience = () => (
   <div>
     <SubHeading label="Experience" meta={`${EXPERIENCE.length} roles`} />
     <ol className="space-y-4">
-      {EXPERIENCE.map(({ initials, role, company, url, location, period, current, stack, points }, i) => (
-        <motion.li
-          key={company}
-          {...reveal}
-          className="relative grid gap-3 md:grid-cols-[170px_1fr] md:gap-10"
-        >
-          <div className="md:pt-8">
-            <p className="font-mono text-sm text-zinc-300">{period}</p>
-            {location && <p className="mt-1 text-sm text-zinc-500">{location}</p>}
-            {current && (
-              <span className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 font-mono text-[11px] text-accent ring-1 ring-inset ring-accent/20">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
-                Current
-              </span>
-            )}
-          </div>
-
-          <div className="relative md:pl-10">
-            <span
-              className={`absolute bottom-[-1rem] left-0 top-0 hidden w-px bg-white/[0.08] md:block ${
-                i === EXPERIENCE.length - 1 ? "!bottom-auto h-10" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-[-4.5px] top-9 hidden h-2.5 w-2.5 rounded-full md:block ${
-                current ? "bg-accent ring-4 ring-accent/20" : "bg-zinc-600 ring-4 ring-zinc-900"
-              }`}
-            />
-
-            <div className="glass rounded-[28px] p-6 sm:p-8">
-              <div className="flex items-start gap-4">
-                <span className="grid h-12 w-12 flex-none place-items-center rounded-2xl bg-accent/10 font-mono text-sm font-bold text-accent ring-1 ring-inset ring-accent/20">
-                  {initials}
+      {EXPERIENCE.map(
+        (
+          {
+            initials,
+            role,
+            company,
+            url,
+            location,
+            period,
+            current,
+            stack,
+            points,
+          },
+          i,
+        ) => (
+          <motion.li
+            key={company}
+            {...reveal}
+            className="relative grid gap-3 md:grid-cols-[170px_1fr] md:gap-10"
+          >
+            <div className="md:pt-8">
+              <p className="font-mono text-sm text-zinc-300">{period}</p>
+              {location && (
+                <p className="mt-1 text-sm text-zinc-500">{location}</p>
+              )}
+              {current && (
+                <span className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 font-mono text-[11px] text-accent ring-1 ring-inset ring-accent/20">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
+                  Current
                 </span>
-                <div className="min-w-0">
-                  <h3 className="text-xl font-medium tracking-tight text-zinc-50">{role}</h3>
-                  {url ? (
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group mt-0.5 inline-flex items-center gap-1 text-sm text-zinc-400 transition-colors hover:text-accent"
-                    >
-                      {company}
-                      <ArrowUpRightIcon className="h-3.5 w-3.5 text-zinc-600 transition-colors group-hover:text-accent" />
-                    </a>
-                  ) : (
-                    <p className="mt-0.5 text-sm text-zinc-400">{company}</p>
-                  )}
-                </div>
-              </div>
-              <ul className="mt-6 space-y-3">
-                {points.map((point) => (
-                  <li
-                    key={point}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-zinc-400 sm:text-[15px]"
-                  >
-                    <span className="mt-[9px] h-1 w-3 flex-none rounded-full bg-accent/70" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              <ul className="mt-6 flex flex-wrap gap-1.5 border-t border-white/[0.06] pt-5">
-                {stack.map((item) => (
-                  <li
-                    key={item}
-                    className="glass-inset rounded-full px-2.5 py-1 font-mono text-[11px] text-zinc-400"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              )}
             </div>
-          </div>
-        </motion.li>
-      ))}
+
+            <div className="relative md:pl-10">
+              <span
+                className={`absolute bottom-[-1rem] left-0 top-0 hidden w-px bg-white/[0.08] md:block ${
+                  i === EXPERIENCE.length - 1 ? "!bottom-auto h-10" : ""
+                }`}
+              />
+              <span
+                className={`absolute left-[-4.5px] top-9 hidden h-2.5 w-2.5 rounded-full md:block ${
+                  current
+                    ? "bg-accent ring-4 ring-accent/20"
+                    : "bg-zinc-600 ring-4 ring-zinc-900"
+                }`}
+              />
+
+              <div className="glass rounded-[28px] p-6 sm:p-8">
+                <div className="flex items-start gap-4">
+                  <span className="grid h-12 w-12 flex-none place-items-center rounded-2xl bg-accent/10 font-mono text-sm font-bold text-accent ring-1 ring-inset ring-accent/20">
+                    {initials}
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-xl font-medium tracking-tight text-zinc-50">
+                      {role}
+                    </h3>
+                    {url ? (
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group mt-0.5 inline-flex items-center gap-1 text-sm text-zinc-400 transition-colors hover:text-accent"
+                      >
+                        {company}
+                        <ArrowUpRightIcon className="h-3.5 w-3.5 text-zinc-600 transition-colors group-hover:text-accent" />
+                      </a>
+                    ) : (
+                      <p className="mt-0.5 text-sm text-zinc-400">{company}</p>
+                    )}
+                  </div>
+                </div>
+                <ul className="mt-6 space-y-3">
+                  {points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 text-sm leading-relaxed text-zinc-400 sm:text-[15px]"
+                    >
+                      <span className="mt-[9px] h-1 w-3 flex-none rounded-full bg-accent/70" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+                <ul className="mt-6 flex flex-wrap gap-1.5 border-t border-white/[0.06] pt-5">
+                  {stack.map((item) => (
+                    <li
+                      key={item}
+                      className="glass-inset rounded-full px-2.5 py-1 font-mono text-[11px] text-zinc-400"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.li>
+        ),
+      )}
     </ol>
   </div>
 );
@@ -333,7 +364,9 @@ const Toolkit = () => (
         {SKILLS.map(({ title, items }, i) => (
           <div key={title} className="glass-inset rounded-[24px] p-5 sm:p-6">
             <p className="label">{String(i + 1).padStart(2, "0")}</p>
-            <h3 className="mt-2 text-lg font-medium tracking-tight text-zinc-50">{title}</h3>
+            <h3 className="mt-2 text-lg font-medium tracking-tight text-zinc-50">
+              {title}
+            </h3>
             <ul className="mt-5 flex flex-wrap gap-1.5">
               {items.map((item) => (
                 <li
@@ -350,7 +383,10 @@ const Toolkit = () => (
 
       <ul className="mt-2 grid gap-2 md:grid-cols-3">
         {CERTIFICATIONS.map(({ title, issuer }) => (
-          <li key={title} className="glass-inset flex items-center gap-4 rounded-[24px] p-4 sm:p-5">
+          <li
+            key={title}
+            className="glass-inset flex items-center gap-4 rounded-[24px] p-4 sm:p-5"
+          >
             <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-accent/10 text-accent ring-1 ring-inset ring-accent/20">
               <AcademicCapIcon className="h-5 w-5" />
             </span>
